@@ -126,7 +126,7 @@ function rch(){const c=$('#chars');c.innerHTML='';const by={};sc.ord.forEach(i=>
   d.innerHTML=`${sc.ic[i]?`<span class=ic>${IC[sc.ic[i]]||'💬'}</span>`:''}<div class=fig style="background:linear-gradient(#fff3,#0004),hsl(${h},45%,45%)"><div>${[...nm][0]}</div><div class=em>${E[o.e]||'🙂'}</div></div><span class=nm>${nm}</span>`;c.append(d)})}
 const CeciliaSpine=(()=>{
  let canvas=null,ctx=null,shader=null,batcher=null,skeletonRenderer=null,assetManager=null,skeleton=null,state=null,bounds=null,ready=false,loading=false,failed=false,last=0,frame=0;
- const assetBase='./Characters/Cecilia/',DISPLAY_SCALE=1;
+ const assetBase='./Characters/Cecilia/',DISPLAY_SCALE=2;
  function mount(target){if(!canvas){canvas=document.createElement('canvas');canvas.className='spine-stage';canvas.setAttribute('aria-label','Cecilia Spine animation')}target.replaceWith(canvas);if(ready){drawOnce();return}if(loading||failed)return;loading=true;
   try{ctx=new spine.ManagedWebGLRenderingContext(canvas,{alpha:true, premultipliedAlpha:true});if(!ctx.gl)throw Error('WebGL unavailable');
    shader=spine.Shader.newTwoColoredTextured(ctx);batcher=new spine.PolygonBatcher(ctx);skeletonRenderer=new spine.SkeletonRenderer(ctx);
