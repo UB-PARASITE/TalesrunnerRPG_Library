@@ -127,7 +127,7 @@ function rch(){const c=$('#chars');c.innerHTML='';const by={};sc.ord.forEach(i=>
 const CeciliaSpine=(()=>{
  let canvas=null,ctx=null,shader=null,batcher=null,skeletonRenderer=null,assetManager=null,skeleton=null,state=null,bounds=null,ready=false,loading=false,failed=false,last=0,frame=0;
  const assetBase='./Characters/Cecilia/';
- function mount(target){canvas=target;if(ready){drawOnce();return}if(loading||failed)return;loading=true;
+ function mount(target){if(!canvas){canvas=document.createElement('canvas');canvas.className='spine-stage';canvas.setAttribute('aria-label','Cecilia Spine animation')}target.replaceWith(canvas);if(ready){drawOnce();return}if(loading||failed)return;loading=true;
   try{ctx=new spine.ManagedWebGLRenderingContext(canvas,{alpha:true, premultipliedAlpha:true});if(!ctx.gl)throw Error('WebGL unavailable');
    shader=spine.Shader.newTwoColoredTextured(ctx);batcher=new spine.PolygonBatcher(ctx);skeletonRenderer=new spine.SkeletonRenderer(ctx);
    assetManager=new spine.AssetManager(ctx,assetBase);assetManager.loadBinary('Cecilia.skel');assetManager.loadTextureAtlas('Cecilia.atlas');poll();
@@ -140,7 +140,7 @@ const CeciliaSpine=(()=>{
    ready=true;loading=false;last=performance.now()/1000;render();
   }catch(e){failed=true;loading=false;console.error('Cecilia Spine parse failed:',e)}
  }
- function render(){if(!ready||!canvas?.isConnected)return;const w=Math.max(1,canvas.clientWidth),h=Math.max(1,canvas.clientHeight);if(canvas.width!==w*devicePixelRatio||canvas.height!==h*devicePixelRatio){canvas.width=Math.round(w*devicePixelRatio);canvas.height=Math.round(h*devicePixelRatio)}
+ function render(){if(!ready)return;if(!canvas?.isConnected){frame=requestAnimationFrame(render);return}const w=Math.max(1,canvas.clientWidth),h=Math.max(1,canvas.clientHeight);if(canvas.width!==w*devicePixelRatio||canvas.height!==h*devicePixelRatio){canvas.width=Math.round(w*devicePixelRatio);canvas.height=Math.round(h*devicePixelRatio)}
   const gl=ctx.gl;gl.viewport(0,0,canvas.width,canvas.height);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);
   const now=performance.now()/1000,delta=Math.min(.05,Math.max(0,now-last));last=now;state.update(delta);state.apply(skeleton);skeleton.updateWorldTransform();
   const cx=bounds.offset.x+bounds.size.x/2,cy=bounds.offset.y+bounds.size.y/2,scale=Math.min(w/Math.max(bounds.size.x,1),h/Math.max(bounds.size.y,1))*.94,viewW=w/scale,viewH=h/scale;
