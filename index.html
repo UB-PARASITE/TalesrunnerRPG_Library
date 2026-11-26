@@ -36,7 +36,11 @@ summary{padding:11px 14px;font-weight:600;cursor:pointer}summary small{color:var
 #bgn{position:absolute;left:10px;top:8px;font-size:11px;opacity:.45}
 #chars{position:absolute;inset:0 0 150px 0}
 .ch{position:absolute;bottom:0;transform:translateX(-50%);width:min(30vw,170px);text-align:center;transition:left .4s,opacity .3s,filter .3s;opacity:.55;filter:brightness(.6)}
-.ch.sp{opacity:1;filter:none}.ch .fig{height:min(46vh,300px);border-radius:90px 90px 14px 14px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:18px;font-size:46px;box-shadow:0 6px 24px #0008}
+.ch.sp{opacity:1;filter:none}
+.ch.spine-ch{width:min(46vw,330px);height:100%;bottom:0;filter:none;opacity:1;pointer-events:none}
+.ch.spine-ch .spine-stage{position:absolute;inset:0;width:100%;height:100%;display:block}
+.ch.spine-ch .nm{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);white-space:nowrap}
+.spine-tag{display:inline-block;margin-left:7px;padding:1px 6px;border-radius:5px;background:#8058b8;color:#fff;font-size:10px;font-weight:600;vertical-align:2px}.ch .fig{height:min(46vh,300px);border-radius:90px 90px 14px 14px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:18px;font-size:46px;box-shadow:0 6px 24px #0008}
 .ch .em{font-size:38px;line-height:1.1}.ch .nm{font-size:13px;margin-top:6px;background:#0009;border-radius:8px;display:inline-block;padding:1px 8px}
 .ch .ic{position:absolute;top:-6px;right:6px;font-size:30px;animation:pop .5s}
 @keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
@@ -59,6 +63,7 @@ summary{padding:11px 14px;font-weight:600;cursor:pointer}summary small{color:var
 <div id="pl"><div id="bar"><button id="bk">← 목록</button><span id="ttl"></span><button id="pv">◀ 이전 화</button><button id="b1">↩ 되돌리기</button><button id="b2">로그</button><button id="b3">오토</button><button id="b4">스킵</button><button id="b5">주인공 ♂</button><button id="nxs">다음 화 ▶</button></div><div id="prog"><i></i></div>
 <div id="st"><span id="bgn"></span><div id="chars"></div><div id="cur"></div><div id="ov"></div>
 <div id="dlg"><div id="nm"></div><div id="tx"></div><span id="nx">▼</span></div><div id="cho"></div><div id="lg"></div><div id="end"><div>— 끝 —</div><button id="e1">다음 화</button><button id="e2">목록으로</button></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@esotericsoftware/spine-webgl@4.1.24/dist/iife/spine-webgl.js"></script>
 <script>
 const $=s=>document.querySelector(s),E={200:'😐',201:'😠',202:'😑',203:'😢',204:'😊',205:'😡',206:'😭',207:'😄',208:'🙂',209:'😲',210:'🤬'},IC={100:'❗',101:'❓',102:'⁉️',103:'💡',104:'💧',105:'💢',106:'🌸',107:'😤',108:'😖',109:'😮‍💨',110:'❤️',111:'✨',112:'😅'},POS={L:'20%',C:'50%',R:'80%'};
 let DB,cat=0,cur=null,list=[],sc,stack,hist,gender=1,auto=0,skip=0,typ=null,tmr=null,total=1,read={};
@@ -82,9 +87,10 @@ function hydrate(tr,sc,tx,miss){const L=a=>a.map(p=>p[0]=='@'?(tx[p.slice(1)]??p
  DB.cats.push({k:'talk',n:'로비 대화',g:[]});idx=null;cat=0;tabs();show();if(miss.length)$('#mn').insertAdjacentHTML('afterbegin','<p>⚠ 읽지 못한 파일: '+miss.join(', ')+'</p>')}
 $('#pk').onchange=e=>{FILES={};[...e.target.files].forEach(f=>FILES[f.name]=f);load()};
 function tabs(){$('#tabs').innerHTML='';DB.cats.forEach((c,i)=>{const b=document.createElement('button');b.className='tab'+(i==cat?' on':'');b.textContent=c.n;b.onclick=()=>{cat=i;$('#q').value='';tabs();show()};$('#tabs').append(b)})}
+function hasCecilia(id){const st=DB.S[String(id)]?.st;if(!st)return false;const scan=a=>{for(const x of a||[]){if(!Array.isArray(x))continue;if(x[0]==='C'&&String(x[1])==='25')return true;for(let n=1;n<x.length;n++)if(Array.isArray(x[n])&&(Array.isArray(x[n][0])?scan(x[n]):scan([x[n]])))return true}return false};return scan(st)}
 function show(){const c=DB.cats[cat],m=$('#mn');m.innerHTML='';if(c.k=='talk')return talks(m);
  c.g.forEach((g,gi)=>{const d=document.createElement('details');d.open=c.g.length<4||gi==0;d.innerHTML=`<summary>${g.n}<small>${g.s.length}화</small></summary>`;const gr=document.createElement('div');gr.className='grid';
-  g.s.forEach(s=>{const b=document.createElement('button');b.className='card'+(read[s[1]]?' rd':'');const sm=DB.S[s[1]].sm;b.innerHTML=`<b>${s[0]}</b>${sm?`<span>${sm}</span>`:''}`;b.onclick=()=>play(s[1],g.s.map(x=>x[1]),g.n+' · '+s[0]);gr.append(b)});d.append(gr);m.append(d)})}
+  g.s.forEach(s=>{const b=document.createElement('button');b.className='card'+(read[s[1]]?' rd':'');const sm=DB.S[s[1]].sm;b.innerHTML=`<b>${s[0]}${hasCecilia(s[1])?'<span class="spine-tag">✦ Spine</span>':''}</b>${sm?`<span>${sm}</span>`:''}`;b.onclick=()=>play(s[1],g.s.map(x=>x[1]),g.n+' · '+s[0]);gr.append(b)});d.append(gr);m.append(d)})}
 function talks(m,hid){const ch=document.createElement('div');ch.className='chips';Object.keys(DB.talk).forEach(h=>{const b=document.createElement('button');b.className='tab'+(h==hid?' on':'');b.textContent=DB.H[h]||'#'+h;b.onclick=()=>{m.innerHTML='';talks(m,h)};ch.append(b)});m.append(ch);
  if(hid!=null)DB.talk[hid].forEach(t=>{const d=document.createElement('div');d.className='talk';d.innerHTML=`<small>${E[t[1]]||''} ${t[0]?'터치/상호작용':'기본'}</small><br>${t[2]}`;m.append(d)});else m.append(Object.assign(document.createElement('p'),{textContent:'캐릭터를 선택하세요.'}))}
 let idx;$('#q').oninput=()=>{clearTimeout(tmr);tmr=setTimeout(search,250)};
@@ -116,7 +122,35 @@ function pause(){$('#tx').textContent='';$('#nm').style.display='none';$('#nx').
 function bg(){const b=sc.bg||'',st=$('#st');$('#bgn').textContent=(b?'🖼 '+b:'')+(sc.bgm?'  ♪ '+sc.bgm:'');if(!b)return st.style.background='#111';if(/black/i.test(b))return st.style.background='#000';if(/white/i.test(b))return st.style.background='#ddd';const h=hue(b),l=/night|dark|cave|dungeon|ruin/i.test(b)?18:/sunset|evening/i.test(b)?40:46;st.style.background=`linear-gradient(160deg,hsl(${h},35%,${l}%),hsl(${(h+50)%360},40%,${l-12}%))`}
 function rch(){const c=$('#chars');c.innerHTML='';const by={};sc.ord.forEach(i=>{const o=sc.ch[i];if(o)(by[o.p]=by[o.p]||[]).push(i)});
  for(const p in by)by[p].forEach((i,j)=>{const o=sc.ch[i],nm=DB.P[i]||'#'+i,h=hue(nm),d=document.createElement('div');d.className='ch'+(sc.spk==i?' sp':'');d.style.left=`calc(${POS[p]||'50%'} + ${(j-(by[p].length-1)/2)*(by[p].length>1?9:0)}vw)`;
+  if(String(i)==='25'){d.classList.add('spine-ch');const canvas=document.createElement('canvas');canvas.className='spine-stage';canvas.setAttribute('aria-label','Cecilia Spine animation');d.append(canvas);d.insertAdjacentHTML('beforeend',`<span class=nm>${nm}</span>`);c.append(d);CeciliaSpine.mount(canvas);return}
   d.innerHTML=`${sc.ic[i]?`<span class=ic>${IC[sc.ic[i]]||'💬'}</span>`:''}<div class=fig style="background:linear-gradient(#fff3,#0004),hsl(${h},45%,45%)"><div>${[...nm][0]}</div><div class=em>${E[o.e]||'🙂'}</div></div><span class=nm>${nm}</span>`;c.append(d)})}
+const CeciliaSpine=(()=>{
+ let canvas=null,ctx=null,shader=null,batcher=null,skeletonRenderer=null,assetManager=null,skeleton=null,state=null,bounds=null,ready=false,loading=false,failed=false,last=0,frame=0;
+ const assetBase='./Characters/Cecilia/';
+ function mount(target){canvas=target;if(ready){drawOnce();return}if(loading||failed)return;loading=true;
+  try{ctx=new spine.ManagedWebGLRenderingContext(canvas,{alpha:true, premultipliedAlpha:true});if(!ctx.gl)throw Error('WebGL unavailable');
+   shader=spine.Shader.newTwoColoredTextured(ctx);batcher=new spine.PolygonBatcher(ctx);skeletonRenderer=new spine.SkeletonRenderer(ctx);
+   assetManager=new spine.AssetManager(ctx,assetBase);assetManager.loadBinary('Cecilia.skel');assetManager.loadTextureAtlas('Cecilia.atlas');poll();
+  }catch(e){failed=true;loading=false;console.error('Cecilia Spine init failed:',e)}
+ }
+ function poll(){if(!assetManager.isLoadingComplete()){if(assetManager.hasErrors()){failed=true;loading=false;console.error('Cecilia Spine assets failed:',assetManager.getErrors());return}setTimeout(poll,80);return}
+  try{const atlas=assetManager.require('Cecilia.atlas'),loader=new spine.SkeletonBinary(new spine.AtlasAttachmentLoader(atlas));loader.scale=1;
+   const data=loader.readSkeletonData(assetManager.require('Cecilia.skel'));skeleton=new spine.Skeleton(data);bounds=(()=>{skeleton.setToSetupPose();skeleton.updateWorldTransform();const offset=new spine.Vector2(),size=new spine.Vector2();skeleton.getBounds(offset,size,[]);return{offset,size}})();
+   const sd=new spine.AnimationStateData(data);state=new spine.AnimationState(sd);const names=data.animations.map(a=>a.name);const initial=names.includes('Idle')?'Idle':names.includes('Normal')?'Normal':names[0];if(initial)state.setAnimation(0,initial,true);
+   ready=true;loading=false;last=performance.now()/1000;render();
+  }catch(e){failed=true;loading=false;console.error('Cecilia Spine parse failed:',e)}
+ }
+ function render(){if(!ready||!canvas?.isConnected)return;const w=Math.max(1,canvas.clientWidth),h=Math.max(1,canvas.clientHeight);if(canvas.width!==w*devicePixelRatio||canvas.height!==h*devicePixelRatio){canvas.width=Math.round(w*devicePixelRatio);canvas.height=Math.round(h*devicePixelRatio)}
+  const gl=ctx.gl;gl.viewport(0,0,canvas.width,canvas.height);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);
+  const now=performance.now()/1000,delta=Math.min(.05,Math.max(0,now-last));last=now;state.update(delta);state.apply(skeleton);skeleton.updateWorldTransform();
+  const cx=bounds.offset.x+bounds.size.x/2,cy=bounds.offset.y+bounds.size.y/2,scale=Math.min(w/Math.max(bounds.size.x,1),h/Math.max(bounds.size.y,1))*.94,viewW=w/scale,viewH=h/scale;
+  const mvp=new spine.Matrix4();mvp.ortho2d(cx-viewW/2,cy-viewH/2,viewW,viewH);
+  shader.bind();shader.setUniformi(spine.Shader.SAMPLER,0);shader.setUniform4x4f(spine.Shader.MVP_MATRIX,mvp.values);batcher.begin(shader);skeletonRenderer.premultipliedAlpha=true;skeletonRenderer.draw(batcher,skeleton);batcher.end();shader.unbind();
+  frame=requestAnimationFrame(render);
+ }
+ function drawOnce(){if(ready&&!frame)render()}
+ return{mount};
+})();
 function ovr(){const o=$('#ov');if(!sc.ov){o.style.display='none';return}o.style.display='flex';o.className=sc.ov.c;o.innerHTML=sc.ov.t;$('#cur').style.opacity=sc.cur}
 function line(s){$('#ov').style.display='none';sc.ov=null;$('#cho').style.display='none';const nm=$('#nm'),t=$('#tx'),p=s[1]>=0?DB.P[s[1]]:'';nm.style.display=p?'':'none';nm.textContent=p;t.className=s[1]<0||!p?'nar':'';t.innerHTML=s[2];$('#nx').style.display='none';rch();
  const w=[],a=document.createTreeWalker(t,4);let x;while(x=a.nextNode())w.push([x,x.textContent]);const L=w.reduce((q,y)=>q+y[1].length,0);let i=0;w.forEach(y=>y[0].textContent='');
