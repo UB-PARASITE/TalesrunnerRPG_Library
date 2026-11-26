@@ -37,7 +37,7 @@ summary{padding:11px 14px;font-weight:600;cursor:pointer}summary small{color:var
 #chars{position:absolute;inset:0 0 150px 0}
 .ch{position:absolute;bottom:0;transform:translateX(-50%);width:min(30vw,170px);text-align:center;transition:left .4s,opacity .3s,filter .3s;opacity:.55;filter:brightness(.6)}
 .ch.sp{opacity:1;filter:none}
-.ch.spine-ch{width:min(46vw,330px);height:100%;bottom:0;filter:none;opacity:1;pointer-events:none}
+.ch.spine-ch{width:min(46vw,330px);height:100%;bottom:0;filter:none;opacity:1;pointer-events:none;transition:left .4s ease}
 .ch.spine-ch .spine-stage{position:absolute;inset:0;width:100%;height:100%;display:block}
 .ch.spine-ch .nm{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);white-space:nowrap}
 .spine-tag{display:inline-block;margin-left:7px;padding:1px 6px;border-radius:5px;background:#8058b8;color:#fff;font-size:10px;font-weight:600;vertical-align:2px}.ch .fig{height:min(46vh,300px);border-radius:90px 90px 14px 14px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:18px;font-size:46px;box-shadow:0 6px 24px #0008}
@@ -113,7 +113,7 @@ function ex(s){const k=s[0];
  if(k=='Q'){snap(['Q',s]);choice(s);return 1}
  if(k=='B'){sc.bg=s[1];bg()}else if(k=='C'){if(!sc.ch[s[1]])sc.ord.push(s[1]);sc.ch[s[1]]={p:s[2],e:208};rch()}
  else if(k=='X'){delete sc.ch[s[1]];sc.ord=sc.ord.filter(x=>x!=s[1]);rch()}else if(k=='XA'){sc.ch={};sc.ord=[];rch()}
- else if(k=='E'){if(sc.ch[s[1]])sc.ch[s[1]].e=s[2];rch()}else if(k=='M'){if(sc.ch[s[1]]){sc.ch[s[1]].p=s[2];rch()}}
+ else if(k=='E'){if(sc.ch[s[1]])sc.ch[s[1]].e=s[2];rch()}else if(k=='M'){if(sc.ch[s[1]]){sc.ch[s[1]].p=s[2];if(String(s[1])==='25')CeciliaSpine.setPosition(s[2]);else rch()}}
  else if(k=='I'){sc.ic[s[1]]=s[2];rch();setTimeout(()=>{delete sc.ic[s[1]];rch()},1400)}
  else if(k=='K'){sc.cur=s[1];$('#cur').style.opacity=s[1]}else if(k=='G'){sc.bgm=s[1]}
  else if(k=='Z'){sc.ov={c:'l',t:'⚔ 장면 전환\n'+(s[1]||'')};snap(['O']);ovr();pause();return 1}
@@ -143,13 +143,14 @@ const CeciliaSpine=(()=>{
  function render(){if(!ready)return;if(!canvas?.isConnected){frame=requestAnimationFrame(render);return}const w=Math.max(1,canvas.clientWidth),h=Math.max(1,canvas.clientHeight);if(canvas.width!==w*devicePixelRatio||canvas.height!==h*devicePixelRatio){canvas.width=Math.round(w*devicePixelRatio);canvas.height=Math.round(h*devicePixelRatio)}
   const gl=ctx.gl;gl.viewport(0,0,canvas.width,canvas.height);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);
   const now=performance.now()/1000,delta=Math.min(.05,Math.max(0,now-last));last=now;state.update(delta);state.apply(skeleton);skeleton.updateWorldTransform();
-  const cx=bounds.offset.x+bounds.size.x/2,cy=bounds.offset.y+bounds.size.y/2,scale=Math.min(w/Math.max(bounds.size.x,1),h/Math.max(bounds.size.y,1))*.94,viewW=w/scale,viewH=h/scale;
+  const cx=bounds.offset.x+bounds.size.x/2,cy=bounds.offset.y+bounds.size.y/2,scale=Math.min(w/Math.max(bounds.size.x,1),h/Math.max(bounds.size.y,1)),viewW=w/scale,viewH=h/scale;
   const mvp=new spine.Matrix4();mvp.ortho2d(cx-viewW/2,cy-viewH/2,viewW,viewH);
   shader.bind();shader.setUniformi(spine.Shader.SAMPLER,0);shader.setUniform4x4f(spine.Shader.MVP_MATRIX,mvp.values);batcher.begin(shader);skeletonRenderer.premultipliedAlpha=true;skeletonRenderer.draw(batcher,skeleton);batcher.end();shader.unbind();
   frame=requestAnimationFrame(render);
  }
  function drawOnce(){if(ready&&!frame)render()}
- return{mount};
+ function setPosition(p){if(canvas?.parentElement){canvas.parentElement.style.left=POS[p]||'50%'}}
+ return{mount,setPosition};
 })();
 function ovr(){const o=$('#ov');if(!sc.ov){o.style.display='none';return}o.style.display='flex';o.className=sc.ov.c;o.innerHTML=sc.ov.t;$('#cur').style.opacity=sc.cur}
 function line(s){$('#ov').style.display='none';sc.ov=null;$('#cho').style.display='none';const nm=$('#nm'),t=$('#tx'),p=s[1]>=0?DB.P[s[1]]:'';nm.style.display=p?'':'none';nm.textContent=p;t.className=s[1]<0||!p?'nar':'';t.innerHTML=s[2];$('#nx').style.display='none';rch();
