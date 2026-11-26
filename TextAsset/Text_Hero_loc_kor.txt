@@ -1,0 +1,272 @@
+Hero_Name_0000	초원
+Hero_Name_0001	헬리아
+Hero_Name_0002	루나
+Hero_Name_0003	엘린
+Hero_Name_0004	퀸 하트
+Hero_Name_0005	밍밍
+Hero_Name_0006	앨리스
+Hero_Name_0007	빅보
+Hero_Name_0008	라라
+Hero_Name_0009	엘림스 스마일
+Hero_Name_0010	제인 도우
+Hero_Name_0011	피노키오
+Hero_Name_0012	리나
+Hero_Name_0013	스칼렛
+Hero_Name_0014	그레텔
+Hero_Name_0015	아라모드
+Hero_Name_0016	헨젤
+Hero_Name_0017	체셔
+Hero_Name_0018	플레어
+Hero_Name_0019	브라이어 로즈
+Hero_Name_0020	멜피
+Hero_Name_0021	제페토
+Hero_Name_0022	DnD
+Hero_Name_0023	사샤
+Hero_Name_0024	드로셀마이어
+Hero_Name_0025	세실리아
+Hero_Name_0026	마리
+Hero_Name_0027	디에터
+Hero_Name_0028	아이르
+Hero_Name_0029	플로렌스
+Hero_Name_0030	베라
+Hero_Name_0031	키스멧
+Hero_Name_0032	마녀 세실리아
+Hero_Name_0033	하루
+Hero_Name_0034	카이
+Hero_Name_0035	루시안
+Hero_Name_0036	레일라
+Hero_Name_0037	막시밀리안
+Hero_Name_0038	올리비에
+Hero_Name_0039	오필리아
+Hero_Name_0040	아나스타샤
+Hero_Name_0041	피치 크러시
+Hero_Name_0042	자르갈
+Hero_Name_0043	닉스
+Hero_Name_0044	사야
+Hero_Name_0045	바다
+Hero_Name_0046	릴리스
+Hero_Name_0047	아크 포리프
+Hero_Name_0048	모니카
+Hero_Name_0049	메이메이
+Hero_Name_0050	하랑
+Hero_Name_0051	클로드
+Hero_Name_0052	러프
+Hero_Name_0053	카인
+Hero_Name_0054	미호
+Hero_Name_0055	라리사
+Hero_Name_0056	아멜리
+Hero_Name_0057	연오
+Hero_Name_0058	미하일
+Hero_Name_0059	시호
+Hero_Name_0060	살라딘
+Hero_Name_0061	셰라자드
+Hero_Name_0062	크리스티앙
+Hero_Name_0063	죠안
+Hero_Name_0064	악마 카인
+Hero_Name_0065	소피
+Hero_Name_0066	타브리스
+Hero_Name_0067	티나
+Hero_FullName_0000	강초원
+Hero_FullName_0001	헬리아 볼드윈
+Hero_FullName_0002	루나 플라키디아
+Hero_FullName_0003	엘린 하트
+Hero_FullName_0004	퀸 오브 하트
+Hero_FullName_0005	리우 밍밍
+Hero_FullName_0006	앨리스 플레전스
+Hero_FullName_0007	빅보 시우바
+Hero_FullName_0008	라라 브리에 드 앙리
+Hero_FullName_0009	엘림스 스마일
+Hero_FullName_0010	제인 도우
+Hero_FullName_0011	피노키오 폴렌디나
+Hero_FullName_0012	리나 미쉘
+Hero_FullName_0013	스칼렛
+Hero_FullName_0014	그레텔 메츨러
+Hero_FullName_0015	아라모드 쇼콜라
+Hero_FullName_0016	헨젤 메츨러
+Hero_FullName_0017	체셔 캣
+Hero_FullName_0018	플레어 그리디어
+Hero_FullName_0019	브라이어 로즈
+Hero_FullName_0020	멜피 데크레센트
+Hero_FullName_0021	제페토 폴렌디나
+Hero_FullName_0022	DnD
+Hero_FullName_0023	사샤 슈크렘
+Hero_FullName_0024	애쉬 드로셀마이어
+Hero_FullName_0025	세실리아
+Hero_FullName_0026	마리 슈탈바움
+Hero_FullName_0027	킹 디에터
+Hero_FullName_0028	아이르 트라이튼
+Hero_FullName_0029	플로렌스 블룸
+Hero_FullName_0030	베라 바피르
+Hero_FullName_0031	키스멧
+Hero_FullName_0032	마녀 세실리아
+Hero_FullName_0033	하루
+Hero_FullName_0034	카이 로벨
+Hero_FullName_0035	루시안 화이트
+Hero_FullName_0036	레일라 섀도우
+Hero_FullName_0037	막시밀리안 리온
+Hero_FullName_0038	올리비에 브리앙
+Hero_FullName_0039	오필리아 록스버그
+Hero_FullName_0040	아나스타샤 아냐
+Hero_FullName_0041	피치 크러시
+Hero_FullName_0042	자르갈
+Hero_FullName_0043	닉스
+Hero_FullName_0044	오가타 사야
+Hero_FullName_0045	바다
+Hero_FullName_0046	릴리스
+Hero_FullName_0047	아크 포리프
+Hero_FullName_0048	모니카 클레멘스
+Hero_FullName_0049	메이메이
+Hero_FullName_0050	하랑
+Hero_FullName_0051	클로드
+Hero_FullName_0052	러프
+Hero_FullName_0053	카인 레인울프
+Hero_FullName_0054	미호
+Hero_FullName_0055	라리사
+Hero_FullName_0056	아멜리 아모르
+Hero_FullName_0057	연오
+Hero_FullName_0058	미하일 버츄스
+Hero_FullName_0059	시호
+Hero_FullName_0060	살라딘
+Hero_FullName_0061	셰라자드
+Hero_FullName_0062	크리스티앙 데 메디치
+Hero_FullName_0063	죠안 카트라이트
+Hero_FullName_0064	악마 카인
+Hero_FullName_0065	소피
+Hero_FullName_0066	타브리스 신
+Hero_FullName_0067	티나 드 플뢰르
+Hero_Cv_0000	안영미
+Hero_Cv_0001	방시우
+Hero_Cv_0002	김보나
+Hero_Cv_0003	이소은
+Hero_Cv_0004	이주희
+Hero_Cv_0005	김필진
+Hero_Cv_0006	방시우
+Hero_Cv_0007	김광국
+Hero_Cv_0008	장예나
+Hero_Cv_0009	황창영
+Hero_Cv_0010	정유정
+Hero_Cv_0011	장예나
+Hero_Cv_0012	이주희
+Hero_Cv_0013	김보나
+Hero_Cv_0014	정유정
+Hero_Cv_0015	장미
+Hero_Cv_0016	안영미
+Hero_Cv_0017	정주원
+Hero_Cv_0018	김가령
+Hero_Cv_0019	김현지
+Hero_Cv_0020	김가령
+Hero_Cv_0021	방시우
+Hero_Cv_0022	이동은
+Hero_Cv_0023	이새아
+Hero_Cv_0024	홍범기
+Hero_Cv_0025	이소은
+Hero_Cv_0026	김하루
+Hero_Cv_0027	양정화
+Hero_Cv_0028	김하루
+Hero_Cv_0029	이보희
+Hero_Cv_0030	이계윤
+Hero_Cv_0031	이은조
+Hero_Cv_0032	이소은
+Hero_Cv_0033	홍범기
+Hero_Cv_0034	신용우
+Hero_Cv_0035	이경태
+Hero_Cv_0036	김하루
+Hero_Cv_0037	신용우
+Hero_Cv_0038	김보나
+Hero_Cv_0039	안영미
+Hero_Cv_0040	장미
+Hero_Cv_0041	김현지
+Hero_Cv_0042	이새아
+Hero_Cv_0043	김성희
+Hero_Cv_0044	박신희
+Hero_Cv_0045	양정화
+Hero_Cv_0046	방연지
+Hero_Cv_0047	정재헌
+Hero_Cv_0048	이세레나
+Hero_Cv_0049	박고운
+Hero_Cv_0050	정재헌
+Hero_Cv_0051	김신우
+Hero_Cv_0052	김혜성
+Hero_Cv_0053	김선혜
+Hero_Cv_0054	우정신
+Hero_Cv_0055	오로아
+Hero_Cv_0056	사문영
+Hero_Cv_0057	강시현
+Hero_Cv_0058	류승곤
+Hero_Cv_0059	김지율
+Hero_Cv_0060	신용우
+Hero_Cv_0061	김보나
+Hero_Cv_0062	강수진
+Hero_Cv_0063	이계윤
+Hero_Cv_0064	김선혜
+Hero_Cv_0065	강은애
+Hero_Cv_0066	표영재
+Hero_Cv_0067	김윤채
+Hero_Class_0000	육상선수
+Hero_Class_0001	테일즈나이츠 단장
+Hero_Class_0002	테일즈나이츠 부단장
+Hero_Class_0003	수석 연금술사
+Hero_Class_0004	하트의 여왕
+Hero_Class_0005	액션배우
+Hero_Class_0006	정의의 용사
+Hero_Class_0007	수의사
+Hero_Class_0008	동화나라 여왕
+Hero_Class_0009	아티팩터
+Hero_Class_0010	늑대 사냥꾼
+Hero_Class_0011	제페토의 걸작
+Hero_Class_0012	발레리나
+Hero_Class_0013	차기 족장
+Hero_Class_0014	파티셰(장래희망)
+Hero_Class_0015	디저트의 마녀
+Hero_Class_0016	파티셰(장래희망)
+Hero_Class_0017	정체불명 고양이
+Hero_Class_0018	서커스 단장
+Hero_Class_0019	잠자는 공주
+Hero_Class_0020	악몽의 요정
+Hero_Class_0021	인형공방의 주인
+Hero_Class_0022	모두의 아이돌
+Hero_Class_0023	빨간 두건
+Hero_Class_0024	호두까기 병정
+Hero_Class_0025	기억을 잃은 소녀
+Hero_Class_0026	꿈꾸는 소녀
+Hero_Class_0027	생쥐대왕
+Hero_Class_0028	인어공주
+Hero_Class_0029	정원사
+Hero_Class_0030	고고학자
+Hero_Class_0031	예언가
+Hero_Class_0032	겨울나무 숲의 마녀
+Hero_Class_0033	어둠의 군주
+Hero_Class_0034	디스토셔너
+Hero_Class_0035	영원의 고통
+Hero_Class_0036	왕실 메이드
+Hero_Class_0037	백작
+Hero_Class_0038	레오네나이츠 단장
+Hero_Class_0039	차석 연금술사
+Hero_Class_0040	설산의 조사대원
+Hero_Class_0041	프로게이머
+Hero_Class_0042	늑대 최후의 일족
+Hero_Class_0043	테일즈노바 용병
+Hero_Class_0044	검객
+Hero_Class_0045	서핑 선수
+Hero_Class_0046	서큐버스
+Hero_Class_0047	용사
+Hero_Class_0048	천재 화가
+Hero_Class_0049	만취한 강시
+Hero_Class_0050	저승차사
+Hero_Class_0051	괴도 마술사
+Hero_Class_0052	바이크 레이서
+Hero_Class_0053	동화나라 보좌관
+Hero_Class_0054	태양술사
+Hero_Class_0055	바다의 소원
+Hero_Class_0056	기상술사
+Hero_Class_0057	성주신
+Hero_Class_0058	엔젤시티 대주교
+Hero_Class_0059	차기 수호신장
+Hero_Class_0060	시반 슈미터 단장
+Hero_Class_0061	무타나비의 성녀
+Hero_Class_0062	ISS 비밀요원
+Hero_Class_0063	임페리얼 발키리
+Hero_Class_0064	반전의 악마
+Hero_Class_0065	음유시인
+Hero_Class_0066	속죄의 천사
+Hero_Class_0067	백합의 기사

@@ -1,0 +1,20 @@
+Chapter_Name_0000	없음
+Chapter_Name_0001	헨젤과 그레텔
+Chapter_Name_0002	이상한 나라의 앨리스
+Chapter_Name_0003	피노키오
+Chapter_Name_0004	잠자는 숲속의 공주
+Chapter_Name_0005	빨간 두건
+Chapter_Name_0006	호두까기 인형
+Chapter_Name_0007	인어 공주
+Chapter_Name_0008	겨울나무 숲에는 꽃이 핀다 (상)
+Chapter_Name_0009	겨울나무 숲에는 꽃이 핀다 (하)
+Chapter_Description_0000	없음
+Chapter_Description_0001	1. 헨젤과 그레텔
+Chapter_Description_0002	2. 이상한 나라의 앨리스
+Chapter_Description_0003	3. 피노키오
+Chapter_Description_0004	4. 잠자는 숲속의 공주
+Chapter_Description_0005	5. 빨간 두건
+Chapter_Description_0006	6. 호두까기 인형
+Chapter_Description_0007	7. 인어 공주
+Chapter_Description_0008	8. 겨울나무 숲에는 꽃이 핀다 (상)
+Chapter_Description_0009	9. 겨울나무 숲에는 꽃이 핀다 (하)

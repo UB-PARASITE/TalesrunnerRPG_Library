@@ -1,0 +1,396 @@
+Portrait_Name_2000	작가
+Portrait_Name_3000	???
+Portrait_Name_3001	아티팩트
+Portrait_Name_3002	에프라트
+Portrait_Name_3003	트럼프 병사
+Portrait_Name_3004	트럼프 병사 2
+Portrait_Name_3005	트럼프 병사 3
+Portrait_Name_3006	너굴씨
+Portrait_Name_3007	헨젤의 아버지
+Portrait_Name_3008	헨젤의 어머니
+Portrait_Name_3009	에프라트
+Portrait_Name_3010	스페이드
+Portrait_Name_3011	아주머니
+Portrait_Name_3012	아저씨
+Portrait_Name_3013	해머군
+Portrait_Name_3014	불량배 너굴씨 1
+Portrait_Name_3015	불량배 너굴씨 2
+Portrait_Name_3016	불량배 듀오
+Portrait_Name_3017	마을 상인
+Portrait_Name_3018	곰인형
+Portrait_Name_3019	토끼인형
+Portrait_Name_3020	미미
+Portrait_Name_3021	피피
+Portrait_Name_3022	미미&피피
+Portrait_Name_3023	피노키오?
+Portrait_Name_3024	피노키오 Mk.2
+Portrait_Name_3025	병사
+Portrait_Name_3026	병사1
+Portrait_Name_3027	병사2
+Portrait_Name_3028	병사3
+Portrait_Name_3029	날카로운 목소리
+Portrait_Name_3030	속삭이는 목소리
+Portrait_Name_3031	단호한 목소리
+Portrait_Name_3032	검은 양 1
+Portrait_Name_3033	검은 양 2
+Portrait_Name_3034	검은 양 3
+Portrait_Name_3035	검은 양들
+Portrait_Name_3036	왕
+Portrait_Name_3037	어린 로즈
+Portrait_Name_3038	병사들
+Portrait_Name_3039	라펠
+Portrait_Name_3040	마을 주민
+Portrait_Name_3041	너굴씨 2
+Portrait_Name_3042	너굴씨 3
+Portrait_Name_3043	자르갈
+Portrait_Name_3044	할머니?
+Portrait_Name_3045	사샤의 할머니
+Portrait_Name_3046	검은 병사
+Portrait_Name_3047	생쥐 대왕
+Portrait_Name_3048	소녀
+Portrait_Name_3049	생쥐?
+Portrait_Name_3050	생쥐 병사
+Portrait_Name_3051	생쥐 병사2
+Portrait_Name_3052	생쥐 병사3
+Portrait_Name_3053	호두까기 병정 1
+Portrait_Name_3054	호두까기 병정 2
+Portrait_Name_3055	호두까기 병정 3
+Portrait_Name_3056	생쥐군
+Portrait_Name_3057	호두까기군
+Portrait_Name_3058	대부
+Portrait_Name_3059	에프라트
+Portrait_Name_3060	남자
+Portrait_Name_3061	인어?
+Portrait_Name_3062	서핑 너굴씨 A
+Portrait_Name_3063	서핑 너굴씨 B
+Portrait_Name_3064	헨젤&그레텔
+Portrait_Name_3065	도너찌
+Portrait_Name_3066	병사의 목소리
+Portrait_Name_3067	왕자
+Portrait_Name_3068	에드워드
+Portrait_Name_3069	레이나
+Portrait_Name_3070	청년의 목소리
+Portrait_Name_3071	신하
+Portrait_Name_3072	귀부인
+Portrait_Name_3073	신사
+Portrait_Name_3074	귀족 청년
+Portrait_Name_3075	귀족 A
+Portrait_Name_3076	귀족 B
+Portrait_Name_3077	귀족 C
+Portrait_Name_3078	경비병
+Portrait_Name_3079	아버지
+Portrait_Name_3080	마을 사람 A
+Portrait_Name_3081	마을 사람 B
+Portrait_Name_3082	마을 사람 C
+Portrait_Name_3083	소녀
+Portrait_Name_3084	세르네쥬 A
+Portrait_Name_3085	세르네쥬 B
+Portrait_Name_3086	눈의 괴물
+Portrait_Name_3087	세르네쥬
+Portrait_Name_3088	나스챠
+Portrait_Name_3089	봄의 정령
+Portrait_Name_3090	관중
+Portrait_Name_3091	할머니 손님
+Portrait_Name_3092	할아버지 손님
+Portrait_Name_3093	남자 손님
+Portrait_Name_3094	손님들
+Portrait_Name_3095	어린이 손님
+Portrait_Name_3096	여자 손님
+Portrait_Name_3097	피치 MK-2
+Portrait_Name_3098	도적단
+Portrait_Name_3099	기사들
+Portrait_Name_3100	기사 A
+Portrait_Name_3101	기사 B
+Portrait_Name_3102	빨강 아멍이
+Portrait_Name_3103	파랑 아멍이
+Portrait_Name_3104	초록 아멍이
+Portrait_Name_3105	만타댕댕
+Portrait_Name_3106	맥스
+Portrait_Name_3107	고양이
+Portrait_Name_3108	주민 1
+Portrait_Name_3109	주민 2
+Portrait_Name_3110	루아 세르네쥬
+Portrait_Name_3111	어린 그레텔
+Portrait_Name_3112	어린 헨젤
+Portrait_Name_3113	아냐의 어머니
+Portrait_Name_3114	둥가
+Portrait_Name_3115	시선
+Portrait_Name_3116	어둠의 형상
+Portrait_Name_3117	J
+Portrait_Name_3118	닥터헬
+Portrait_Name_3119	이든
+Portrait_Name_3120	노인
+Portrait_Name_3121	제이
+Portrait_Name_3122	소원의 돌
+Portrait_Name_3123	주민들
+Portrait_Name_3124	악마카인
+Portrait_Name_3125	비행선원
+Portrait_Name_3126	에프라트의 목소리
+Portrait_Name_3127	하루?
+Portrait_Name_3128	인형?
+Portrait_Name_3129	기사단?
+Portrait_Name_3130	물고기?
+Portrait_Name_3131	영혼
+Portrait_Name_3132	크롬웰 바피르
+Portrait_Name_3133	소녀
+Portrait_Name_3134	쥬쥬
+Portrait_Name_3135	박쥐?
+Portrait_Name_3136	왕눈이
+Portrait_Name_3137	박쥐2?
+Portrait_Name_3138	왕눈이&쥬쥬
+Portrait_Name_3139	보육원 어린이 1
+Portrait_Name_3140	보육원 어린이 2
+Portrait_Name_3141	엠마
+Portrait_Name_3142	필립
+Portrait_Name_3143	라라&아나스타샤
+Portrait_Name_3144	언더월드 주민 1
+Portrait_Name_3145	언더월드 주민 2
+Portrait_Name_3146	점원
+Portrait_Name_3147	도비
+Portrait_Name_3148	꼬비
+Portrait_Name_3149	도비&꼬비
+Portrait_Name_3150	남자 목소리
+Portrait_Name_3151	여자 목소리
+Portrait_Name_3152	마을 주민
+Portrait_Name_3153	도깨비에 홀린 주민
+Portrait_Name_3154	도깨비에 홀린 주민2
+Portrait_Name_3155	주민들?
+Portrait_Name_3156	과거의 연오
+Portrait_Name_3157	옛 친구
+Portrait_Name_3158	야광 도깨비
+Portrait_Name_3159	야광 꼬깨비
+Portrait_Name_3160	도깨비들
+Portrait_Name_3161	강시?
+Portrait_Name_3162	트럼프 병사
+Portrait_Name_3163	사제
+Portrait_Name_3164	사제 2
+Portrait_Name_3165	사제들
+Portrait_Name_3166	천왕
+Portrait_Name_3167	호선
+Portrait_Name_3168	운디네 1
+Portrait_Name_3169	운디네 2
+Portrait_Name_3170	수인족 할머니
+Portrait_Name_3171	수인족 할아버지
+Portrait_Name_3172	천년호
+Portrait_Name_3173	수인족 주민
+Portrait_Name_3174	판도라 너굴씨 1
+Portrait_Name_3175	판도라 너굴씨 2
+Portrait_Name_3176	미호&시호
+Portrait_Name_3177	하얀 새?
+Portrait_Name_3178	초원&작가
+Portrait_Name_3179	시반 슈미터 용병
+Portrait_Name_3180	얀 지슈카
+Portrait_Name_3181	필립 팬드래건
+Portrait_Name_3182	철가면
+Portrait_Name_3183	남자의 목소리
+Portrait_Name_3184	여자의 목소리
+Portrait_Name_3185	나스챠의 목소리
+Portrait_Name_3186	어린 세실리아
+Portrait_Name_3187	철가면
+Portrait_Name_3188	크리스티앙(임시)
+Portrait_Name_3189	레인울프 원로 A
+Portrait_Name_3190	레인울프 원로 B
+Portrait_Name_3191	레인울프 가주
+Portrait_Name_3192	음유시인?
+Portrait_Name_3193	나나
+Portrait_Name_3194	촌장
+Portrait_Name_3195	베니쉬[가명]
+Portrait_Name_3196	신부?
+Portrait_FullName_2000	작가
+Portrait_FullName_3000	???
+Portrait_FullName_3001	아티팩트
+Portrait_FullName_3002	에프라트
+Portrait_FullName_3003	트럼프 병사
+Portrait_FullName_3004	트럼프 병사 2
+Portrait_FullName_3005	트럼프 병사 3
+Portrait_FullName_3006	너굴씨
+Portrait_FullName_3007	헨젤의 아버지
+Portrait_FullName_3008	헨젤의 어머니
+Portrait_FullName_3009	에프라트
+Portrait_FullName_3010	스페이드
+Portrait_FullName_3011	아주머니
+Portrait_FullName_3012	아저씨
+Portrait_FullName_3013	해머군
+Portrait_FullName_3014	불량배 너굴씨 1
+Portrait_FullName_3015	불량배 너굴씨 2
+Portrait_FullName_3016	불량배 듀오
+Portrait_FullName_3017	마을 상인
+Portrait_FullName_3018	곰인형
+Portrait_FullName_3019	토끼인형
+Portrait_FullName_3020	미미
+Portrait_FullName_3021	피피
+Portrait_FullName_3022	미미&피피
+Portrait_FullName_3023	피노키오?
+Portrait_FullName_3024	피노키오 Mk.2
+Portrait_FullName_3025	병사
+Portrait_FullName_3026	병사1
+Portrait_FullName_3027	병사2
+Portrait_FullName_3028	병사3
+Portrait_FullName_3029	날카로운 목소리
+Portrait_FullName_3030	속삭이는 목소리
+Portrait_FullName_3031	단호한 목소리
+Portrait_FullName_3032	검은 양 1
+Portrait_FullName_3033	검은 양 2
+Portrait_FullName_3034	검은 양 3
+Portrait_FullName_3035	검은 양들
+Portrait_FullName_3036	왕
+Portrait_FullName_3037	어린 로즈
+Portrait_FullName_3038	병사들
+Portrait_FullName_3039	라펠
+Portrait_FullName_3040	마을 주민
+Portrait_FullName_3041	너굴씨 2
+Portrait_FullName_3042	너굴씨 3
+Portrait_FullName_3043	자르갈
+Portrait_FullName_3044	할머니?
+Portrait_FullName_3045	사샤의 할머니
+Portrait_FullName_3046	검은 병사
+Portrait_FullName_3047	생쥐 대왕
+Portrait_FullName_3048	소녀
+Portrait_FullName_3049	생쥐?
+Portrait_FullName_3050	생쥐 병사
+Portrait_FullName_3051	생쥐 병사2
+Portrait_FullName_3052	생쥐 병사3
+Portrait_FullName_3053	호두까기 병정 1
+Portrait_FullName_3054	호두까기 병정 2
+Portrait_FullName_3055	호두까기 병정 3
+Portrait_FullName_3056	생쥐군
+Portrait_FullName_3057	호두까기군
+Portrait_FullName_3058	대부
+Portrait_FullName_3059	에프라트
+Portrait_FullName_3060	남자
+Portrait_FullName_3061	인어?
+Portrait_FullName_3062	서핑 너굴씨 A
+Portrait_FullName_3063	서핑 너굴씨 B
+Portrait_FullName_3064	헨젤&그레텔
+Portrait_FullName_3065	도너찌
+Portrait_FullName_3066	병사의 목소리
+Portrait_FullName_3067	왕자
+Portrait_FullName_3068	에드워드
+Portrait_FullName_3069	레이나
+Portrait_FullName_3070	청년의 목소리
+Portrait_FullName_3071	신하
+Portrait_FullName_3072	귀부인
+Portrait_FullName_3073	신사
+Portrait_FullName_3074	귀족 청년
+Portrait_FullName_3075	귀족 A
+Portrait_FullName_3076	귀족 B
+Portrait_FullName_3077	귀족 C
+Portrait_FullName_3078	경비병
+Portrait_FullName_3079	아버지
+Portrait_FullName_3080	마을 사람 A
+Portrait_FullName_3081	마을 사람 B
+Portrait_FullName_3082	마을 사람 C
+Portrait_FullName_3083	소녀
+Portrait_FullName_3084	세르네쥬 A
+Portrait_FullName_3085	세르네쥬 B
+Portrait_FullName_3086	눈의 괴물
+Portrait_FullName_3087	세르네쥬
+Portrait_FullName_3088	나스챠
+Portrait_FullName_3089	봄의 정령
+Portrait_FullName_3090	관중
+Portrait_FullName_3091	할머니 손님
+Portrait_FullName_3092	할아버지 손님
+Portrait_FullName_3093	남자 손님
+Portrait_FullName_3094	손님들
+Portrait_FullName_3095	어린이 손님
+Portrait_FullName_3096	여자 손님
+Portrait_FullName_3097	피치 MK-2
+Portrait_FullName_3098	도적단
+Portrait_FullName_3099	기사들
+Portrait_FullName_3100	기사 A
+Portrait_FullName_3101	기사 B
+Portrait_FullName_3102	빨강 아멍이
+Portrait_FullName_3103	파랑 아멍이
+Portrait_FullName_3104	초록 아멍이
+Portrait_FullName_3105	만타댕댕
+Portrait_FullName_3106	맥스
+Portrait_FullName_3107	고양이
+Portrait_FullName_3108	주민 1
+Portrait_FullName_3109	주민 2
+Portrait_FullName_3110	루아 세르네쥬
+Portrait_FullName_3111	어린 그레텔
+Portrait_FullName_3112	어린 헨젤
+Portrait_FullName_3113	아냐의 어머니
+Portrait_FullName_3114	둥가
+Portrait_FullName_3115	시선
+Portrait_FullName_3116	어둠의 형상
+Portrait_FullName_3117	J
+Portrait_FullName_3118	닥터헬
+Portrait_FullName_3119	이든
+Portrait_FullName_3120	노인
+Portrait_FullName_3121	제이
+Portrait_FullName_3122	소원의 돌
+Portrait_FullName_3123	주민들
+Portrait_FullName_3124	악마카인
+Portrait_FullName_3125	비행선원
+Portrait_FullName_3126	에프라트의 목소리
+Portrait_FullName_3127	하루?
+Portrait_FullName_3128	인형?
+Portrait_FullName_3129	기사단?
+Portrait_FullName_3130	물고기?
+Portrait_FullName_3131	영혼
+Portrait_FullName_3132	크롬웰 바피르
+Portrait_FullName_3133	소녀
+Portrait_FullName_3134	쥬쥬
+Portrait_FullName_3135	박쥐?
+Portrait_FullName_3136	왕눈이
+Portrait_FullName_3137	박쥐2?
+Portrait_FullName_3138	왕눈이&쥬쥬
+Portrait_FullName_3139	보육원 어린이 1
+Portrait_FullName_3140	보육원 어린이 2
+Portrait_FullName_3141	엠마
+Portrait_FullName_3142	필립
+Portrait_FullName_3143	라라&아나스타샤
+Portrait_FullName_3144	언더월드 주민 1
+Portrait_FullName_3145	언더월드 주민 2
+Portrait_FullName_3146	점원
+Portrait_FullName_3147	도비
+Portrait_FullName_3148	꼬비
+Portrait_FullName_3149	도비&꼬비
+Portrait_FullName_3150	남자 목소리
+Portrait_FullName_3151	여자 목소리
+Portrait_FullName_3152	마을 주민
+Portrait_FullName_3153	도깨비에 홀린 주민
+Portrait_FullName_3154	도깨비에 홀린 주민2
+Portrait_FullName_3155	주민들?
+Portrait_FullName_3156	과거의 연오
+Portrait_FullName_3157	옛 친구
+Portrait_FullName_3158	야광 도깨비
+Portrait_FullName_3159	야광 꼬깨비
+Portrait_FullName_3160	도깨비들
+Portrait_FullName_3161	강시?
+Portrait_FullName_3162	트럼프 병사
+Portrait_FullName_3163	사제
+Portrait_FullName_3164	사제 2
+Portrait_FullName_3165	사제들
+Portrait_FullName_3166	천왕
+Portrait_FullName_3167	호선
+Portrait_FullName_3168	운디네
+Portrait_FullName_3169	운디네
+Portrait_FullName_3170	수인족 할머니
+Portrait_FullName_3171	수인족 할아버지
+Portrait_FullName_3172	천년호
+Portrait_FullName_3173	수인족 주민
+Portrait_FullName_3174	판도라 너굴씨 1
+Portrait_FullName_3175	판도라 너굴씨 2
+Portrait_FullName_3176	미호&시호
+Portrait_FullName_3177	하얀 새?
+Portrait_FullName_3178	초원&작가
+Portrait_FullName_3179	시반 슈미터 용병
+Portrait_FullName_3180	얀 지슈카
+Portrait_FullName_3181	필립 팬드래건
+Portrait_FullName_3182	철가면
+Portrait_FullName_3183	남자의 목소리
+Portrait_FullName_3184	여자의 목소리
+Portrait_FullName_3185	나스챠의 목소리
+Portrait_FullName_3186	어린 세실리아
+Portrait_FullName_3187	철가면
+Portrait_FullName_3188	크리스티앙(임시)
+Portrait_FullName_3189	레인울프 원로 A
+Portrait_FullName_3190	레인울프 원로 B
+Portrait_FullName_3191	레인울프 가주
+Portrait_FullName_3192	음유시인?
+Portrait_FullName_3193	나나
+Portrait_FullName_3194	촌장
+Portrait_FullName_3195	베니쉬[가명]
+Portrait_FullName_3196	신부?

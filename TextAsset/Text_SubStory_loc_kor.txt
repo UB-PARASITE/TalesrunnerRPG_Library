@@ -1,0 +1,14 @@
+SubStory_Name_0001	바다 이벤트
+SubStory_Name_0002	세상에서 가장 따뜻한 겨울을 위하여
+SubStory_Name_0003	새해를 비추는 등불처럼
+SubStory_Name_0004	여우별에 던져진 예고장
+SubStory_Name_0005	창세기전:P1 with 동화나라
+SubStory_Name_0006	창세기전:P2 with 동화나라
+SubStory_Name_0007	용사를 노래하는 파티
+SubStory_Description_0001	바다 이벤트 A 내용 설명
+SubStory_Description_0002	세상에서 가장 따뜻한 겨울을 위하여
+SubStory_Description_0003	새해를 비추는 등불처럼
+SubStory_Description_0004	여우별에 던져진 예고장
+SubStory_Description_0005	창세기전:P1 with 동화나라
+SubStory_Description_0006	창세기전:P2 with 동화나라
+SubStory_Description_0007	용사를 노래하는 파티
