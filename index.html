@@ -39,7 +39,7 @@ summary{padding:11px 14px;font-weight:600;cursor:pointer}summary small{color:var
 .ch.sp{opacity:1;filter:none}
 .ch.spine-ch{width:min(140vw,1000px);height:calc(100% + 150px);bottom:-150px;filter:none;opacity:1;pointer-events:none;transition:none}
 .ch.spine-ch .spine-stage{position:absolute;inset:0;width:100%;height:100%;display:block}
-.ch.spine-ch .nm{position:absolute;bottom:154px;left:50%;transform:translateX(calc(-50% + var(--spine-shift-x,0px)));white-space:nowrap}
+.ch.spine-ch .nm{position:absolute;bottom:154px;left:50%;transform:translateX(-50%);white-space:nowrap}
 .spine-tag{display:inline-block;margin-left:7px;padding:1px 6px;border-radius:5px;background:#8058b8;color:#fff;font-size:10px;font-weight:600;vertical-align:2px}.ch .fig{height:min(46vh,300px);border-radius:90px 90px 14px 14px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:18px;font-size:46px;box-shadow:0 6px 24px #0008}
 .ch .em{font-size:38px;line-height:1.1}.ch .nm{font-size:13px;margin-top:6px;background:#0009;border-radius:8px;display:inline-block;padding:1px 8px}
 .ch .ic{position:absolute;top:-6px;right:6px;font-size:30px;animation:pop .5s}
@@ -147,9 +147,7 @@ const CeciliaSpine=(()=>{
   const liveOk=frameSize.x>0&&frameSize.y>0,minX=liveOk?Math.min(bounds.offset.x,frameOffset.x):bounds.offset.x,maxX=liveOk?Math.max(bounds.offset.x+bounds.size.x,frameOffset.x+frameSize.x):bounds.offset.x+bounds.size.x,minY=liveOk?Math.min(bounds.offset.y,frameOffset.y):bounds.offset.y,maxY=liveOk?Math.max(bounds.offset.y+bounds.size.y,frameOffset.y+frameSize.y):bounds.offset.y+bounds.size.y,boxW=Math.max(1,maxX-minX),boxH=Math.max(1,maxY-minY),cx=(minX+maxX)/2,visibleH=Math.max(1,h-150),referenceW=Math.min(window.innerWidth*1.12,800);
   if(!fixedScale)fixedScale=Math.min((referenceW/1.6)/boxW,visibleH/boxH)*1.12;
   const scale=fixedScale,viewW=w/scale,viewH=h/scale,topY=maxY;
-  const host=canvas.parentElement,stage=host?.parentElement;let cameraCx=cx,shiftX=0;
-  if(host&&stage){const stageRect=stage.getBoundingClientRect(),hostRect=host.getBoundingClientRect(),half=Math.min(boxW*scale/2,stageRect.width/2),desired=hostRect.left+hostRect.width/2,target=Math.max(stageRect.left+half,Math.min(stageRect.right-half,desired));shiftX=target-desired;cameraCx=cx-shiftX/scale;host.style.setProperty('--spine-shift-x',shiftX+'px')}
-  const mvp=new spine.Matrix4();mvp.ortho2d(cameraCx-viewW/2,topY-viewH,viewW,viewH);
+  const mvp=new spine.Matrix4();mvp.ortho2d(cx-viewW/2,topY-viewH,viewW,viewH);
   shader.bind();shader.setUniformi(spine.Shader.SAMPLER,0);shader.setUniform4x4f(spine.Shader.MVP_MATRIX,mvp.values);batcher.begin(shader);skeletonRenderer.premultipliedAlpha=true;skeletonRenderer.draw(batcher,skeleton);batcher.end();shader.unbind();
   frame=requestAnimationFrame(render);
  }
