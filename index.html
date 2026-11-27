@@ -42,8 +42,6 @@ summary{padding:11px 14px;font-weight:600;cursor:pointer}summary small{color:var
 .ch.spine-ch .nm{position:absolute;bottom:154px;left:50%;transform:translateX(-50%);white-space:nowrap}
 .spine-tag{display:inline-block;margin-left:7px;padding:1px 6px;border-radius:5px;background:#8058b8;color:#fff;font-size:10px;font-weight:600;vertical-align:2px}.ch .fig{height:min(46vh,300px);border-radius:90px 90px 14px 14px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:18px;font-size:46px;box-shadow:0 6px 24px #0008}
 .ch .em{font-size:38px;line-height:1.1}.ch .nm{font-size:13px;margin-top:6px;background:#0009;border-radius:8px;display:inline-block;padding:1px 8px}
-.ch .ic{position:absolute;top:50%;left:50%;right:auto;transform:translate(-50%,-50%);width:76px;height:76px;pointer-events:none;animation:pop .5s;z-index:5}.ch.spine-ch .ic{top:calc(50% - 300px);left:50%;transform:translate(-50%,-50%);z-index:5}.ch .ic img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.ch .ic.pish img:first-child{z-index:0}.ch .ic.pish img:last-child{z-index:1;transform:scale(.82)}
-@keyframes pop{from{opacity:0;scale:0}to{opacity:1;scale:1}}
 #ov{position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:24px;font-size:clamp(18px,3.4vw,30px);white-space:pre-line;background:#000a;z-index:2;line-height:1.8}
 #ov.t{font-weight:700;letter-spacing:.06em;font-size:clamp(24px,5vw,44px)}#ov.l{align-items:flex-start;padding-top:20vh;font-size:clamp(18px,3vw,28px)}
 #cur{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none;transition:opacity .5s;z-index:1}
@@ -65,7 +63,7 @@ summary{padding:11px 14px;font-weight:600;cursor:pointer}summary small{color:var
 <div id="dlg"><div id="nm"></div><div id="tx"></div><span id="nx">▼</span></div><div id="cho"></div><div id="lg"></div><div id="end"><div>— 끝 —</div><button id="e1">다음 화</button><button id="e2">목록으로</button></div></div></div>
 <script src="https://cdn.jsdelivr.net/npm/@esotericsoftware/spine-webgl@4.1.24/dist/iife/spine-webgl.js"></script>
 <script>
-const $=s=>document.querySelector(s),E={200:'😐',201:'😠',202:'😑',203:'😢',204:'😊',205:'😡',206:'😭',207:'😄',208:'🙂',209:'😲',210:'🤬'},IC={100:['exclamation','Mark_Exclamation'],101:['question','QuestionMark'],102:['interrobang','Note02'],103:['lightbulb','Notice'],104:['hesitant','Sweat'],105:['annoyed','Annoyed'],106:['flowerbling','Trailer04'],107:['pish','SpeechBubble','Scribble'],108:['frustrated','Trailer03'],109:['gee','Gee'],110:['heart','Heart02'],111:['starbling','StarBling']},POS={L:'20%',C:'50%',R:'80%'};
+const $=s=>document.querySelector(s),E={200:'😐',201:'😠',202:'😑',203:'😢',204:'😊',205:'😡',206:'😭',207:'😄',208:'🙂',209:'😲',210:'🤬'},POS={L:'20%',C:'50%',R:'80%'};
 let DB,cat=0,cur=null,list=[],sc,stack,hist,gender=1,auto=0,skip=0,typ=null,tmr=null,total=1,read={};
 try{read=JSON.parse(localStorage.getItem('rd')||'{}')}catch(e){}
 const strip=h=>h.replace(/<[^>]+>/g,''),hue=s=>{let h=0;for(const c of String(s))h=(h*31+c.charCodeAt(0))%360;return h};
@@ -102,7 +100,7 @@ function search(){const q=$('#q').value.trim().toLowerCase();if(q.length<2)retur
   b.innerHTML=`<small>${ti[sid][0]}</small><br>${s?'<b>'+s+'</b>: ':''}${e(t.slice(Math.max(0,p-30),p))}<mark>${e(t.slice(p,p+q.length))}</mark>${e(t.slice(p+q.length,p+q.length+50))}`;b.onclick=()=>play(sid,ti[sid][1],ti[sid][0]);m.append(b)}
  if(!n)m.innerHTML='<p>검색 결과가 없습니다.</p>'}
 function play(id,l,title){cur=String(id);list=l.map(String);$('#ttl').textContent=title;$('#pl').classList.add('on');start()}
-function start(){clearTimeout(tmr);$('#end').style.display=$('#lg').style.display=$('#cho').style.display='none';sc={bg:'',ch:{},ord:[],ov:null,cur:0,ic:{},spk:null,log:[],bgm:''};stack=[[DB.S[cur].st,0]];hist=[];total=cntT(DB.S[cur].st)||1;bg();rch();ovr();step()}
+function start(){clearTimeout(tmr);$('#end').style.display=$('#lg').style.display=$('#cho').style.display='none';sc={bg:'',ch:{},ord:[],ov:null,cur:0,spk:null,log:[],bgm:''};stack=[[DB.S[cur].st,0]];hist=[];total=cntT(DB.S[cur].st)||1;bg();rch();ovr();step()}
 const cntT=st=>st.reduce((a,x)=>a+(x[0]=='T'?1:x[0]=='Q'?1+Math.max(0,...x[2].map(cntT)):0),0);
 function step(){while(1){const t=stack[stack.length-1];if(!t)return fin();if(t[1]>=t[0].length){stack.pop();continue}const s=t[0][t[1]++];if(ex(s))return}}
 function snap(l){hist.push({st:stack.map(x=>[x[0],x[1]]),sc:JSON.parse(JSON.stringify(sc)),l,n:sc.log.length});}
@@ -114,7 +112,7 @@ function ex(s){const k=s[0];
  if(k=='B'){sc.bg=s[1];bg()}else if(k=='C'){if(!sc.ch[s[1]])sc.ord.push(s[1]);sc.ch[s[1]]={p:s[2],e:208};rch()}
  else if(k=='X'){delete sc.ch[s[1]];sc.ord=sc.ord.filter(x=>x!=s[1]);rch()}else if(k=='XA'){sc.ch={};sc.ord=[];rch()}
  else if(k=='E'){if(sc.ch[s[1]])sc.ch[s[1]].e=s[2];rch()}else if(k=='M'){if(sc.ch[s[1]]){sc.ch[s[1]].p=s[2];rch()}}
- else if(k=='I'){sc.ic[s[1]]=s[2];rch();setTimeout(()=>{delete sc.ic[s[1]];rch()},1400)}
+ 
  else if(k=='K'){sc.cur=s[1];$('#cur').style.opacity=s[1]}else if(k=='G'){sc.bgm=s[1]}
  else if(k=='Z'){sc.ov={c:'l',t:'⚔ 장면 전환\n'+(s[1]||'')};snap(['O']);ovr();pause();return 1}
  return 0}
@@ -122,11 +120,10 @@ function pause(){$('#tx').textContent='';$('#nm').style.display='none';$('#nx').
 function fitBackground(){const layer=$('#bg'),imgs=[...layer.querySelectorAll('img')];if(imgs.length!==2||!imgs.every(i=>i.complete&&i.naturalWidth>0))return;const h=Math.max(...imgs.map(i=>i.naturalHeight)),scale=layer.clientHeight/h;imgs.forEach(i=>{i.style.width=(i.naturalWidth*scale)+'px';i.style.height=(i.naturalHeight*scale)+'px'})}
 window.addEventListener('resize',fitBackground);
 function bg(){const b=String(sc.bg||'').trim(),st=$('#st'),layer=$('#bg');$('#bgn').textContent=(b?'🖼 '+b:'')+(sc.bgm?'  ♪ '+sc.bgm:'');layer.innerHTML='';if(!b){st.style.background='#111';return}if(/black/i.test(b)){st.style.background='#000';return}const key=b.toLowerCase().trim().replace(/\.png$/i,'');const pair=key==='white'?'White':key==='library_default'?'Library_Default':null;if(pair){st.style.background='#111';const a=document.createElement('img'),z=document.createElement('img');a.alt=pair+' background left';z.alt=pair+' background right';a.onload=fitBackground;z.onload=fitBackground;a.src='./Background/'+encodeURIComponent(pair+' (Left).png');z.src='./Background/'+encodeURIComponent(pair+' (Right).png');layer.append(a,z);fitBackground();return}const h=hue(b),l=/night|dark|cave|dungeon|ruin/i.test(b)?18:/sunset|evening/i.test(b)?40:46;st.style.background=`linear-gradient(160deg,hsl(${h},35%,${l}%),hsl(${(h+50)%360},40%,${l-12}%))`}
-function emotionHTML(id){const a=IC[Number(id)];if(!a)return '';const files=a.slice(1).map(n=>`<img src="./Emotion/${a[0]}/${n}.png" alt="${a[0]}" onerror="this.style.display='none'">`).join('');return `<span class="ic ${a[0]}">${files}</span>`}
 function rch(){const c=$('#chars');c.innerHTML='';const by={};sc.ord.forEach(i=>{const o=sc.ch[i];if(o)(by[o.p]=by[o.p]||[]).push(i)});
  for(const p in by)by[p].forEach((i,j)=>{const o=sc.ch[i],nm=DB.P[i]||'#'+i,h=hue(nm),d=document.createElement('div');d.className='ch'+(sc.spk==i?' sp':'');d.style.left=`calc(${POS[p]||'50%'} + ${(j-(by[p].length-1)/2)*(by[p].length>1?9:0)}vw)`;
-  const isWriter=String(i)==='2000'||nm==='작가',isCecilia=String(i)==='25',isBriarRose=String(i)==='19';if(isWriter||isCecilia||isBriarRose){d.classList.add('spine-ch');const canvas=document.createElement('canvas');canvas.className='spine-stage';canvas.setAttribute('aria-label',isWriter?(gender?'Writer Male Spine animation':'Writer Female Spine animation'):isCecilia?'Cecilia Spine animation':'BriarRose Spine animation');d.append(canvas);if(sc.ic[i])d.insertAdjacentHTML('beforeend',emotionHTML(sc.ic[i]));d.insertAdjacentHTML('beforeend',`<span class=nm>${nm}</span>`);c.append(d);const portrait=isWriter?(gender?WriterMaleSpine:WriterFemaleSpine):isCecilia?CeciliaSpine:BriarRoseSpine;portrait.mount(canvas);portrait.setExpression(o.e);return}
-  d.innerHTML=`${sc.ic[i]?emotionHTML(sc.ic[i]):''}<div class=fig style="background:linear-gradient(#fff3,#0004),hsl(${h},45%,45%)"><div>${[...nm][0]}</div><div class=em>${E[o.e]||'🙂'}</div></div><span class=nm>${nm}</span>`;c.append(d)})}
+  const isWriter=String(i)==='2000'||nm==='작가',isCecilia=String(i)==='25',isBriarRose=String(i)==='19';if(isWriter||isCecilia||isBriarRose){d.classList.add('spine-ch');const canvas=document.createElement('canvas');canvas.className='spine-stage';canvas.setAttribute('aria-label',isWriter?(gender?'Writer Male Spine animation':'Writer Female Spine animation'):isCecilia?'Cecilia Spine animation':'BriarRose Spine animation');d.append(canvas);d.insertAdjacentHTML('beforeend',`<span class=nm>${nm}</span>`);c.append(d);const portrait=isWriter?(gender?WriterMaleSpine:WriterFemaleSpine):isCecilia?CeciliaSpine:BriarRoseSpine;portrait.mount(canvas);portrait.setExpression(o.e);return}
+  d.innerHTML=`<div class=fig style="background:linear-gradient(#fff3,#0004),hsl(${h},45%,45%)"><div>${[...nm][0]}</div><div class=em>${E[o.e]||'🙂'}</div></div><span class=nm>${nm}</span>`;c.append(d)})}
 function createSpinePortrait(name,folder){
  let canvas=null,ctx=null,shader=null,batcher=null,skeletonRenderer=null,assetManager=null,skeleton=null,state=null,bounds=null,fixedScale=0,ready=false,loading=false,failed=false,last=0,frame=0,expression=208,faceSlots=[];
  const assetBase='./Characters/'+folder+'/',DISPLAY_SCALE=2;
