@@ -85,7 +85,6 @@ function hydrate(tr,sc,tx,miss){const L=a=>a.map(p=>p[0]=='@'?(tx[p.slice(1)]??p
  for(const k in sc.talk)DB.talk[k]=sc.talk[k].map(t=>[t[0],t[1],cl(t[2])]);
  allStories=DB.cats.flatMap(c=>c.g.flatMap(g=>g.s.map(x=>({id:String(x[1]),title:g.n+' · '+x[0]})))).filter(x=>DB.S[x.id]);
  DB.cats.push({k:'talk',n:'로비 대화',g:[]});idx=null;cat=0;tabs();show();if(miss.length)$('#mn').insertAdjacentHTML('afterbegin','<p>⚠ 읽지 못한 파일: '+miss.join(', ')+'</p>')}
-$('#pk').onchange=e=>{FILES={};[...e.target.files].forEach(f=>FILES[f.name]=f);load()};
 function tabs(){$('#tabs').innerHTML='';DB.cats.forEach((c,i)=>{const b=document.createElement('button');b.className='tab'+(i==cat?' on':'');b.textContent=c.n;b.onclick=()=>{cat=i;$('#q').value='';tabs();show()};$('#tabs').append(b)})}
 function hasCecilia(id){const st=DB.S[String(id)]?.st;if(!st)return false;const scan=a=>{for(const x of a||[]){if(!Array.isArray(x))continue;if(x[0]==='C'&&String(x[1])==='25')return true;for(let n=1;n<x.length;n++)if(Array.isArray(x[n])&&(Array.isArray(x[n][0])?scan(x[n]):scan([x[n]])))return true}return false};return scan(st)}
 function show(){const c=DB.cats[cat],m=$('#mn');m.innerHTML='';if(c.k=='talk')return talks(m);
