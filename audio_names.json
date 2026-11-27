@@ -1,5 +1,5 @@
 {
- "_note": "Names as written in dialog data (case differs in places, e.g. SFX_Ding / SFX_ding). Match audio files case-insensitively. bgm entries with dots (TalesRunner.*) come from PlayOneTime rows.",
+ "_note": "Names as written in dialog data (case differs in places). SFX aliases confirmed by asset mapping: SFX_Paper1 -> SFX_Paper; SFX_Opendoor -> SFX_Opendoor1; SFX_Knock -> SFX_Knocking; SFX_Walking -> SFX_Walk. SFX_Bell and SFX_PaperBag have no corresponding audio assets.",
  "bgm": [
   {
    "name": "BGM_SmilingBaby",
@@ -564,6 +564,11 @@
    "key": "sfx_scenechange"
   },
   {
+   "name": "SFX_Knocking",
+   "count": 74,
+   "key": "sfx_knocking"
+  },
+  {
    "name": "SFX_Shinning",
    "count": 74,
    "key": "sfx_shinning"
@@ -572,11 +577,6 @@
    "name": "SFX_DoorClosed",
    "count": 71,
    "key": "sfx_doorclosed"
-  },
-  {
-   "name": "SFX_Knocking",
-   "count": 71,
-   "key": "sfx_knocking"
   },
   {
    "name": "sfx_shinning",
@@ -590,7 +590,7 @@
   },
   {
    "name": "SFX_Walk",
-   "count": 56,
+   "count": 58,
    "key": "sfx_walk"
   },
   {
@@ -634,14 +634,14 @@
    "key": "sfx_flick"
   },
   {
+   "name": "SFX_Opendoor1",
+   "count": 43,
+   "key": "sfx_opendoor1"
+  },
+  {
    "name": "SFX_Forestwalk",
    "count": 42,
    "key": "sfx_forestwalk"
-  },
-  {
-   "name": "SFX_Opendoor1",
-   "count": 37,
-   "key": "sfx_opendoor1"
   },
   {
    "name": "SFX_Boke",
@@ -849,6 +849,11 @@
    "key": "sfx_doubleclick"
   },
   {
+   "name": "SFX_Paper",
+   "count": 11,
+   "key": "sfx_paper"
+  },
+  {
    "name": "SFX_QuizX",
    "count": 11,
    "key": "sfx_quizx"
@@ -964,11 +969,6 @@
    "key": "sfx_paper"
   },
   {
-   "name": "SFX_Paper1",
-   "count": 7,
-   "key": "sfx_paper1"
-  },
-  {
    "name": "SFX_Shuk",
    "count": 7,
    "key": "sfx_shuk"
@@ -1007,11 +1007,6 @@
    "name": "SFX_Monster2",
    "count": 6,
    "key": "sfx_monster2"
-  },
-  {
-   "name": "SFX_Opendoor",
-   "count": 6,
-   "key": "sfx_opendoor"
   },
   {
    "name": "SFX_piano",
@@ -1144,11 +1139,6 @@
    "key": "sfx_monster3"
   },
   {
-   "name": "SFX_Paper",
-   "count": 4,
-   "key": "sfx_paper"
-  },
-  {
    "name": "SFX_Punch",
    "count": 4,
    "key": "sfx_punch"
@@ -1227,11 +1217,6 @@
    "name": "SFX_Kick",
    "count": 3,
    "key": "sfx_kick"
-  },
-  {
-   "name": "SFX_Knock",
-   "count": 3,
-   "key": "sfx_knock"
   },
   {
    "name": "SFX_Monster4",
@@ -1392,11 +1377,6 @@
    "name": "SFX_StringInstrument",
    "count": 2,
    "key": "sfx_stringinstrument"
-  },
-  {
-   "name": "SFX_Walking",
-   "count": 2,
-   "key": "sfx_walking"
   },
   {
    "name": "SFX_walksnow",
