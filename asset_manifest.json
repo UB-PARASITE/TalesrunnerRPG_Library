@@ -1,0 +1,1034 @@
+{
+  "version": 1,
+  "totalBytes": 1188557143,
+  "files": [
+    {
+      "url": "./BGM/BGM_ADreamWorld.wav",
+      "size": 17227724
+    },
+    {
+      "url": "./BGM/BGM_Action.wav",
+      "size": 8478764
+    },
+    {
+      "url": "./BGM/BGM_AnubisInvasion.wav",
+      "size": 10080048
+    },
+    {
+      "url": "./BGM/BGM_Awakening.wav",
+      "size": 11681836
+    },
+    {
+      "url": "./BGM/BGM_BadaStory.wav",
+      "size": 10584048
+    },
+    {
+      "url": "./BGM/BGM_BeyondStars.wav",
+      "size": 6932780
+    },
+    {
+      "url": "./BGM/BGM_Block.wav",
+      "size": 11648964
+    },
+    {
+      "url": "./BGM/BGM_BownaviDogTown.wav",
+      "size": 10925464
+    },
+    {
+      "url": "./BGM/BGM_BownaviPark.wav",
+      "size": 10635176
+    },
+    {
+      "url": "./BGM/BGM_BownaviSlide.wav",
+      "size": 29113388
+    },
+    {
+      "url": "./BGM/BGM_Chill.wav",
+      "size": 10455596
+    },
+    {
+      "url": "./BGM/BGM_ChristmasRunner.wav",
+      "size": 13629448
+    },
+    {
+      "url": "./BGM/BGM_Cinderella2.wav",
+      "size": 10348848
+    },
+    {
+      "url": "./BGM/BGM_CosyLiving.wav",
+      "size": 6838924
+    },
+    {
+      "url": "./BGM/BGM_DeveloperScare.wav",
+      "size": 12524352
+    },
+    {
+      "url": "./BGM/BGM_DimensionAmon.wav",
+      "size": 5622796
+    },
+    {
+      "url": "./BGM/BGM_DimensionArcade.wav",
+      "size": 5292044
+    },
+    {
+      "url": "./BGM/BGM_DokkaebiDen.wav",
+      "size": 11095000
+    },
+    {
+      "url": "./BGM/BGM_DokkaebiGoldSilver.wav",
+      "size": 11723860
+    },
+    {
+      "url": "./BGM/BGM_DokkaebiNote.wav",
+      "size": 11245656
+    },
+    {
+      "url": "./BGM/BGM_DwellingPlace.wav",
+      "size": 20805164
+    },
+    {
+      "url": "./BGM/BGM_ElfOfSpring.wav",
+      "size": 7548988
+    },
+    {
+      "url": "./BGM/BGM_GoodOrEvil.wav",
+      "size": 10348844
+    },
+    {
+      "url": "./BGM/BGM_HanselGretelBoss.wav",
+      "size": 9205280
+    },
+    {
+      "url": "./BGM/BGM_Happy.wav",
+      "size": 9506348
+    },
+    {
+      "url": "./BGM/BGM_HealingLight.wav",
+      "size": 9667628
+    },
+    {
+      "url": "./BGM/BGM_HenryGardenFire.wav",
+      "size": 10725168
+    },
+    {
+      "url": "./BGM/BGM_HorrorHouse.wav",
+      "size": 10277384
+    },
+    {
+      "url": "./BGM/BGM_HorrorPark.wav",
+      "size": 11854504
+    },
+    {
+      "url": "./BGM/BGM_HungbuNolbu1.wav",
+      "size": 29192172
+    },
+    {
+      "url": "./BGM/BGM_HungbuNolbu2.wav",
+      "size": 20299820
+    },
+    {
+      "url": "./BGM/BGM_KingdomOfSadness.wav",
+      "size": 6680620
+    },
+    {
+      "url": "./BGM/BGM_LittleMatchSurvival.wav",
+      "size": 10584044
+    },
+    {
+      "url": "./BGM/BGM_LittleMatchTale.wav",
+      "size": 13209036
+    },
+    {
+      "url": "./BGM/BGM_Love.wav",
+      "size": 14953004
+    },
+    {
+      "url": "./BGM/BGM_Memories.wav",
+      "size": 33878060
+    },
+    {
+      "url": "./BGM/BGM_Mermaid.wav",
+      "size": 11520048
+    },
+    {
+      "url": "./BGM/BGM_MouseGangster.wav",
+      "size": 4981668
+    },
+    {
+      "url": "./BGM/BGM_MysteryCat.wav",
+      "size": 13865516
+    },
+    {
+      "url": "./BGM/BGM_NewPark.wav",
+      "size": 20382256
+    },
+    {
+      "url": "./BGM/BGM_PandoraBoss.wav",
+      "size": 19491992
+    },
+    {
+      "url": "./BGM/BGM_PandoraLand.wav",
+      "size": 25821740
+    },
+    {
+      "url": "./BGM/BGM_PandoraRaid1.wav",
+      "size": 12544048
+    },
+    {
+      "url": "./BGM/BGM_PandoraRaid2.wav",
+      "size": 12780724
+    },
+    {
+      "url": "./BGM/BGM_ParkWinter.wav",
+      "size": 15050640
+    },
+    {
+      "url": "./BGM/BGM_PianoVersion.wav",
+      "size": 4690988
+    },
+    {
+      "url": "./BGM/BGM_Pinocchio.wav",
+      "size": 10340880
+    },
+    {
+      "url": "./BGM/BGM_Rain.wav",
+      "size": 6748460
+    },
+    {
+      "url": "./BGM/BGM_RedRidinghood.wav",
+      "size": 18076204
+    },
+    {
+      "url": "./BGM/BGM_RelaxIntoSleep.wav",
+      "size": 6048044
+    },
+    {
+      "url": "./BGM/BGM_Reminiscence.wav",
+      "size": 5413660
+    },
+    {
+      "url": "./BGM/BGM_Sad.wav",
+      "size": 18358316
+    },
+    {
+      "url": "./BGM/BGM_SecretGarden.wav",
+      "size": 9686060
+    },
+    {
+      "url": "./BGM/BGM_ShadowlandCity.wav",
+      "size": 2688046
+    },
+    {
+      "url": "./BGM/BGM_ShadowlandGhost.wav",
+      "size": 3024046
+    },
+    {
+      "url": "./BGM/BGM_ShadowlandPark.wav",
+      "size": 3079028
+    },
+    {
+      "url": "./BGM/BGM_SmilingBaby.wav",
+      "size": 6158008
+    },
+    {
+      "url": "./BGM/BGM_SnowQueen.wav",
+      "size": 9699936
+    },
+    {
+      "url": "./BGM/BGM_SpookyNight.wav",
+      "size": 17584172
+    },
+    {
+      "url": "./BGM/BGM_SquidGame.wav",
+      "size": 4233648
+    },
+    {
+      "url": "./BGM/BGM_StrangeLand.wav",
+      "size": 16943660
+    },
+    {
+      "url": "./BGM/BGM_StrangeMatter.wav",
+      "size": 7028444
+    },
+    {
+      "url": "./BGM/BGM_UnderworldVera.wav",
+      "size": 10776484
+    },
+    {
+      "url": "./BGM/BGM_g3_Alone.wav",
+      "size": 11810348
+    },
+    {
+      "url": "./BGM/BGM_g3_BlueConcerto.wav",
+      "size": 16017452
+    },
+    {
+      "url": "./BGM/BGM_g3_Conspiracy2.wav",
+      "size": 18229292
+    },
+    {
+      "url": "./BGM/BGM_g3_HappyMercenary.wav",
+      "size": 8828972
+    },
+    {
+      "url": "./BGM/BGM_g3_HeartToHeart.wav",
+      "size": 18510380
+    },
+    {
+      "url": "./BGM/BGM_g3_LonelyWanderer.wav",
+      "size": 18459692
+    },
+    {
+      "url": "./BGM/BGM_g3_RiskyVoices.wav",
+      "size": 13791788
+    },
+    {
+      "url": "./BGM/BGM_g3_ShivanScimitar.wav",
+      "size": 20464172
+    },
+    {
+      "url": "./BGM/BGM_g3_Tears.wav",
+      "size": 14404588
+    },
+    {
+      "url": "./BGM/BGM_g3_TimeOfFate.wav",
+      "size": 13584428
+    },
+    {
+      "url": "./BGM/Beach.wav",
+      "size": 8386604
+    },
+    {
+      "url": "./BGM/Devil'sFollower.wav",
+      "size": 18648620
+    },
+    {
+      "url": "./BGM/WarmHappyTown.wav",
+      "size": 20037672
+    },
+    {
+      "url": "./BGM/bgm_g3_BraveMarch.wav",
+      "size": 22408748
+    },
+    {
+      "url": "./BGM/bgm_g3_Corale.wav",
+      "size": 24215084
+    },
+    {
+      "url": "./BGM/bgm_g3_Exodus.wav",
+      "size": 17478188
+    },
+    {
+      "url": "./Background/Library_Default (Left).png",
+      "size": 529389
+    },
+    {
+      "url": "./Background/Library_Default (Right).png",
+      "size": 570735
+    },
+    {
+      "url": "./Background/White (Left).png",
+      "size": 494
+    },
+    {
+      "url": "./Background/White (Right).png",
+      "size": 494
+    },
+    {
+      "url": "./Characters/BriarRose/BriarRose.atlas",
+      "size": 5196
+    },
+    {
+      "url": "./Characters/BriarRose/BriarRose.png",
+      "size": 926109
+    },
+    {
+      "url": "./Characters/BriarRose/BriarRose.skel",
+      "size": 2096203
+    },
+    {
+      "url": "./Characters/BriarRose/BriarRose_2.png",
+      "size": 248946
+    },
+    {
+      "url": "./Characters/Cecilia/Cecilia.atlas",
+      "size": 6558
+    },
+    {
+      "url": "./Characters/Cecilia/Cecilia.png",
+      "size": 386216
+    },
+    {
+      "url": "./Characters/Cecilia/Cecilia.skel",
+      "size": 1508941
+    },
+    {
+      "url": "./Characters/Cecilia/Cecilia_2.png",
+      "size": 531699
+    },
+    {
+      "url": "./Characters/Cecilia/Cecilia_3.png",
+      "size": 419629
+    },
+    {
+      "url": "./Characters/Cecilia/Cecilia_4.png",
+      "size": 720224
+    },
+    {
+      "url": "./Characters/Cecilia/Cecilia_5.png",
+      "size": 495105
+    },
+    {
+      "url": "./Characters/Cecilia/Cecilia_6.png",
+      "size": 480830
+    },
+    {
+      "url": "./Characters/WriterFemale/WriterFemale.atlas",
+      "size": 7470
+    },
+    {
+      "url": "./Characters/WriterFemale/WriterFemale.png",
+      "size": 706496
+    },
+    {
+      "url": "./Characters/WriterFemale/WriterFemale.skel",
+      "size": 619830
+    },
+    {
+      "url": "./Characters/WriterFemale/WriterFemale_2.png",
+      "size": 626378
+    },
+    {
+      "url": "./Characters/WriterFemale/WriterFemale_3.png",
+      "size": 363408
+    },
+    {
+      "url": "./Characters/WriterFemale/WriterFemale_4.png",
+      "size": 271110
+    },
+    {
+      "url": "./Characters/WriterFemale/WriterFemale_5.png",
+      "size": 200153
+    },
+    {
+      "url": "./Characters/WriterMale/WriterMale.atlas",
+      "size": 8253
+    },
+    {
+      "url": "./Characters/WriterMale/WriterMale.png",
+      "size": 828063
+    },
+    {
+      "url": "./Characters/WriterMale/WriterMale.skel",
+      "size": 474903
+    },
+    {
+      "url": "./Characters/WriterMale/WriterMale_2.png",
+      "size": 264356
+    },
+    {
+      "url": "./SFX/Fountain.wav",
+      "size": 372600
+    },
+    {
+      "url": "./SFX/ManyCrow.wav",
+      "size": 123536
+    },
+    {
+      "url": "./SFX/SFX_Bam2.wav",
+      "size": 1870892
+    },
+    {
+      "url": "./SFX/SFX_Bam3.wav",
+      "size": 460844
+    },
+    {
+      "url": "./SFX/SFX_Bam4.wav",
+      "size": 79960
+    },
+    {
+      "url": "./SFX/SFX_Battle.wav",
+      "size": 2603708
+    },
+    {
+      "url": "./SFX/SFX_Bird.wav",
+      "size": 10598444
+    },
+    {
+      "url": "./SFX/SFX_Bird2.wav",
+      "size": 165932
+    },
+    {
+      "url": "./SFX/SFX_Bite.wav",
+      "size": 161324
+    },
+    {
+      "url": "./SFX/SFX_Bite2.wav",
+      "size": 553004
+    },
+    {
+      "url": "./SFX/SFX_Bleak.wav",
+      "size": 203852
+    },
+    {
+      "url": "./SFX/SFX_Blood1.wav",
+      "size": 190556
+    },
+    {
+      "url": "./SFX/SFX_Boke.wav",
+      "size": 230444
+    },
+    {
+      "url": "./SFX/SFX_Boke2.wav",
+      "size": 419168
+    },
+    {
+      "url": "./SFX/SFX_Boke3.wav",
+      "size": 294956
+    },
+    {
+      "url": "./SFX/SFX_Boke4.wav",
+      "size": 64556
+    },
+    {
+      "url": "./SFX/SFX_Boots.wav",
+      "size": 299564
+    },
+    {
+      "url": "./SFX/SFX_Break.wav",
+      "size": 94508
+    },
+    {
+      "url": "./SFX/SFX_BreakingGlass.wav",
+      "size": 359468
+    },
+    {
+      "url": "./SFX/SFX_Broken.wav",
+      "size": 184364
+    },
+    {
+      "url": "./SFX/SFX_BrokenGlass.wav",
+      "size": 232892
+    },
+    {
+      "url": "./SFX/SFX_Bubble.wav",
+      "size": 728108
+    },
+    {
+      "url": "./SFX/SFX_Burning.wav",
+      "size": 10612268
+    },
+    {
+      "url": "./SFX/SFX_Camera.wav",
+      "size": 87596
+    },
+    {
+      "url": "./SFX/SFX_Card1.wav",
+      "size": 686636
+    },
+    {
+      "url": "./SFX/SFX_Card2.wav",
+      "size": 92204
+    },
+    {
+      "url": "./SFX/SFX_Card3.wav",
+      "size": 198188
+    },
+    {
+      "url": "./SFX/SFX_Cat.wav",
+      "size": 254060
+    },
+    {
+      "url": "./SFX/SFX_Celouneige.wav",
+      "size": 666836
+    },
+    {
+      "url": "./SFX/SFX_Cheer.wav",
+      "size": 728108
+    },
+    {
+      "url": "./SFX/SFX_Click.wav",
+      "size": 46124
+    },
+    {
+      "url": "./SFX/SFX_Clock.wav",
+      "size": 2479148
+    },
+    {
+      "url": "./SFX/SFX_Computer.wav",
+      "size": 1276460
+    },
+    {
+      "url": "./SFX/SFX_Crowded.wav",
+      "size": 28156176
+    },
+    {
+      "url": "./SFX/SFX_Crumble.wav",
+      "size": 258092
+    },
+    {
+      "url": "./SFX/SFX_CuteSound1.wav",
+      "size": 117072
+    },
+    {
+      "url": "./SFX/SFX_CuteStep.wav",
+      "size": 200664
+    },
+    {
+      "url": "./SFX/SFX_Dash.wav",
+      "size": 138284
+    },
+    {
+      "url": "./SFX/SFX_Ding.wav",
+      "size": 635948
+    },
+    {
+      "url": "./SFX/SFX_Dive.wav",
+      "size": 215956
+    },
+    {
+      "url": "./SFX/SFX_Dive2.wav",
+      "size": 192932
+    },
+    {
+      "url": "./SFX/SFX_DoorChime.wav",
+      "size": 460844
+    },
+    {
+      "url": "./SFX/SFX_DoorClosed.wav",
+      "size": 131284
+    },
+    {
+      "url": "./SFX/SFX_DoorOpen.wav",
+      "size": 313328
+    },
+    {
+      "url": "./SFX/SFX_DoubleClick.wav",
+      "size": 59948
+    },
+    {
+      "url": "./SFX/SFX_Drink.wav",
+      "size": 622124
+    },
+    {
+      "url": "./SFX/SFX_Drum.wav",
+      "size": 283692
+    },
+    {
+      "url": "./SFX/SFX_Fall.wav",
+      "size": 486908
+    },
+    {
+      "url": "./SFX/SFX_FallSword.wav",
+      "size": 147500
+    },
+    {
+      "url": "./SFX/SFX_Falldown.wav",
+      "size": 71570
+    },
+    {
+      "url": "./SFX/SFX_Falldown2.wav",
+      "size": 190556
+    },
+    {
+      "url": "./SFX/SFX_Falldown3.wav",
+      "size": 258092
+    },
+    {
+      "url": "./SFX/SFX_Fast.wav",
+      "size": 230444
+    },
+    {
+      "url": "./SFX/SFX_FingerSnap.wav",
+      "size": 83344
+    },
+    {
+      "url": "./SFX/SFX_Fireworks.wav",
+      "size": 2942396
+    },
+    {
+      "url": "./SFX/SFX_Fireworks2.wav",
+      "size": 715520
+    },
+    {
+      "url": "./SFX/SFX_Flick.wav",
+      "size": 188972
+    },
+    {
+      "url": "./SFX/SFX_Forestwalk.wav",
+      "size": 1691180
+    },
+    {
+      "url": "./SFX/SFX_Fuse.wav",
+      "size": 847916
+    },
+    {
+      "url": "./SFX/SFX_Gun1.wav",
+      "size": 402236
+    },
+    {
+      "url": "./SFX/SFX_Gun2.wav",
+      "size": 503840
+    },
+    {
+      "url": "./SFX/SFX_Gun3.wav",
+      "size": 193580
+    },
+    {
+      "url": "./SFX/SFX_Gun3_2.wav",
+      "size": 461504
+    },
+    {
+      "url": "./SFX/SFX_Gun4.wav",
+      "size": 248876
+    },
+    {
+      "url": "./SFX/SFX_Heal.wav",
+      "size": 635948
+    },
+    {
+      "url": "./SFX/SFX_HeartBeatOnce.wav",
+      "size": 41420
+    },
+    {
+      "url": "./SFX/SFX_Heartbeat.wav",
+      "size": 173600
+    },
+    {
+      "url": "./SFX/SFX_Hug.wav",
+      "size": 119852
+    },
+    {
+      "url": "./SFX/SFX_Hungry.wav",
+      "size": 308780
+    },
+    {
+      "url": "./SFX/SFX_Kick.wav",
+      "size": 225836
+    },
+    {
+      "url": "./SFX/SFX_KickDoor.wav",
+      "size": 115244
+    },
+    {
+      "url": "./SFX/SFX_Kill.wav",
+      "size": 237124
+    },
+    {
+      "url": "./SFX/SFX_Knocking.wav",
+      "size": 115244
+    },
+    {
+      "url": "./SFX/SFX_Koong.wav",
+      "size": 207488
+    },
+    {
+      "url": "./SFX/SFX_Koong2.wav",
+      "size": 230444
+    },
+    {
+      "url": "./SFX/SFX_Levelup.wav",
+      "size": 398000
+    },
+    {
+      "url": "./SFX/SFX_Lunatic.wav",
+      "size": 3115052
+    },
+    {
+      "url": "./SFX/SFX_Magic1.wav",
+      "size": 668204
+    },
+    {
+      "url": "./SFX/SFX_Magic2.wav",
+      "size": 760364
+    },
+    {
+      "url": "./SFX/SFX_MagicFire.wav",
+      "size": 617516
+    },
+    {
+      "url": "./SFX/SFX_Mail.wav",
+      "size": 165552
+    },
+    {
+      "url": "./SFX/SFX_Monster.wav",
+      "size": 258092
+    },
+    {
+      "url": "./SFX/SFX_Monster2.wav",
+      "size": 161324
+    },
+    {
+      "url": "./SFX/SFX_Monster3.wav",
+      "size": 275228
+    },
+    {
+      "url": "./SFX/SFX_Monster4.wav",
+      "size": 486908
+    },
+    {
+      "url": "./SFX/SFX_Monster5.wav",
+      "size": 199020
+    },
+    {
+      "url": "./SFX/SFX_Noise.wav",
+      "size": 3027500
+    },
+    {
+      "url": "./SFX/SFX_Nyut.wav",
+      "size": 59948
+    },
+    {
+      "url": "./SFX/SFX_Opendoor1.wav",
+      "size": 212012
+    },
+    {
+      "url": "./SFX/SFX_Opendoor2.wav",
+      "size": 498724
+    },
+    {
+      "url": "./SFX/SFX_Paper.wav",
+      "size": 184364
+    },
+    {
+      "url": "./SFX/SFX_Piano.wav",
+      "size": 177852
+    },
+    {
+      "url": "./SFX/SFX_Punch.wav",
+      "size": 82988
+    },
+    {
+      "url": "./SFX/SFX_PunchWind.wav",
+      "size": 400940
+    },
+    {
+      "url": "./SFX/SFX_Quake.wav",
+      "size": 1138880
+    },
+    {
+      "url": "./SFX/SFX_Quiz.wav",
+      "size": 304172
+    },
+    {
+      "url": "./SFX/SFX_QuizO.wav",
+      "size": 313388
+    },
+    {
+      "url": "./SFX/SFX_QuizX.wav",
+      "size": 101420
+    },
+    {
+      "url": "./SFX/SFX_RunAway.wav",
+      "size": 271916
+    },
+    {
+      "url": "./SFX/SFX_Running.wav",
+      "size": 2059820
+    },
+    {
+      "url": "./SFX/SFX_SceneChange.wav",
+      "size": 188972
+    },
+    {
+      "url": "./SFX/SFX_Scratch.wav",
+      "size": 649772
+    },
+    {
+      "url": "./SFX/SFX_Scream.wav",
+      "size": 740924
+    },
+    {
+      "url": "./SFX/SFX_Seaside.wav",
+      "size": 19288324
+    },
+    {
+      "url": "./SFX/SFX_Shield.wav",
+      "size": 190556
+    },
+    {
+      "url": "./SFX/SFX_Shinning.wav",
+      "size": 304860
+    },
+    {
+      "url": "./SFX/SFX_Shinning2.wav",
+      "size": 580652
+    },
+    {
+      "url": "./SFX/SFX_Shinning3.wav",
+      "size": 2442284
+    },
+    {
+      "url": "./SFX/SFX_ShoesBreak.wav",
+      "size": 248876
+    },
+    {
+      "url": "./SFX/SFX_Shuk.wav",
+      "size": 190556
+    },
+    {
+      "url": "./SFX/SFX_Slap.wav",
+      "size": 69164
+    },
+    {
+      "url": "./SFX/SFX_Slash.wav",
+      "size": 478440
+    },
+    {
+      "url": "./SFX/SFX_Slash2.wav",
+      "size": 398000
+    },
+    {
+      "url": "./SFX/SFX_SpecialMove.wav",
+      "size": 451628
+    },
+    {
+      "url": "./SFX/SFX_Squeeze.wav",
+      "size": 745156
+    },
+    {
+      "url": "./SFX/SFX_StandUp.wav",
+      "size": 327212
+    },
+    {
+      "url": "./SFX/SFX_Stone.wav",
+      "size": 990764
+    },
+    {
+      "url": "./SFX/SFX_StringInstrument.wav",
+      "size": 608300
+    },
+    {
+      "url": "./SFX/SFX_Successful.wav",
+      "size": 520748
+    },
+    {
+      "url": "./SFX/SFX_Swallow.wav",
+      "size": 99284
+    },
+    {
+      "url": "./SFX/SFX_Sword.wav",
+      "size": 309096
+    },
+    {
+      "url": "./SFX/SFX_Sword2.wav",
+      "size": 336428
+    },
+    {
+      "url": "./SFX/SFX_Sword3.wav",
+      "size": 228656
+    },
+    {
+      "url": "./SFX/SFX_Sword4.wav",
+      "size": 202796
+    },
+    {
+      "url": "./SFX/SFX_Symbals.wav",
+      "size": 797228
+    },
+    {
+      "url": "./SFX/SFX_Teleport.wav",
+      "size": 248876
+    },
+    {
+      "url": "./SFX/SFX_TensionDown.wav",
+      "size": 173912
+    },
+    {
+      "url": "./SFX/SFX_Timer.wav",
+      "size": 1193516
+    },
+    {
+      "url": "./SFX/SFX_Timpani.wav",
+      "size": 536876
+    },
+    {
+      "url": "./SFX/SFX_Trumpet.wav",
+      "size": 895980
+    },
+    {
+      "url": "./SFX/SFX_Tsukkomi.wav",
+      "size": 82988
+    },
+    {
+      "url": "./SFX/SFX_Walk.wav",
+      "size": 1810988
+    },
+    {
+      "url": "./SFX/SFX_WalkSnow.wav",
+      "size": 3621932
+    },
+    {
+      "url": "./SFX/SFX_Wind.wav",
+      "size": 732716
+    },
+    {
+      "url": "./SFX/SFX_Wind2.wav",
+      "size": 6693364
+    },
+    {
+      "url": "./SFX/SFX_applause.wav",
+      "size": 520776
+    },
+    {
+      "url": "./SFX/SFX_gogogo.wav",
+      "size": 372024
+    },
+    {
+      "url": "./SFX/TrainAmbience.wav",
+      "size": 5319476
+    },
+    {
+      "url": "./TextAsset/Text_Chapter_loc_kor.txt",
+      "size": 919
+    },
+    {
+      "url": "./TextAsset/Text_Dialog_loc_kor.txt",
+      "size": 4266231
+    },
+    {
+      "url": "./TextAsset/Text_FriendshipStory_loc_kor.txt",
+      "size": 17652
+    },
+    {
+      "url": "./TextAsset/Text_Hero_loc_kor.txt",
+      "size": 7969
+    },
+    {
+      "url": "./TextAsset/Text_MainStorySet_loc_kor.txt",
+      "size": 7479
+    },
+    {
+      "url": "./TextAsset/Text_Mob_loc_kor.txt",
+      "size": 64508
+    },
+    {
+      "url": "./TextAsset/Text_Portrait_loc_kor.txt",
+      "size": 13652
+    },
+    {
+      "url": "./TextAsset/Text_SubStoryRead_loc_kor.txt",
+      "size": 2988
+    },
+    {
+      "url": "./TextAsset/Text_SubStory_loc_kor.txt",
+      "size": 793
+    },
+    {
+      "url": "./TextAsset/Text_Talk_loc_kor.txt",
+      "size": 156274
+    },
+    {
+      "url": "./TextAsset/Text_Writer_loc_kor.txt",
+      "size": 24
+    },
+    {
+      "url": "./story_scripts.json",
+      "size": 2663493
+    },
+    {
+      "url": "./story_tree.json",
+      "size": 131099
+    }
+  ]
+}
