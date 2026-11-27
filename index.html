@@ -117,7 +117,7 @@ function ex(s){const k=s[0];
  else if(k=='X'){delete sc.ch[s[1]];sc.ord=sc.ord.filter(x=>x!=s[1]);rch()}else if(k=='XA'){sc.ch={};sc.ord=[];rch()}
  else if(k=='E'){if(sc.ch[s[1]])sc.ch[s[1]].e=s[2];rch()}else if(k=='M'){if(sc.ch[s[1]]){sc.ch[s[1]].p=s[2];rch()}}
  
- else if(k=='K'){sc.cur=s[1];$('#cur').style.opacity=s[1]}else if(k=='G'){sc.bgm=s[1];audioCommand(s[1])}
+ else if(k=='K'){sc.cur=s[1];$('#cur').style.opacity=s[1]}else if(k=='G'){sc.bgm=s[1];audioCommand(s[1])}else if(k=='S'){audioCommand(s[1])}
  else if(k=='Z'){sc.ov={c:'l',t:'⚔ 장면 전환\n'+(s[1]||'')};snap(['O']);ovr();pause();return 1}
  return 0}
 function pause(){$('#tx').textContent='';$('#nm').style.display='none';$('#nx').style.display='';aut()}
