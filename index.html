@@ -33,7 +33,7 @@ summary{padding:11px 14px;font-weight:600;cursor:pointer}summary small{color:var
 #ttl{flex:1;min-width:80px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-weight:600}
 #prog{height:3px;background:#ffffff25}#prog i{display:block;height:100%;width:0;background:var(--ac)}
 #st{position:relative;flex:1;overflow:hidden;transition:background .6s}
-#bgn{position:absolute;left:10px;top:8px;font-size:11px;opacity:.45}
+#bg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}#bg img{position:absolute;top:0;width:50%;height:100%;object-fit:fill}#bg img:first-child{left:0}#bg img:last-child{right:0}#bgn{position:absolute;left:10px;top:8px;font-size:11px;opacity:.45;z-index:1}
 #chars{position:absolute;inset:0 0 150px 0}
 .ch{position:absolute;bottom:0;transform:translateX(-50%);width:min(30vw,170px);text-align:center;transition:left .4s,opacity .3s,filter .3s;opacity:.55;filter:brightness(.6)}
 .ch.sp{opacity:1;filter:none}
@@ -42,7 +42,7 @@ summary{padding:11px 14px;font-weight:600;cursor:pointer}summary small{color:var
 .ch.spine-ch .nm{position:absolute;bottom:154px;left:50%;transform:translateX(-50%);white-space:nowrap}
 .spine-tag{display:inline-block;margin-left:7px;padding:1px 6px;border-radius:5px;background:#8058b8;color:#fff;font-size:10px;font-weight:600;vertical-align:2px}.ch .fig{height:min(46vh,300px);border-radius:90px 90px 14px 14px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:18px;font-size:46px;box-shadow:0 6px 24px #0008}
 .ch .em{font-size:38px;line-height:1.1}.ch .nm{font-size:13px;margin-top:6px;background:#0009;border-radius:8px;display:inline-block;padding:1px 8px}
-.ch .ic{position:absolute;top:-6px;right:6px;font-size:30px;animation:pop .5s}
+.ch .ic{position:absolute;top:-18px;right:4px;width:76px;height:76px;pointer-events:none;animation:pop .5s;z-index:2}.ch .ic img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.ch .ic.pish img:first-child{z-index:0}.ch .ic.pish img:last-child{z-index:1;transform:scale(.82)}
 @keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
 #ov{position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:24px;font-size:clamp(18px,3.4vw,30px);white-space:pre-line;background:#000a;z-index:2;line-height:1.8}
 #ov.t{font-weight:700;letter-spacing:.06em;font-size:clamp(24px,5vw,44px)}#ov.l{align-items:flex-start;padding-top:20vh;font-size:clamp(18px,3vw,28px)}
@@ -61,11 +61,11 @@ summary{padding:11px 14px;font-weight:600;cursor:pointer}summary small{color:var
 <header><div class="row"><h1>📖 동화나라 스토리 플레이어</h1><input id="q" placeholder="대사·제목 검색 (2자 이상)"><label class="tab" title="story_tree.json·story_scripts.json·TextAsset 폴더를 직접 선택">📁 폴더 선택<input type="file" id="pk" webkitdirectory multiple hidden></label><button class="tab" id="th">🌓</button></div><div class="tabs" id="tabs"></div></header>
 <main id="mn"><p>데이터 불러오는 중…</p></main>
 <div id="pl"><div id="bar"><button id="bk">← 목록</button><span id="ttl"></span><button id="pv">◀ 이전 화</button><button id="b1">↩ 되돌리기</button><button id="b2">로그</button><button id="b3">오토</button><button id="b4">스킵</button><button id="b5">주인공 ♂</button><button id="nxs">다음 화 ▶</button></div><div id="prog"><i></i></div>
-<div id="st"><span id="bgn"></span><div id="chars"></div><div id="cur"></div><div id="ov"></div>
+<div id="st"><div id="bg"></div><span id="bgn"></span><div id="chars"></div><div id="cur"></div><div id="ov"></div>
 <div id="dlg"><div id="nm"></div><div id="tx"></div><span id="nx">▼</span></div><div id="cho"></div><div id="lg"></div><div id="end"><div>— 끝 —</div><button id="e1">다음 화</button><button id="e2">목록으로</button></div></div></div>
 <script src="https://cdn.jsdelivr.net/npm/@esotericsoftware/spine-webgl@4.1.24/dist/iife/spine-webgl.js"></script>
 <script>
-const $=s=>document.querySelector(s),E={200:'😐',201:'😠',202:'😑',203:'😢',204:'😊',205:'😡',206:'😭',207:'😄',208:'🙂',209:'😲',210:'🤬'},IC={100:'❗',101:'❓',102:'⁉️',103:'💡',104:'💧',105:'💢',106:'🌸',107:'😤',108:'😖',109:'😮‍💨',110:'❤️',111:'✨',112:'😅'},POS={L:'20%',C:'50%',R:'80%'};
+const $=s=>document.querySelector(s),E={200:'😐',201:'😠',202:'😑',203:'😢',204:'😊',205:'😡',206:'😭',207:'😄',208:'🙂',209:'😲',210:'🤬'},IC={100:['exclamation','Mark_Exclamation'],101:['question','QuestionMark'],102:['interrobang','Note02'],103:['lightbulb','Notice'],104:['hesitant','Sweat'],105:['annoyed','Annoyed'],106:['flowerbling','Trailer04'],107:['pish','SpeechBubble','Scribble'],108:['frustrated','Trailer03'],109:['gee','Gee'],110:['heart','Heart02'],111:['starbling','StarBling']},POS={L:'20%',C:'50%',R:'80%'};
 let DB,cat=0,cur=null,list=[],sc,stack,hist,gender=1,auto=0,skip=0,typ=null,tmr=null,total=1,read={};
 try{read=JSON.parse(localStorage.getItem('rd')||'{}')}catch(e){}
 const strip=h=>h.replace(/<[^>]+>/g,''),hue=s=>{let h=0;for(const c of String(s))h=(h*31+c.charCodeAt(0))%360;return h};
@@ -119,11 +119,11 @@ function ex(s){const k=s[0];
  else if(k=='Z'){sc.ov={c:'l',t:'⚔ 장면 전환\n'+(s[1]||'')};snap(['O']);ovr();pause();return 1}
  return 0}
 function pause(){$('#tx').textContent='';$('#nm').style.display='none';$('#nx').style.display='';aut()}
-function bg(){const b=sc.bg||'',st=$('#st');$('#bgn').textContent=(b?'🖼 '+b:'')+(sc.bgm?'  ♪ '+sc.bgm:'');if(!b)return st.style.background='#111';if(/black/i.test(b))return st.style.background='#000';if(/white/i.test(b))return st.style.background='#ddd';const h=hue(b),l=/night|dark|cave|dungeon|ruin/i.test(b)?18:/sunset|evening/i.test(b)?40:46;st.style.background=`linear-gradient(160deg,hsl(${h},35%,${l}%),hsl(${(h+50)%360},40%,${l-12}%))`}
-function rch(){const c=$('#chars');c.innerHTML='';const by={};sc.ord.forEach(i=>{const o=sc.ch[i];if(o)(by[o.p]=by[o.p]||[]).push(i)});
+function bg(){const b=String(sc.bg||'').trim(),st=$('#st'),layer=$('#bg');$('#bgn').textContent=(b?'🖼 '+b:'')+(sc.bgm?'  ♪ '+sc.bgm:'');layer.innerHTML='';if(!b){st.style.background='#111';return}if(/black/i.test(b)){st.style.background='#000';return}const key=b.toLowerCase().replace(/\\/g,'/').split('/').pop().replace(/\\.(png|jpg|jpeg)$/i,'').replace(/\\s*\\((left|right)\\)$/i,'').trim();const pair=key==='white'?'White':key==='library_default'?'Library_Default':null;if(pair){st.style.background='#111';const a=document.createElement('img'),z=document.createElement('img');a.alt=pair+' background left';z.alt=pair+' background right';a.src='./Background/'+encodeURIComponent(pair+' (Left).png');z.src='./Background/'+encodeURIComponent(pair+' (Right).png');layer.append(a,z);return}const h=hue(b),l=/night|dark|cave|dungeon|ruin/i.test(b)?18:/sunset|evening/i.test(b)?40:46;st.style.background=`linear-gradient(160deg,hsl(${h},35%,${l}%),hsl(${(h+50)%360},40%,${l-12}%))`}
+function emotionHTML(id){const a=IC[Number(id)];if(!a)return '';const files=a.slice(1).map(n=>`<img src="./Emotion/${a[0]}/${n}.png" alt="${a[0]}" onerror="this.style.display='none'">`).join('');return `<span class="ic ${a[0]}">${files}</span>`}\nfunction rch(){const c=$('#chars');c.innerHTML='';const by={};sc.ord.forEach(i=>{const o=sc.ch[i];if(o)(by[o.p]=by[o.p]||[]).push(i)});
  for(const p in by)by[p].forEach((i,j)=>{const o=sc.ch[i],nm=DB.P[i]||'#'+i,h=hue(nm),d=document.createElement('div');d.className='ch'+(sc.spk==i?' sp':'');d.style.left=`calc(${POS[p]||'50%'} + ${(j-(by[p].length-1)/2)*(by[p].length>1?9:0)}vw)`;
-  const isWriter=String(i)==='2000'||nm==='작가',isCecilia=String(i)==='25';if(isWriter||isCecilia){d.classList.add('spine-ch');const canvas=document.createElement('canvas');canvas.className='spine-stage';canvas.setAttribute('aria-label',isWriter?(gender?'Writer Male Spine animation':'Writer Female Spine animation'):'Cecilia Spine animation');d.append(canvas);d.insertAdjacentHTML('beforeend',`<span class=nm>${nm}</span>`);c.append(d);const portrait=isWriter?(gender?WriterMaleSpine:WriterFemaleSpine):CeciliaSpine;portrait.mount(canvas);portrait.setExpression(o.e);return}
-  d.innerHTML=`${sc.ic[i]?`<span class=ic>${IC[sc.ic[i]]||'💬'}</span>`:''}<div class=fig style="background:linear-gradient(#fff3,#0004),hsl(${h},45%,45%)"><div>${[...nm][0]}</div><div class=em>${E[o.e]||'🙂'}</div></div><span class=nm>${nm}</span>`;c.append(d)})}
+  const isWriter=String(i)==='2000'||nm==='작가',isCecilia=String(i)==='25';if(isWriter||isCecilia){d.classList.add('spine-ch');const canvas=document.createElement('canvas');canvas.className='spine-stage';canvas.setAttribute('aria-label',isWriter?(gender?'Writer Male Spine animation':'Writer Female Spine animation'):'Cecilia Spine animation');d.append(canvas);if(sc.ic[i])d.insertAdjacentHTML('beforeend',emotionHTML(sc.ic[i]));d.insertAdjacentHTML('beforeend',`<span class=nm>${nm}</span>`);c.append(d);const portrait=isWriter?(gender?WriterMaleSpine:WriterFemaleSpine):CeciliaSpine;portrait.mount(canvas);portrait.setExpression(o.e);return}
+  d.innerHTML=`${sc.ic[i]?emotionHTML(sc.ic[i]):''}<div class=fig style="background:linear-gradient(#fff3,#0004),hsl(${h},45%,45%)"><div>${[...nm][0]}</div><div class=em>${E[o.e]||'🙂'}</div></div><span class=nm>${nm}</span>`;c.append(d)})}
 function createSpinePortrait(name,folder){
  let canvas=null,ctx=null,shader=null,batcher=null,skeletonRenderer=null,assetManager=null,skeleton=null,state=null,bounds=null,fixedScale=0,ready=false,loading=false,failed=false,last=0,frame=0,expression=208,faceSlots=[];
  const assetBase='./Characters/'+folder+'/',DISPLAY_SCALE=2;
