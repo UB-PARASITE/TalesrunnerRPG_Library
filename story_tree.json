@@ -2399,6 +2399,8 @@
    "children": [
     {
      "id": "hero0",
+     "heroId": 0,
+     "friendshipGroup": 0,
      "title": [
       "@Hero_Name_0000"
      ],
@@ -2442,6 +2444,8 @@
     },
     {
      "id": "hero1",
+     "heroId": 1,
+     "friendshipGroup": 1,
      "title": [
       "@Hero_Name_0001"
      ],
@@ -2485,6 +2489,8 @@
     },
     {
      "id": "hero2",
+     "heroId": 2,
+     "friendshipGroup": 2,
      "title": [
       "@Hero_Name_0002"
      ],
@@ -2528,6 +2534,8 @@
     },
     {
      "id": "hero3",
+     "heroId": 3,
+     "friendshipGroup": 3,
      "title": [
       "@Hero_Name_0003"
      ],
@@ -2571,6 +2579,8 @@
     },
     {
      "id": "hero4",
+     "heroId": 4,
+     "friendshipGroup": 4,
      "title": [
       "@Hero_Name_0004"
      ],
@@ -2614,6 +2624,8 @@
     },
     {
      "id": "hero5",
+     "heroId": 5,
+     "friendshipGroup": 5,
      "title": [
       "@Hero_Name_0005"
      ],
@@ -2657,6 +2669,8 @@
     },
     {
      "id": "hero6",
+     "heroId": 6,
+     "friendshipGroup": 6,
      "title": [
       "@Hero_Name_0006"
      ],
@@ -2700,6 +2714,8 @@
     },
     {
      "id": "hero7",
+     "heroId": 7,
+     "friendshipGroup": 7,
      "title": [
       "@Hero_Name_0007"
      ],
@@ -2743,6 +2759,8 @@
     },
     {
      "id": "hero8",
+     "heroId": 8,
+     "friendshipGroup": 8,
      "title": [
       "@Hero_Name_0008"
      ],
@@ -2786,6 +2804,8 @@
     },
     {
      "id": "hero9",
+     "heroId": 9,
+     "friendshipGroup": 9,
      "title": [
       "@Hero_Name_0009"
      ],
@@ -2829,6 +2849,8 @@
     },
     {
      "id": "hero10",
+     "heroId": 10,
+     "friendshipGroup": 10,
      "title": [
       "@Hero_Name_0010"
      ],
@@ -2872,6 +2894,8 @@
     },
     {
      "id": "hero11",
+     "heroId": 11,
+     "friendshipGroup": 11,
      "title": [
       "@Hero_Name_0011"
      ],
@@ -2915,6 +2939,8 @@
     },
     {
      "id": "hero12",
+     "heroId": 12,
+     "friendshipGroup": 12,
      "title": [
       "@Hero_Name_0012"
      ],
@@ -2958,6 +2984,8 @@
     },
     {
      "id": "hero13",
+     "heroId": 13,
+     "friendshipGroup": 13,
      "title": [
       "@Hero_Name_0013"
      ],
@@ -3001,6 +3029,8 @@
     },
     {
      "id": "hero14",
+     "heroId": 14,
+     "friendshipGroup": 14,
      "title": [
       "@Hero_Name_0014"
      ],
@@ -3044,6 +3074,8 @@
     },
     {
      "id": "hero15",
+     "heroId": 15,
+     "friendshipGroup": 15,
      "title": [
       "@Hero_Name_0015"
      ],
@@ -3087,6 +3119,8 @@
     },
     {
      "id": "hero16",
+     "heroId": 16,
+     "friendshipGroup": 16,
      "title": [
       "@Hero_Name_0016"
      ],
@@ -3130,6 +3164,8 @@
     },
     {
      "id": "hero17",
+     "heroId": 17,
+     "friendshipGroup": 17,
      "title": [
       "@Hero_Name_0017"
      ],
@@ -3173,6 +3209,8 @@
     },
     {
      "id": "hero18",
+     "heroId": 18,
+     "friendshipGroup": 18,
      "title": [
       "@Hero_Name_0018"
      ],
@@ -3216,6 +3254,8 @@
     },
     {
      "id": "hero19",
+     "heroId": 19,
+     "friendshipGroup": 19,
      "title": [
       "@Hero_Name_0019"
      ],
@@ -3259,6 +3299,8 @@
     },
     {
      "id": "hero20",
+     "heroId": 20,
+     "friendshipGroup": 20,
      "title": [
       "@Hero_Name_0020"
      ],
@@ -3302,6 +3344,8 @@
     },
     {
      "id": "hero21",
+     "heroId": 21,
+     "friendshipGroup": 21,
      "title": [
       "@Hero_Name_0021"
      ],
@@ -3345,6 +3389,8 @@
     },
     {
      "id": "hero22",
+     "heroId": 22,
+     "friendshipGroup": 22,
      "title": [
       "@Hero_Name_0022"
      ],
@@ -3388,6 +3434,8 @@
     },
     {
      "id": "hero23",
+     "heroId": 23,
+     "friendshipGroup": 23,
      "title": [
       "@Hero_Name_0023"
      ],
@@ -3431,6 +3479,8 @@
     },
     {
      "id": "hero24",
+     "heroId": 24,
+     "friendshipGroup": 24,
      "title": [
       "@Hero_Name_0024"
      ],
@@ -3474,6 +3524,8 @@
     },
     {
      "id": "hero25",
+     "heroId": 25,
+     "friendshipGroup": 25,
      "title": [
       "@Hero_Name_0025"
      ],
@@ -3517,6 +3569,8 @@
     },
     {
      "id": "hero26",
+     "heroId": 26,
+     "friendshipGroup": 26,
      "title": [
       "@Hero_Name_0026"
      ],
@@ -3560,6 +3614,8 @@
     },
     {
      "id": "hero27",
+     "heroId": 27,
+     "friendshipGroup": 27,
      "title": [
       "@Hero_Name_0027"
      ],
@@ -3603,6 +3659,8 @@
     },
     {
      "id": "hero28",
+     "heroId": 28,
+     "friendshipGroup": 28,
      "title": [
       "@Hero_Name_0028"
      ],
@@ -3646,6 +3704,8 @@
     },
     {
      "id": "hero29",
+     "heroId": 29,
+     "friendshipGroup": 29,
      "title": [
       "@Hero_Name_0029"
      ],
@@ -3689,6 +3749,8 @@
     },
     {
      "id": "hero30",
+     "heroId": 30,
+     "friendshipGroup": 30,
      "title": [
       "@Hero_Name_0030"
      ],
@@ -3732,6 +3794,8 @@
     },
     {
      "id": "hero31",
+     "heroId": 31,
+     "friendshipGroup": 31,
      "title": [
       "@Hero_Name_0031"
      ],
@@ -3775,6 +3839,8 @@
     },
     {
      "id": "hero32",
+     "heroId": 32,
+     "friendshipGroup": 32,
      "title": [
       "@Hero_Name_0032"
      ],
@@ -3818,6 +3884,8 @@
     },
     {
      "id": "hero33",
+     "heroId": 33,
+     "friendshipGroup": 33,
      "title": [
       "@Hero_Name_0033"
      ],
@@ -3861,6 +3929,8 @@
     },
     {
      "id": "hero34",
+     "heroId": 34,
+     "friendshipGroup": 34,
      "title": [
       "@Hero_Name_0034"
      ],
@@ -3904,6 +3974,8 @@
     },
     {
      "id": "hero35",
+     "heroId": 35,
+     "friendshipGroup": 35,
      "title": [
       "@Hero_Name_0035"
      ],
@@ -3947,6 +4019,8 @@
     },
     {
      "id": "hero36",
+     "heroId": 36,
+     "friendshipGroup": 36,
      "title": [
       "@Hero_Name_0036"
      ],
@@ -3990,6 +4064,8 @@
     },
     {
      "id": "hero37",
+     "heroId": 37,
+     "friendshipGroup": 37,
      "title": [
       "@Hero_Name_0037"
      ],
@@ -4033,6 +4109,8 @@
     },
     {
      "id": "hero38",
+     "heroId": 38,
+     "friendshipGroup": 38,
      "title": [
       "@Hero_Name_0038"
      ],
@@ -4076,6 +4154,8 @@
     },
     {
      "id": "hero39",
+     "heroId": 39,
+     "friendshipGroup": 39,
      "title": [
       "@Hero_Name_0039"
      ],
@@ -4119,6 +4199,8 @@
     },
     {
      "id": "hero40",
+     "heroId": 40,
+     "friendshipGroup": 40,
      "title": [
       "@Hero_Name_0040"
      ],
@@ -4162,6 +4244,8 @@
     },
     {
      "id": "hero41",
+     "heroId": 41,
+     "friendshipGroup": 41,
      "title": [
       "@Hero_Name_0041"
      ],
@@ -4205,6 +4289,8 @@
     },
     {
      "id": "hero42",
+     "heroId": 42,
+     "friendshipGroup": 42,
      "title": [
       "@Hero_Name_0042"
      ],
@@ -4247,7 +4333,54 @@
      ]
     },
     {
+     "id": "hero43",
+     "heroId": 43,
+     "friendshipGroup": 59,
+     "title": [
+      "@Hero_Name_0043"
+     ],
+     "children": [
+      {
+       "title": [
+        "@FriendshipStory_StoryName_59001"
+       ],
+       "dialogId": 10280,
+       "storyId": 59001
+      },
+      {
+       "title": [
+        "@FriendshipStory_StoryName_59002"
+       ],
+       "dialogId": 10281,
+       "storyId": 59002
+      },
+      {
+       "title": [
+        "@FriendshipStory_StoryName_59003"
+       ],
+       "dialogId": 10282,
+       "storyId": 59003
+      },
+      {
+       "title": [
+        "@FriendshipStory_StoryName_59004"
+       ],
+       "dialogId": 10283,
+       "storyId": 59004
+      },
+      {
+       "title": [
+        "@FriendshipStory_StoryName_59005"
+       ],
+       "dialogId": 10284,
+       "storyId": 59005
+      }
+     ]
+    },
+    {
      "id": "hero44",
+     "heroId": 44,
+     "friendshipGroup": 44,
      "title": [
       "@Hero_Name_0044"
      ],
@@ -4291,6 +4424,8 @@
     },
     {
      "id": "hero45",
+     "heroId": 45,
+     "friendshipGroup": 45,
      "title": [
       "@Hero_Name_0045"
      ],
@@ -4334,6 +4469,8 @@
     },
     {
      "id": "hero46",
+     "heroId": 46,
+     "friendshipGroup": 46,
      "title": [
       "@Hero_Name_0046"
      ],
@@ -4377,6 +4514,8 @@
     },
     {
      "id": "hero47",
+     "heroId": 47,
+     "friendshipGroup": 47,
      "title": [
       "@Hero_Name_0047"
      ],
@@ -4420,6 +4559,8 @@
     },
     {
      "id": "hero48",
+     "heroId": 48,
+     "friendshipGroup": 48,
      "title": [
       "@Hero_Name_0048"
      ],
@@ -4463,6 +4604,8 @@
     },
     {
      "id": "hero49",
+     "heroId": 49,
+     "friendshipGroup": 49,
      "title": [
       "@Hero_Name_0049"
      ],
@@ -4506,6 +4649,8 @@
     },
     {
      "id": "hero50",
+     "heroId": 50,
+     "friendshipGroup": 50,
      "title": [
       "@Hero_Name_0050"
      ],
@@ -4549,6 +4694,8 @@
     },
     {
      "id": "hero51",
+     "heroId": 51,
+     "friendshipGroup": 51,
      "title": [
       "@Hero_Name_0051"
      ],
@@ -4592,6 +4739,8 @@
     },
     {
      "id": "hero52",
+     "heroId": 52,
+     "friendshipGroup": 52,
      "title": [
       "@Hero_Name_0052"
      ],
@@ -4635,6 +4784,8 @@
     },
     {
      "id": "hero53",
+     "heroId": 53,
+     "friendshipGroup": 53,
      "title": [
       "@Hero_Name_0053"
      ],
@@ -4678,6 +4829,8 @@
     },
     {
      "id": "hero54",
+     "heroId": 54,
+     "friendshipGroup": 54,
      "title": [
       "@Hero_Name_0054"
      ],
@@ -4721,6 +4874,8 @@
     },
     {
      "id": "hero55",
+     "heroId": 55,
+     "friendshipGroup": 55,
      "title": [
       "@Hero_Name_0055"
      ],
@@ -4764,6 +4919,8 @@
     },
     {
      "id": "hero56",
+     "heroId": 56,
+     "friendshipGroup": 56,
      "title": [
       "@Hero_Name_0056"
      ],
@@ -4807,6 +4964,8 @@
     },
     {
      "id": "hero57",
+     "heroId": 57,
+     "friendshipGroup": 57,
      "title": [
       "@Hero_Name_0057"
      ],
@@ -4850,6 +5009,8 @@
     },
     {
      "id": "hero58",
+     "heroId": 58,
+     "friendshipGroup": 58,
      "title": [
       "@Hero_Name_0058"
      ],
@@ -4893,51 +5054,10 @@
     },
     {
      "id": "hero59",
+     "heroId": 59,
+     "friendshipGroup": 60,
      "title": [
       "@Hero_Name_0059"
-     ],
-     "children": [
-      {
-       "title": [
-        "@FriendshipStory_StoryName_59001"
-       ],
-       "dialogId": 10280,
-       "storyId": 59001
-      },
-      {
-       "title": [
-        "@FriendshipStory_StoryName_59002"
-       ],
-       "dialogId": 10281,
-       "storyId": 59002
-      },
-      {
-       "title": [
-        "@FriendshipStory_StoryName_59003"
-       ],
-       "dialogId": 10282,
-       "storyId": 59003
-      },
-      {
-       "title": [
-        "@FriendshipStory_StoryName_59004"
-       ],
-       "dialogId": 10283,
-       "storyId": 59004
-      },
-      {
-       "title": [
-        "@FriendshipStory_StoryName_59005"
-       ],
-       "dialogId": 10284,
-       "storyId": 59005
-      }
-     ]
-    },
-    {
-     "id": "hero60",
-     "title": [
-      "@Hero_Name_0060"
      ],
      "children": [
       {
@@ -4978,9 +5098,11 @@
      ]
     },
     {
-     "id": "hero61",
+     "id": "hero64",
+     "heroId": 64,
+     "friendshipGroup": 61,
      "title": [
-      "@Hero_Name_0061"
+      "@Hero_Name_0064"
      ],
      "children": [
       {
@@ -5021,9 +5143,11 @@
      ]
     },
     {
-     "id": "hero62",
+     "id": "hero65",
+     "heroId": 65,
+     "friendshipGroup": 62,
      "title": [
-      "@Hero_Name_0062"
+      "@Hero_Name_0065"
      ],
      "children": [
       {
@@ -5064,9 +5188,11 @@
      ]
     },
     {
-     "id": "hero63",
+     "id": "hero66",
+     "heroId": 66,
+     "friendshipGroup": 63,
      "title": [
-      "@Hero_Name_0063"
+      "@Hero_Name_0066"
      ],
      "children": [
       {
@@ -5107,9 +5233,11 @@
      ]
     },
     {
-     "id": "hero64",
+     "id": "hero67",
+     "heroId": 67,
+     "friendshipGroup": 64,
      "title": [
-      "@Hero_Name_0064"
+      "@Hero_Name_0067"
      ],
      "children": [
       {

@@ -63,7 +63,20 @@ def parse(rows,i,stop):
         elif t1==22 and t2==62: out.append(['E',pid,t3])
         elif t1==19 and t2==1 and t3>=100: out.append(['I',pid,t3])
         elif t1==13: out.append(['K',1 if t2==1 else 0])
-        elif t1==9 and t2==1 and d['strValue']: out.append(['G',d['strValue']])
+        elif t1==9:
+            sv=d['strValue']
+            if t2==1 and sv: out.append(['G',sv,d['delay']])
+            elif t2==69 and sv: out.append(['G',sv,d['delay'],1])
+            elif t2==10:
+                try: out.append(['GS',float(sv or 0)])
+                except ValueError: out.append(['GS',0])
+            elif t2==2: out.append(['GS',0])
+            elif t2==9: out.append(['GA'])
+        elif t1==14:
+            sv=d['strValue']
+            if t2==1 and sv: out.append(['S',sv,d['delay']])
+            elif t2==2: out.append(['SX'])
+        elif t1==10 and d['strValue']: out.append(['V',d['strValue']])
         elif t1==15 and t2 in(1,65): out.append(['Z',d['strValue']])
     return out,i
 S={}
@@ -96,7 +109,21 @@ tree.append({'id':'sub','label':'서브 스토리','children':sg})
 fg=collections.defaultdict(list)
 for f in T['friendshipStorys']:
     if story(f['dialogId']): fg[f['id']//1000].append(node(['@'+f['storyName']],f['dialogId'],storyId=f['id']))
-tree.append({'id':'fr','label':'호감도 스토리','children':[{'id':'hero%d'%h,'title':['@'+hero[h]] if h in hero else ['#%d'%h],'children':fg[h]} for h in sorted(fg)]})
+# FriendshipStory ids (id//1000) are NOT hero ids: heroes without friendship stories are skipped
+# and later groups are shifted. Resolve the real hero per group from the SpeakText speakers.
+def group_hero(g):
+    c=collections.Counter()
+    for n in fg[g]:
+        for d in by[n['dialogId']]:
+            if d['type1']==1 and 0<=d['portraitId']<1000 and d['portraitId'] in hero: c[d['portraitId']]+=1
+    return g if c[g]>0 else c.most_common(1)[0][0]  # identity when the hero speaks in the group (covers alt-forms like 32), else main speaker
+gmap={g:group_hero(g) for g in fg}
+assert len(set(gmap.values()))==len(gmap),'duplicate hero among friendship groups'
+fgh={}
+for g,h in gmap.items(): fgh[h]=(g,fg[g])
+print('friendship groups remapped (group->hero):',{g:(h,tx.get(hero[h])) for g,h in gmap.items() if g!=h})
+print('heroes without friendship stories:',[(h,tx.get(hero[h])) for h in sorted(hero) if h not in fgh])
+tree.append({'id':'fr','label':'호감도 스토리','children':[{'id':'hero%d'%h,'heroId':h,'friendshipGroup':fgh[h][0],'title':['@'+hero[h]],'children':fgh[h][1]} for h in sorted(fgh)]})
 bl=[node(['@'+hero[b['id']],' 생일 (%d/%d)'%(b['month'],b['day'])] if b['id'] in hero else ['#%d'%b['id']],b['birthDayDialogId']) for b in T['birthdays'] if story(b['birthDayDialogId'])]
 tree.append({'id':'bd','label':'생일 스토리','children':[{'id':'birthday','title':['캐릭터 생일'],'children':bl}]})
 used=set()
@@ -117,6 +144,15 @@ tree_doc={'version':1,'textDir':'TextAsset/','lang':'kor','textFiles':[t+'_loc_{
  'speakers':P,'heroes':{str(k):v for k,v in hero.items()},'tree':tree}
 json.dump(tree_doc,open('story_tree.json','w',encoding='utf-8'),ensure_ascii=False,indent=1)
 json.dump({'S':S,'talk':tk},open('story_scripts.json','w',encoding='utf-8'),ensure_ascii=False,separators=(',',':'))
+aud=collections.defaultdict(collections.Counter)
+def aw(st,sid):
+    for x in st:
+        if x[0] in('G','S','V'): aud[{'G':'bgm','S':'sfx','V':'voice'}[x[0]]][x[1]]+=1
+        elif x[0]=='Q':
+            for b in x[2]: aw(b,sid)
+for k,v in S.items(): aw(v['st'],k)
+json.dump({'_note':'Names as written in dialog data (case differs in places, e.g. SFX_Ding / SFX_ding). Match audio files case-insensitively. bgm entries with dots (TalesRunner.*) come from PlayOneTime rows.',
+ **{k:[{'name':n,'count':c,'key':n.lower()} for n,c in sorted(v.items(),key=lambda x:-x[1])] for k,v in aud.items()}},open('audio_names.json','w',encoding='utf-8'),ensure_ascii=False,indent=1)
 # outline text
 def rs(parts):
     return ''.join(tx.get(p[1:],p[1:]) if p.startswith('@') else p for p in parts)

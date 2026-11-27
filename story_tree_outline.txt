@@ -519,6 +519,12 @@
     나는 아직 배가 고프다 [dialogId=10077]
     어렴풋이 떠오른 희망 [dialogId=10078]
     늑대 소년의 보은 [dialogId=10079]
+  닉스
+    정체불명의 용병 [dialogId=10280]
+    미션, 주인찾기 [dialogId=10281]
+    주인은 오락실에? [dialogId=10282]
+    호칭은 중요해! [dialogId=10283]
+    피치는 누구의 주인인가? [dialogId=10284]
   사야
     호적수는 어디에 [dialogId=10195]
     도검, 무라사메 [dialogId=10196]
@@ -610,36 +616,30 @@
     빛이 향하는 곳 [dialogId=10288]
     불어오는 새로운 바람 [dialogId=10289]
   시호
-    정체불명의 용병 [dialogId=10280]
-    미션, 주인찾기 [dialogId=10281]
-    주인은 오락실에? [dialogId=10282]
-    호칭은 중요해! [dialogId=10283]
-    피치는 누구의 주인인가? [dialogId=10284]
-  살라딘
     여우별에서 찾아온 친구 [dialogId=10290]
     머뭇거리는 사과 [dialogId=10291]
     수행의 습관 [dialogId=10292]
     엇갈린 마음 [dialogId=10293]
     오해를 넘어, 다시 [dialogId=10294]
-  셰라자드
+  악마 카인
     달을 저버린 늑대 [dialogId=10300]
     낯선 악마와의 만남 [dialogId=10301]
     당신을 위해서라면 [dialogId=10302]
     반전의 악마 [dialogId=10303]
     유일한 구원에게 배운 것 [dialogId=10304]
-  크리스티앙
+  소피
     음유시인, 소피. [dialogId=10305]
     이야기를 만드는 곳 [dialogId=10306]
     처음이라는 이름의 용기 [dialogId=10307]
     나나가 전한 이야기 [dialogId=10308]
     행복은 영혼이 노래할 때 [dialogId=10309]
-  죠안
+  타브리스
     교외의 예배당 [dialogId=10310]
     무신론자 [dialogId=10311]
     헤어짐을 대하는 자세 [dialogId=10312]
     밤의 사제 [dialogId=10313]
     속죄의 천사 [dialogId=10314]
-  악마 카인
+  티나
     정식 기사의 첫 임무 [dialogId=10315]
     귀족의 예법 [dialogId=10316]
     동경하게 된 뒷모습 [dialogId=10317]
