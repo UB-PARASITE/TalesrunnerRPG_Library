@@ -1,0 +1,26 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 7185679250872758693
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 2807258900547131880
+  },
+  "m_Name": "",
+  "maskable": 0,
+  "mf": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "mr": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "shape": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "maskTargets": []
+}
