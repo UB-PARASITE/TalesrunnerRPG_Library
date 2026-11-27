@@ -63,7 +63,7 @@ summary{padding:11px 14px;font-weight:600;cursor:pointer}summary small{color:var
 <div id="dlg"><div id="nm"></div><div id="tx"></div><span id="nx">▼</span></div><div id="cho"></div><div id="lg"></div><div id="end"><div>— 끝 —</div><button id="e1">다음 화</button><button id="e2">목록으로</button></div></div></div>
 <script src="https://cdn.jsdelivr.net/npm/@esotericsoftware/spine-webgl@4.1.24/dist/iife/spine-webgl.js"></script>
 <script>
-const $=s=>document.querySelector(s),E={200:'😐',201:'😠',202:'😑',203:'😢',204:'😊',205:'😡',206:'😭',207:'😄',208:'🙂',209:'😲',210:'🤬'},POS={L:'20%',C:'50%',R:'80%'};
+const $=s=>document.querySelector(s),E={200:'😐',201:'😠',202:'😑',203:'😢',204:'😊',205:'😡',206:'😭',207:'😄',208:'🙂',209:'😲',210:'🤬'},POS={L:'25%',C:'50%',R:'75%'};
 let DB,cat=0,cur=null,list=[],sc,stack,hist,gender=1,auto=0,skip=0,typ=null,tmr=null,total=1,read={};
 try{read=JSON.parse(localStorage.getItem('rd')||'{}')}catch(e){}
 const strip=h=>h.replace(/<[^>]+>/g,''),hue=s=>{let h=0;for(const c of String(s))h=(h*31+c.charCodeAt(0))%360;return h};
