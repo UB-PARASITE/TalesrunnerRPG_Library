@@ -1,0 +1,1739 @@
+{
+ "_note": "Names as written in dialog data (case differs in places, e.g. SFX_Ding / SFX_ding). Match audio files case-insensitively. bgm entries with dots (TalesRunner.*) come from PlayOneTime rows.",
+ "bgm": [
+  {
+   "name": "BGM_SmilingBaby",
+   "count": 146,
+   "key": "bgm_smilingbaby"
+  },
+  {
+   "name": "BGM_Happy",
+   "count": 101,
+   "key": "bgm_happy"
+  },
+  {
+   "name": "BGM_StrangeLand",
+   "count": 99,
+   "key": "bgm_strangeland"
+  },
+  {
+   "name": "BGM_Smilingbaby",
+   "count": 93,
+   "key": "bgm_smilingbaby"
+  },
+  {
+   "name": "BGM_MouseGangster",
+   "count": 59,
+   "key": "bgm_mousegangster"
+  },
+  {
+   "name": "BGM_HealingLight",
+   "count": 58,
+   "key": "bgm_healinglight"
+  },
+  {
+   "name": "BGM_MysteryCat",
+   "count": 50,
+   "key": "bgm_mysterycat"
+  },
+  {
+   "name": "BGM_Rain",
+   "count": 50,
+   "key": "bgm_rain"
+  },
+  {
+   "name": "BGM_Chill",
+   "count": 49,
+   "key": "bgm_chill"
+  },
+  {
+   "name": "BGM_DimensionArcade",
+   "count": 46,
+   "key": "bgm_dimensionarcade"
+  },
+  {
+   "name": "BGM_SecretGarden",
+   "count": 45,
+   "key": "bgm_secretgarden"
+  },
+  {
+   "name": "BGM_CosyLiving",
+   "count": 42,
+   "key": "bgm_cosyliving"
+  },
+  {
+   "name": "BGM_RelaxIntoSleep",
+   "count": 37,
+   "key": "bgm_relaxintosleep"
+  },
+  {
+   "name": "BGM_DwellingPlace",
+   "count": 35,
+   "key": "bgm_dwellingplace"
+  },
+  {
+   "name": "BGM_ADreamWorld",
+   "count": 35,
+   "key": "bgm_adreamworld"
+  },
+  {
+   "name": "BGM_SpookyNight",
+   "count": 33,
+   "key": "bgm_spookynight"
+  },
+  {
+   "name": "BGM_HorrorPark",
+   "count": 31,
+   "key": "bgm_horrorpark"
+  },
+  {
+   "name": "BGM_Sad",
+   "count": 30,
+   "key": "bgm_sad"
+  },
+  {
+   "name": "BGM_DeveloperScare",
+   "count": 29,
+   "key": "bgm_developerscare"
+  },
+  {
+   "name": "BGM_Reminiscence",
+   "count": 29,
+   "key": "bgm_reminiscence"
+  },
+  {
+   "name": "BGM_StrangeMatter",
+   "count": 29,
+   "key": "bgm_strangematter"
+  },
+  {
+   "name": "BGM_Action",
+   "count": 28,
+   "key": "bgm_action"
+  },
+  {
+   "name": "BGM_Love",
+   "count": 28,
+   "key": "bgm_love"
+  },
+  {
+   "name": "BGM_BeyondStars",
+   "count": 23,
+   "key": "bgm_beyondstars"
+  },
+  {
+   "name": "BGM_rain",
+   "count": 21,
+   "key": "bgm_rain"
+  },
+  {
+   "name": "BGM_HorrorHouse",
+   "count": 19,
+   "key": "bgm_horrorhouse"
+  },
+  {
+   "name": "BGM_SquidGame",
+   "count": 18,
+   "key": "bgm_squidgame"
+  },
+  {
+   "name": "BGM_PianoVersion",
+   "count": 17,
+   "key": "bgm_pianoversion"
+  },
+  {
+   "name": "bgm_happy",
+   "count": 17,
+   "key": "bgm_happy"
+  },
+  {
+   "name": "BGM_Memories",
+   "count": 15,
+   "key": "bgm_memories"
+  },
+  {
+   "name": "BGM_Mermaid",
+   "count": 14,
+   "key": "bgm_mermaid"
+  },
+  {
+   "name": "BGM_Cinderella2",
+   "count": 14,
+   "key": "bgm_cinderella2"
+  },
+  {
+   "name": "BGM_smilingbaby",
+   "count": 13,
+   "key": "bgm_smilingbaby"
+  },
+  {
+   "name": "BGM_KingdomOfSadness",
+   "count": 12,
+   "key": "bgm_kingdomofsadness"
+  },
+  {
+   "name": "BGM_ParkWinter",
+   "count": 12,
+   "key": "bgm_parkwinter"
+  },
+  {
+   "name": "BGM_Pinocchio",
+   "count": 10,
+   "key": "bgm_pinocchio"
+  },
+  {
+   "name": "BGM_RedRidinghood",
+   "count": 10,
+   "key": "bgm_redridinghood"
+  },
+  {
+   "name": "BGM_NewPark",
+   "count": 10,
+   "key": "bgm_newpark"
+  },
+  {
+   "name": "BGM_ChristmasRunner",
+   "count": 9,
+   "key": "bgm_christmasrunner"
+  },
+  {
+   "name": "BGM_sad",
+   "count": 9,
+   "key": "bgm_sad"
+  },
+  {
+   "name": "BGM_LittleMatchTale",
+   "count": 8,
+   "key": "bgm_littlematchtale"
+  },
+  {
+   "name": "BGM_AnubisInvasion",
+   "count": 8,
+   "key": "bgm_anubisinvasion"
+  },
+  {
+   "name": "BGM_HanselGretelBoss",
+   "count": 7,
+   "key": "bgm_hanselgretelboss"
+  },
+  {
+   "name": "TalesRunner.RPG.Ending.1m30sec",
+   "count": 6,
+   "key": "talesrunner.rpg.ending.1m30sec"
+  },
+  {
+   "name": "BGM_DimensionAmon",
+   "count": 6,
+   "key": "bgm_dimensionamon"
+  },
+  {
+   "name": "BGM_ShadowlandPark",
+   "count": 6,
+   "key": "bgm_shadowlandpark"
+  },
+  {
+   "name": "BGM_LittleMatchSurvival",
+   "count": 5,
+   "key": "bgm_littlematchsurvival"
+  },
+  {
+   "name": "BGM_g3_LonelyWanderer",
+   "count": 5,
+   "key": "bgm_g3_lonelywanderer"
+  },
+  {
+   "name": "BGM_HenryGardenFire",
+   "count": 4,
+   "key": "bgm_henrygardenfire"
+  },
+  {
+   "name": "BGM_HungbuNolbu1",
+   "count": 4,
+   "key": "bgm_hungbunolbu1"
+  },
+  {
+   "name": "BGM_g3_RiskyVoices",
+   "count": 4,
+   "key": "bgm_g3_riskyvoices"
+  },
+  {
+   "name": "BGM_chill",
+   "count": 4,
+   "key": "bgm_chill"
+  },
+  {
+   "name": "TalesRunner.Last.Chaos.2m",
+   "count": 3,
+   "key": "talesrunner.last.chaos.2m"
+  },
+  {
+   "name": "BGM_SnowQueen",
+   "count": 3,
+   "key": "bgm_snowqueen"
+  },
+  {
+   "name": "BGM_BadaStory",
+   "count": 3,
+   "key": "bgm_badastory"
+  },
+  {
+   "name": "BGM_ShadowlandGhost",
+   "count": 3,
+   "key": "bgm_shadowlandghost"
+  },
+  {
+   "name": "BGM_badaStory",
+   "count": 3,
+   "key": "bgm_badastory"
+  },
+  {
+   "name": "BGM_g3_HappyMercenary",
+   "count": 3,
+   "key": "bgm_g3_happymercenary"
+  },
+  {
+   "name": "BGM_g3_Alone",
+   "count": 3,
+   "key": "bgm_g3_alone"
+  },
+  {
+   "name": "BGM_g3_TimeOfFate",
+   "count": 3,
+   "key": "bgm_g3_timeoffate"
+  },
+  {
+   "name": "BGM_g3_Conspiracy2",
+   "count": 3,
+   "key": "bgm_g3_conspiracy2"
+  },
+  {
+   "name": "bgm_g3_BraveMarch",
+   "count": 3,
+   "key": "bgm_g3_bravemarch"
+  },
+  {
+   "name": "bgm_g3_Exodus",
+   "count": 3,
+   "key": "bgm_g3_exodus"
+  },
+  {
+   "name": "BGM_Newpark",
+   "count": 2,
+   "key": "bgm_newpark"
+  },
+  {
+   "name": "BGM_UnderworldVera",
+   "count": 2,
+   "key": "bgm_underworldvera"
+  },
+  {
+   "name": "BGM_ElfOfSpring",
+   "count": 2,
+   "key": "bgm_elfofspring"
+  },
+  {
+   "name": "BGM_DokkaebiNote",
+   "count": 2,
+   "key": "bgm_dokkaebinote"
+  },
+  {
+   "name": "BGM_DokkaebiGoldSilver",
+   "count": 2,
+   "key": "bgm_dokkaebigoldsilver"
+  },
+  {
+   "name": "BGM_happy",
+   "count": 2,
+   "key": "bgm_happy"
+  },
+  {
+   "name": "BGM_PandoraRaid2",
+   "count": 2,
+   "key": "bgm_pandoraraid2"
+  },
+  {
+   "name": "BGM_g3_HeartToHeart",
+   "count": 2,
+   "key": "bgm_g3_hearttoheart"
+  },
+  {
+   "name": "BGM_g3_ShivanScimitar",
+   "count": 2,
+   "key": "bgm_g3_shivanscimitar"
+  },
+  {
+   "name": "BGM_Squidgame",
+   "count": 2,
+   "key": "bgm_squidgame"
+  },
+  {
+   "name": "BGM_Awakening",
+   "count": 2,
+   "key": "bgm_awakening"
+  },
+  {
+   "name": "SFX_Clock",
+   "count": 1,
+   "key": "sfx_clock"
+  },
+  {
+   "name": "SFX_Heartbeat",
+   "count": 1,
+   "key": "sfx_heartbeat"
+  },
+  {
+   "name": "bgm_love",
+   "count": 1,
+   "key": "bgm_love"
+  },
+  {
+   "name": "Beach",
+   "count": 1,
+   "key": "beach"
+  },
+  {
+   "name": "WarmHappyTown",
+   "count": 1,
+   "key": "warmhappytown"
+  },
+  {
+   "name": "BGM_ShadowlandCity",
+   "count": 1,
+   "key": "bgm_shadowlandcity"
+  },
+  {
+   "name": "BGM_HungbuNolbu2",
+   "count": 1,
+   "key": "bgm_hungbunolbu2"
+  },
+  {
+   "name": "BGM_DokkaebiDen",
+   "count": 1,
+   "key": "bgm_dokkaebiden"
+  },
+  {
+   "name": "SFX_Lunatic",
+   "count": 1,
+   "key": "sfx_lunatic"
+  },
+  {
+   "name": "BGM_PandoraLand",
+   "count": 1,
+   "key": "bgm_pandoraland"
+  },
+  {
+   "name": "BGM_BownaviSlide",
+   "count": 1,
+   "key": "bgm_bownavislide"
+  },
+  {
+   "name": "BGM_PandoraRaid1",
+   "count": 1,
+   "key": "bgm_pandoraraid1"
+  },
+  {
+   "name": "BGM_PandoraBoss",
+   "count": 1,
+   "key": "bgm_pandoraboss"
+  },
+  {
+   "name": "BGM_block",
+   "count": 1,
+   "key": "bgm_block"
+  },
+  {
+   "name": "BGM_BownaviDogTown",
+   "count": 1,
+   "key": "bgm_bownavidogtown"
+  },
+  {
+   "name": "BGM_g3_BlueConcerto",
+   "count": 1,
+   "key": "bgm_g3_blueconcerto"
+  },
+  {
+   "name": "BGM_g3_Tears",
+   "count": 1,
+   "key": "bgm_g3_tears"
+  },
+  {
+   "name": "bgm_g3_Corale",
+   "count": 1,
+   "key": "bgm_g3_corale"
+  },
+  {
+   "name": "BGM_Mysterycat",
+   "count": 1,
+   "key": "bgm_mysterycat"
+  },
+  {
+   "name": "bgm_sad",
+   "count": 1,
+   "key": "bgm_sad"
+  },
+  {
+   "name": "BGM_love",
+   "count": 1,
+   "key": "bgm_love"
+  },
+  {
+   "name": "black",
+   "count": 1,
+   "key": "black"
+  },
+  {
+   "name": "BGM_spookynight",
+   "count": 1,
+   "key": "bgm_spookynight"
+  },
+  {
+   "name": "BGM_Pianoversion",
+   "count": 1,
+   "key": "bgm_pianoversion"
+  },
+  {
+   "name": "BGM_BownaviPark",
+   "count": 1,
+   "key": "bgm_bownavipark"
+  },
+  {
+   "name": "BGM_GoodOrEvil",
+   "count": 1,
+   "key": "bgm_goodorevil"
+  },
+  {
+   "name": "BGM_memories",
+   "count": 1,
+   "key": "bgm_memories"
+  },
+  {
+   "name": "Devil'sFollower",
+   "count": 1,
+   "key": "devil'sfollower"
+  }
+ ],
+ "sfx": [
+  {
+   "name": "SFX_Tsukkomi",
+   "count": 1191,
+   "key": "sfx_tsukkomi"
+  },
+  {
+   "name": "sfx_boke",
+   "count": 268,
+   "key": "sfx_boke"
+  },
+  {
+   "name": "SFX_Ding",
+   "count": 148,
+   "key": "sfx_ding"
+  },
+  {
+   "name": "SFX_Piano",
+   "count": 126,
+   "key": "sfx_piano"
+  },
+  {
+   "name": "sfx_drum",
+   "count": 108,
+   "key": "sfx_drum"
+  },
+  {
+   "name": "SFX_ding",
+   "count": 102,
+   "key": "sfx_ding"
+  },
+  {
+   "name": "SFX_Drum",
+   "count": 101,
+   "key": "sfx_drum"
+  },
+  {
+   "name": "sfx_levelup",
+   "count": 95,
+   "key": "sfx_levelup"
+  },
+  {
+   "name": "SFX_boke2",
+   "count": 86,
+   "key": "sfx_boke2"
+  },
+  {
+   "name": "SFX_SceneChange",
+   "count": 85,
+   "key": "sfx_scenechange"
+  },
+  {
+   "name": "SFX_Shinning",
+   "count": 73,
+   "key": "sfx_shinning"
+  },
+  {
+   "name": "SFX_Knocking",
+   "count": 71,
+   "key": "sfx_knocking"
+  },
+  {
+   "name": "SFX_DoorClosed",
+   "count": 71,
+   "key": "sfx_doorclosed"
+  },
+  {
+   "name": "sfx_shinning",
+   "count": 69,
+   "key": "sfx_shinning"
+  },
+  {
+   "name": "SFX_Running",
+   "count": 67,
+   "key": "sfx_running"
+  },
+  {
+   "name": "SFX_Walk",
+   "count": 56,
+   "key": "sfx_walk"
+  },
+  {
+   "name": "SFX_Shinning2",
+   "count": 55,
+   "key": "sfx_shinning2"
+  },
+  {
+   "name": "sfx_ding",
+   "count": 53,
+   "key": "sfx_ding"
+  },
+  {
+   "name": "sfx_piano",
+   "count": 50,
+   "key": "sfx_piano"
+  },
+  {
+   "name": "SFX_HeartBeatOnce",
+   "count": 49,
+   "key": "sfx_heartbeatonce"
+  },
+  {
+   "name": "SFX_Falldown2",
+   "count": 48,
+   "key": "sfx_falldown2"
+  },
+  {
+   "name": "SFX_shinning",
+   "count": 47,
+   "key": "sfx_shinning"
+  },
+  {
+   "name": "SFX_boke",
+   "count": 46,
+   "key": "sfx_boke"
+  },
+  {
+   "name": "SFX_Flick",
+   "count": 44,
+   "key": "sfx_flick"
+  },
+  {
+   "name": "SFX_Forestwalk",
+   "count": 41,
+   "key": "sfx_forestwalk"
+  },
+  {
+   "name": "SFX_Opendoor1",
+   "count": 37,
+   "key": "sfx_opendoor1"
+  },
+  {
+   "name": "SFX_Boke",
+   "count": 34,
+   "key": "sfx_boke"
+  },
+  {
+   "name": "SFX_Lunatic",
+   "count": 34,
+   "key": "sfx_lunatic"
+  },
+  {
+   "name": "SFX_Nyut",
+   "count": 26,
+   "key": "sfx_nyut"
+  },
+  {
+   "name": "SFX_Magic1",
+   "count": 24,
+   "key": "sfx_magic1"
+  },
+  {
+   "name": "SFX_Levelup",
+   "count": 23,
+   "key": "sfx_levelup"
+  },
+  {
+   "name": "sfx_boke2",
+   "count": 23,
+   "key": "sfx_boke2"
+  },
+  {
+   "name": "SFX_Swallow",
+   "count": 22,
+   "key": "sfx_swallow"
+  },
+  {
+   "name": "SFX_walk",
+   "count": 22,
+   "key": "sfx_walk"
+  },
+  {
+   "name": "SFX_running",
+   "count": 22,
+   "key": "sfx_running"
+  },
+  {
+   "name": "SFX_Falldown",
+   "count": 21,
+   "key": "sfx_falldown"
+  },
+  {
+   "name": "SFX_Celouneige",
+   "count": 21,
+   "key": "sfx_celouneige"
+  },
+  {
+   "name": "SFX_Koong",
+   "count": 20,
+   "key": "sfx_koong"
+  },
+  {
+   "name": "SFX_Seaside",
+   "count": 20,
+   "key": "sfx_seaside"
+  },
+  {
+   "name": "SFX_Boke2",
+   "count": 19,
+   "key": "sfx_boke2"
+  },
+  {
+   "name": "SFX_Bam3",
+   "count": 19,
+   "key": "sfx_bam3"
+  },
+  {
+   "name": "SFX_Wind",
+   "count": 19,
+   "key": "sfx_wind"
+  },
+  {
+   "name": "sfx_quizo",
+   "count": 19,
+   "key": "sfx_quizo"
+  },
+  {
+   "name": "sfx_falldown2",
+   "count": 19,
+   "key": "sfx_falldown2"
+  },
+  {
+   "name": "SFX_Monster",
+   "count": 18,
+   "key": "sfx_monster"
+  },
+  {
+   "name": "SFX_Fast",
+   "count": 18,
+   "key": "sfx_fast"
+  },
+  {
+   "name": "SFX_Crowded",
+   "count": 18,
+   "key": "sfx_crowded"
+  },
+  {
+   "name": "SFX_drum",
+   "count": 18,
+   "key": "sfx_drum"
+  },
+  {
+   "name": "SFX_Cheer",
+   "count": 17,
+   "key": "sfx_cheer"
+  },
+  {
+   "name": "sfx_quizx",
+   "count": 16,
+   "key": "sfx_quizx"
+  },
+  {
+   "name": "SFX_Slap",
+   "count": 15,
+   "key": "sfx_slap"
+  },
+  {
+   "name": "SFX_Quiz",
+   "count": 15,
+   "key": "sfx_quiz"
+  },
+  {
+   "name": "SFX_QuizO",
+   "count": 15,
+   "key": "sfx_quizo"
+  },
+  {
+   "name": "sfx_walk",
+   "count": 14,
+   "key": "sfx_walk"
+  },
+  {
+   "name": "SFX_Dash",
+   "count": 13,
+   "key": "sfx_dash"
+  },
+  {
+   "name": "SFX_Bam4",
+   "count": 13,
+   "key": "sfx_bam4"
+  },
+  {
+   "name": "SFX_gogogo",
+   "count": 13,
+   "key": "sfx_gogogo"
+  },
+  {
+   "name": "SFX_TensionDown",
+   "count": 13,
+   "key": "sfx_tensiondown"
+  },
+  {
+   "name": "SFX_Sword2",
+   "count": 13,
+   "key": "sfx_sword2"
+  },
+  {
+   "name": "sfx_hug",
+   "count": 13,
+   "key": "sfx_hug"
+  },
+  {
+   "name": "SFX_shinning2",
+   "count": 12,
+   "key": "sfx_shinning2"
+  },
+  {
+   "name": "SFX_Burning",
+   "count": 12,
+   "key": "sfx_burning"
+  },
+  {
+   "name": "SFX_Hug",
+   "count": 12,
+   "key": "sfx_hug"
+  },
+  {
+   "name": "SFX_LevelUp",
+   "count": 12,
+   "key": "sfx_levelup"
+  },
+  {
+   "name": "SFX_RunAway",
+   "count": 11,
+   "key": "sfx_runaway"
+  },
+  {
+   "name": "SFX_Crumble",
+   "count": 11,
+   "key": "sfx_crumble"
+  },
+  {
+   "name": "sfx_running",
+   "count": 11,
+   "key": "sfx_running"
+  },
+  {
+   "name": "SFX_QuizX",
+   "count": 11,
+   "key": "sfx_quizx"
+  },
+  {
+   "name": "SFX_DoorOpen",
+   "count": 11,
+   "key": "sfx_dooropen"
+  },
+  {
+   "name": "SFX_DoubleClick",
+   "count": 11,
+   "key": "sfx_doubleclick"
+  },
+  {
+   "name": "SFX_KickDoor",
+   "count": 10,
+   "key": "sfx_kickdoor"
+  },
+  {
+   "name": "SFX_MagicFire",
+   "count": 10,
+   "key": "sfx_magicfire"
+  },
+  {
+   "name": "SFX_OpenDoor1",
+   "count": 10,
+   "key": "sfx_opendoor1"
+  },
+  {
+   "name": "SFX_cat",
+   "count": 10,
+   "key": "sfx_cat"
+  },
+  {
+   "name": "sfx_seaside",
+   "count": 9,
+   "key": "sfx_seaside"
+  },
+  {
+   "name": "SFX_doorclosed",
+   "count": 9,
+   "key": "sfx_doorclosed"
+  },
+  {
+   "name": "SFX_Hungry",
+   "count": 8,
+   "key": "sfx_hungry"
+  },
+  {
+   "name": "SFX_Heartbeat",
+   "count": 8,
+   "key": "sfx_heartbeat"
+  },
+  {
+   "name": "SFX_Mail",
+   "count": 8,
+   "key": "sfx_mail"
+  },
+  {
+   "name": "SFX_Boots",
+   "count": 8,
+   "key": "sfx_boots"
+  },
+  {
+   "name": "SFX_Gun1",
+   "count": 8,
+   "key": "sfx_gun1"
+  },
+  {
+   "name": "SFX_Sword",
+   "count": 8,
+   "key": "sfx_sword"
+  },
+  {
+   "name": "SFX_dive",
+   "count": 8,
+   "key": "sfx_dive"
+  },
+  {
+   "name": "SFX_PunchWind",
+   "count": 8,
+   "key": "sfx_punchwind"
+  },
+  {
+   "name": "SFX_Tsukommi",
+   "count": 8,
+   "key": "sfx_tsukommi"
+  },
+  {
+   "name": "SFX_Clock",
+   "count": 8,
+   "key": "sfx_clock"
+  },
+  {
+   "name": "SFX_Kill",
+   "count": 7,
+   "key": "sfx_kill"
+  },
+  {
+   "name": "SFX_Opendoor2",
+   "count": 7,
+   "key": "sfx_opendoor2"
+  },
+  {
+   "name": "SFX_Paper1",
+   "count": 7,
+   "key": "sfx_paper1"
+  },
+  {
+   "name": "SFX_Shuk",
+   "count": 7,
+   "key": "sfx_shuk"
+  },
+  {
+   "name": "SFX_Teleport",
+   "count": 7,
+   "key": "sfx_teleport"
+  },
+  {
+   "name": "SFX_Noise",
+   "count": 7,
+   "key": "sfx_noise"
+  },
+  {
+   "name": "sfx_paper",
+   "count": 7,
+   "key": "sfx_paper"
+  },
+  {
+   "name": "SFX_BrokenGlass",
+   "count": 7,
+   "key": "sfx_brokenglass"
+  },
+  {
+   "name": "SFX_Fall",
+   "count": 6,
+   "key": "sfx_fall"
+  },
+  {
+   "name": "SFX_Monster2",
+   "count": 6,
+   "key": "sfx_monster2"
+  },
+  {
+   "name": "SFX_piano",
+   "count": 6,
+   "key": "sfx_piano"
+  },
+  {
+   "name": "SFX_ForestWalk",
+   "count": 6,
+   "key": "sfx_forestwalk"
+  },
+  {
+   "name": "SFX_Blood1",
+   "count": 6,
+   "key": "sfx_blood1"
+  },
+  {
+   "name": "SFX_Opendoor",
+   "count": 6,
+   "key": "sfx_opendoor"
+  },
+  {
+   "name": "sfx_cheer",
+   "count": 6,
+   "key": "sfx_cheer"
+  },
+  {
+   "name": "sfx_card2",
+   "count": 6,
+   "key": "sfx_card2"
+  },
+  {
+   "name": "SFX_CuteStep",
+   "count": 5,
+   "key": "sfx_cutestep"
+  },
+  {
+   "name": "SFX_Bleak",
+   "count": 5,
+   "key": "sfx_bleak"
+  },
+  {
+   "name": "SFX_HeartBeat",
+   "count": 5,
+   "key": "sfx_heartbeat"
+  },
+  {
+   "name": "SFX_Magic2",
+   "count": 5,
+   "key": "sfx_magic2"
+  },
+  {
+   "name": "SFX_Dive2",
+   "count": 5,
+   "key": "sfx_dive2"
+  },
+  {
+   "name": "SFX_Timpani",
+   "count": 5,
+   "key": "sfx_timpani"
+  },
+  {
+   "name": "SFX_SpecialMove",
+   "count": 5,
+   "key": "sfx_specialmove"
+  },
+  {
+   "name": "SFX_hug",
+   "count": 5,
+   "key": "sfx_hug"
+  },
+  {
+   "name": "SFX_Successful",
+   "count": 5,
+   "key": "sfx_successful"
+  },
+  {
+   "name": "SFX_applause",
+   "count": 5,
+   "key": "sfx_applause"
+  },
+  {
+   "name": "SFX_DoorChime",
+   "count": 5,
+   "key": "sfx_doorchime"
+  },
+  {
+   "name": "sfx_quiz",
+   "count": 5,
+   "key": "sfx_quiz"
+  },
+  {
+   "name": "SFX_Gun4",
+   "count": 5,
+   "key": "sfx_gun4"
+  },
+  {
+   "name": "SFX_Punch",
+   "count": 4,
+   "key": "sfx_punch"
+  },
+  {
+   "name": "SFX_Bam2",
+   "count": 4,
+   "key": "sfx_bam2"
+  },
+  {
+   "name": "SFX_Timer",
+   "count": 4,
+   "key": "sfx_timer"
+  },
+  {
+   "name": "SFX_Monster3",
+   "count": 4,
+   "key": "sfx_monster3"
+  },
+  {
+   "name": "SFX_Trumpet",
+   "count": 4,
+   "key": "sfx_trumpet"
+  },
+  {
+   "name": "SFX_Dive",
+   "count": 4,
+   "key": "sfx_dive"
+  },
+  {
+   "name": "SFX_Bubble",
+   "count": 4,
+   "key": "sfx_bubble"
+  },
+  {
+   "name": "SFX_Camera",
+   "count": 4,
+   "key": "sfx_camera"
+  },
+  {
+   "name": "SFX_Boke3",
+   "count": 4,
+   "key": "sfx_boke3"
+  },
+  {
+   "name": "SFX_Gun3",
+   "count": 4,
+   "key": "sfx_gun3"
+  },
+  {
+   "name": "SFX_dash",
+   "count": 4,
+   "key": "sfx_dash"
+  },
+  {
+   "name": "SFX_Cutestep",
+   "count": 4,
+   "key": "sfx_cutestep"
+  },
+  {
+   "name": "SFX_Sword3",
+   "count": 4,
+   "key": "sfx_sword3"
+  },
+  {
+   "name": "SFX_Squeeze",
+   "count": 4,
+   "key": "sfx_squeeze"
+  },
+  {
+   "name": "SFX_bam3",
+   "count": 4,
+   "key": "sfx_bam3"
+  },
+  {
+   "name": "SFX_Paper",
+   "count": 4,
+   "key": "sfx_paper"
+  },
+  {
+   "name": "SFX_Bird",
+   "count": 4,
+   "key": "sfx_bird"
+  },
+  {
+   "name": "sfx_shinning3",
+   "count": 4,
+   "key": "sfx_shinning3"
+  },
+  {
+   "name": "SFX_bleak",
+   "count": 4,
+   "key": "sfx_bleak"
+  },
+  {
+   "name": "sfx_dive",
+   "count": 3,
+   "key": "sfx_dive"
+  },
+  {
+   "name": "SFX_Monster4",
+   "count": 3,
+   "key": "sfx_monster4"
+  },
+  {
+   "name": "SFX_Kick",
+   "count": 3,
+   "key": "sfx_kick"
+  },
+  {
+   "name": "SFX_FingerSnap",
+   "count": 3,
+   "key": "sfx_fingersnap"
+  },
+  {
+   "name": "SFX_Shinning3",
+   "count": 3,
+   "key": "sfx_shinning3"
+  },
+  {
+   "name": "SFX_Quake",
+   "count": 3,
+   "key": "sfx_quake"
+  },
+  {
+   "name": "SFX_Battle",
+   "count": 3,
+   "key": "sfx_battle"
+  },
+  {
+   "name": "sfx_shinning2",
+   "count": 3,
+   "key": "sfx_shinning2"
+  },
+  {
+   "name": "SFX_Monster5",
+   "count": 3,
+   "key": "sfx_monster5"
+  },
+  {
+   "name": "sfx_flick",
+   "count": 3,
+   "key": "sfx_flick"
+  },
+  {
+   "name": "sfx_heartbeatonce",
+   "count": 3,
+   "key": "sfx_heartbeatonce"
+  },
+  {
+   "name": "sfx_cat",
+   "count": 3,
+   "key": "sfx_cat"
+  },
+  {
+   "name": "SFX_Symbals",
+   "count": 3,
+   "key": "sfx_symbals"
+  },
+  {
+   "name": "SFX_Bird2",
+   "count": 3,
+   "key": "sfx_bird2"
+  },
+  {
+   "name": "SFX_cheer",
+   "count": 3,
+   "key": "sfx_cheer"
+  },
+  {
+   "name": "SFX_Knock",
+   "count": 3,
+   "key": "sfx_knock"
+  },
+  {
+   "name": "SFX_slap",
+   "count": 3,
+   "key": "sfx_slap"
+  },
+  {
+   "name": "SFX_bam4",
+   "count": 3,
+   "key": "sfx_bam4"
+  },
+  {
+   "name": "SFX_Scratch",
+   "count": 3,
+   "key": "sfx_scratch"
+  },
+  {
+   "name": "SFX_ShoesBreak",
+   "count": 2,
+   "key": "sfx_shoesbreak"
+  },
+  {
+   "name": "SFX_flick",
+   "count": 2,
+   "key": "sfx_flick"
+  },
+  {
+   "name": "SFX_Bell",
+   "count": 2,
+   "key": "sfx_bell"
+  },
+  {
+   "name": "SFX_Break",
+   "count": 2,
+   "key": "sfx_break"
+  },
+  {
+   "name": "SFX_monster",
+   "count": 2,
+   "key": "sfx_monster"
+  },
+  {
+   "name": "SFX_boke4",
+   "count": 2,
+   "key": "sfx_boke4"
+  },
+  {
+   "name": "SFX_shinning3",
+   "count": 2,
+   "key": "sfx_shinning3"
+  },
+  {
+   "name": "sfx_koong",
+   "count": 2,
+   "key": "sfx_koong"
+  },
+  {
+   "name": "SFX_StringInstrument",
+   "count": 2,
+   "key": "sfx_stringinstrument"
+  },
+  {
+   "name": "SFX_Scream",
+   "count": 2,
+   "key": "sfx_scream"
+  },
+  {
+   "name": "SFX_Slash2",
+   "count": 2,
+   "key": "sfx_slash2"
+  },
+  {
+   "name": "SFX_FallSword",
+   "count": 2,
+   "key": "sfx_fallsword"
+  },
+  {
+   "name": "sfx_slap",
+   "count": 2,
+   "key": "sfx_slap"
+  },
+  {
+   "name": "SFX_Stone",
+   "count": 2,
+   "key": "sfx_stone"
+  },
+  {
+   "name": "SFX_falldown2",
+   "count": 2,
+   "key": "sfx_falldown2"
+  },
+  {
+   "name": "SFX_Click",
+   "count": 2,
+   "key": "sfx_click"
+  },
+  {
+   "name": "SFX_Koong2",
+   "count": 2,
+   "key": "sfx_koong2"
+  },
+  {
+   "name": "sfx_fast",
+   "count": 2,
+   "key": "sfx_fast"
+  },
+  {
+   "name": "SFX_Slash",
+   "count": 2,
+   "key": "sfx_slash"
+  },
+  {
+   "name": "SFX_BreakingGlass",
+   "count": 2,
+   "key": "sfx_breakingglass"
+  },
+  {
+   "name": "SFX_Runaway",
+   "count": 2,
+   "key": "sfx_runaway"
+  },
+  {
+   "name": "SFX_Walking",
+   "count": 2,
+   "key": "sfx_walking"
+  },
+  {
+   "name": "SFX_walksnow",
+   "count": 2,
+   "key": "sfx_walksnow"
+  },
+  {
+   "name": "SFX_seaside",
+   "count": 2,
+   "key": "sfx_seaside"
+  },
+  {
+   "name": "SFX_card3",
+   "count": 2,
+   "key": "sfx_card3"
+  },
+  {
+   "name": "SFX_CuteSound1",
+   "count": 2,
+   "key": "sfx_cutesound1"
+  },
+  {
+   "name": "SFX_Drink",
+   "count": 1,
+   "key": "sfx_drink"
+  },
+  {
+   "name": "SFX_Bite",
+   "count": 1,
+   "key": "sfx_bite"
+  },
+  {
+   "name": "SFX_Bite2",
+   "count": 1,
+   "key": "sfx_bite2"
+  },
+  {
+   "name": "SFX_WalkSnow",
+   "count": 1,
+   "key": "sfx_walksnow"
+  },
+  {
+   "name": "SFX_Gun3_2",
+   "count": 1,
+   "key": "sfx_gun3_2"
+  },
+  {
+   "name": "sfx_magic2",
+   "count": 1,
+   "key": "sfx_magic2"
+  },
+  {
+   "name": "SFX_drink",
+   "count": 1,
+   "key": "sfx_drink"
+  },
+  {
+   "name": "SFX_bird2",
+   "count": 1,
+   "key": "sfx_bird2"
+  },
+  {
+   "name": "SFX_shiing",
+   "count": 1,
+   "key": "sfx_shiing"
+  },
+  {
+   "name": "SFX_Sword4",
+   "count": 1,
+   "key": "sfx_sword4"
+  },
+  {
+   "name": "SFX_Falldown3",
+   "count": 1,
+   "key": "sfx_falldown3"
+  },
+  {
+   "name": "sfx_wind2",
+   "count": 1,
+   "key": "sfx_wind2"
+  },
+  {
+   "name": "sfx_sword4",
+   "count": 1,
+   "key": "sfx_sword4"
+  },
+  {
+   "name": "sfx_quake",
+   "count": 1,
+   "key": "sfx_quake"
+  },
+  {
+   "name": "SFX_Wind2",
+   "count": 1,
+   "key": "sfx_wind2"
+  },
+  {
+   "name": "SGX_ding",
+   "count": 1,
+   "key": "sgx_ding"
+  },
+  {
+   "name": "SGX_boke2",
+   "count": 1,
+   "key": "sgx_boke2"
+  },
+  {
+   "name": "SFX_wind",
+   "count": 1,
+   "key": "sfx_wind"
+  },
+  {
+   "name": "sFX_Ding",
+   "count": 1,
+   "key": "sfx_ding"
+  },
+  {
+   "name": "SFX_StandUp",
+   "count": 1,
+   "key": "sfx_standup"
+  },
+  {
+   "name": "Fountain",
+   "count": 1,
+   "key": "fountain"
+  },
+  {
+   "name": "SFX_Doorclosed",
+   "count": 1,
+   "key": "sfx_doorclosed"
+  },
+  {
+   "name": "sfx_opendoor2",
+   "count": 1,
+   "key": "sfx_opendoor2"
+  },
+  {
+   "name": "sfx_foreastwalk",
+   "count": 1,
+   "key": "sfx_foreastwalk"
+  },
+  {
+   "name": "sfx_runaway",
+   "count": 1,
+   "key": "sfx_runaway"
+  },
+  {
+   "name": "SFX_Fireworks2",
+   "count": 1,
+   "key": "sfx_fireworks2"
+  },
+  {
+   "name": "sfx_hungry",
+   "count": 1,
+   "key": "sfx_hungry"
+  },
+  {
+   "name": "SFX_Kickdoor",
+   "count": 1,
+   "key": "sfx_kickdoor"
+  },
+  {
+   "name": "sfx_fall",
+   "count": 1,
+   "key": "sfx_fall"
+  },
+  {
+   "name": "SFX_Heal",
+   "count": 1,
+   "key": "sfx_heal"
+  },
+  {
+   "name": "SFX_PaperBag",
+   "count": 1,
+   "key": "sfx_paperbag"
+  },
+  {
+   "name": "sfx_quizX",
+   "count": 1,
+   "key": "sfx_quizx"
+  },
+  {
+   "name": "sfx_quizO",
+   "count": 1,
+   "key": "sfx_quizo"
+  },
+  {
+   "name": "SFX_cutestep",
+   "count": 1,
+   "key": "sfx_cutestep"
+  },
+  {
+   "name": "SFX_opendoor1",
+   "count": 1,
+   "key": "sfx_opendoor1"
+  },
+  {
+   "name": "SFX_mail",
+   "count": 1,
+   "key": "sfx_mail"
+  },
+  {
+   "name": "SFX_card2",
+   "count": 1,
+   "key": "sfx_card2"
+  },
+  {
+   "name": "SFX_Gun2",
+   "count": 1,
+   "key": "sfx_gun2"
+  },
+  {
+   "name": "SFX_swallow",
+   "count": 1,
+   "key": "sfx_swallow"
+  },
+  {
+   "name": "SFX_bok2",
+   "count": 1,
+   "key": "sfx_bok2"
+  },
+  {
+   "name": "sFX_ding",
+   "count": 1,
+   "key": "sfx_ding"
+  },
+  {
+   "name": "sfx_wind",
+   "count": 1,
+   "key": "sfx_wind"
+  },
+  {
+   "name": "sfx_boke3",
+   "count": 1,
+   "key": "sfx_boke3"
+  },
+  {
+   "name": "SFX_Shield",
+   "count": 1,
+   "key": "sfx_shield"
+  },
+  {
+   "name": "SFX_Card1",
+   "count": 1,
+   "key": "sfx_card1"
+  },
+  {
+   "name": "sfx_shuk",
+   "count": 1,
+   "key": "sfx_shuk"
+  },
+  {
+   "name": "SFX_shuk",
+   "count": 1,
+   "key": "sfx_shuk"
+  },
+  {
+   "name": "SFX_koong",
+   "count": 1,
+   "key": "sfx_koong"
+  },
+  {
+   "name": "SFX_forestwalk",
+   "count": 1,
+   "key": "sfx_forestwalk"
+  },
+  {
+   "name": "SFX_Cat",
+   "count": 1,
+   "key": "sfx_cat"
+  },
+  {
+   "name": "SFX_crumble",
+   "count": 1,
+   "key": "sfx_crumble"
+  },
+  {
+   "name": "SFX_Boke4",
+   "count": 1,
+   "key": "sfx_boke4"
+  },
+  {
+   "name": "sfx_falldown",
+   "count": 1,
+   "key": "sfx_falldown"
+  },
+  {
+   "name": "sfx_burning",
+   "count": 1,
+   "key": "sfx_burning"
+  },
+  {
+   "name": "SFX_bam2",
+   "count": 1,
+   "key": "sfx_bam2"
+  },
+  {
+   "name": "SFX_Scenechange",
+   "count": 1,
+   "key": "sfx_scenechange"
+  },
+  {
+   "name": "SFX_Broken",
+   "count": 1,
+   "key": "sfx_broken"
+  },
+  {
+   "name": "SFX_hungry",
+   "count": 1,
+   "key": "sfx_hungry"
+  },
+  {
+   "name": "SFX_Computer",
+   "count": 1,
+   "key": "sfx_computer"
+  },
+  {
+   "name": "TrainAmbience",
+   "count": 1,
+   "key": "trainambience"
+  },
+  {
+   "name": "ManyCrow",
+   "count": 1,
+   "key": "manycrow"
+  },
+  {
+   "name": "SFX_Fuse",
+   "count": 1,
+   "key": "sfx_fuse"
+  },
+  {
+   "name": "SFX_Fireworks",
+   "count": 1,
+   "key": "sfx_fireworks"
+  },
+  {
+   "name": "SFX_Gogogo",
+   "count": 1,
+   "key": "sfx_gogogo"
+  }
+ ],
+ "voice": [
+  {
+   "name": "Alice_Victory0",
+   "count": 1,
+   "key": "alice_victory0"
+  }
+ ]
+}
