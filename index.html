@@ -151,7 +151,7 @@ function rch(){const c=$('#chars');c.innerHTML='';const by={};sc.ord.forEach(i=>
   const isWriter=String(i)==='2000'||nm==='작가',isCecilia=String(i)==='25',isBriarRose=String(i)==='19',spineFolder=HERO_SPINE_MAP[String(i)]||PORTRAIT_SPINE_MAP[String(i)],storyFolder=STORY_PORTRAIT_SPINE_MAP[String(i)];if(isWriter||isCecilia||isBriarRose||spineFolder||storyFolder){d.classList.add('spine-ch');if(sc.spk==i)d.classList.add('speaking');const canvas=document.createElement('canvas');canvas.className='spine-stage';canvas.setAttribute('aria-label',(isWriter?(gender?'Writer Male':'Writer Female'):isCecilia?'Cecilia':isBriarRose?'BriarRose':(spineFolder||storyFolder))+' Spine animation');d.append(canvas);d.insertAdjacentHTML('beforeend',`<span class=nm>${nm}</span>`);c.append(d);const portrait=isWriter?(gender?WriterMaleSpine:WriterFemaleSpine):isCecilia?CeciliaSpine:isBriarRose?BriarRoseSpine:spineFolder?getCharacterSpine(spineFolder):getStoryCharacterSpine(storyFolder);portrait.mount(canvas);portrait.setExpression(o.e);return}
   d.innerHTML=`<div class=fig style="background:linear-gradient(#fff3,#0004),hsl(${h},45%,45%)"><div>${[...nm][0]}</div><div class=em>${E[o.e]||'🙂'}</div></div><span class=nm>${nm}</span>`;c.append(d)})}
 function createSpinePortrait(name,folder){
- let canvas=null,ctx=null,shader=null,batcher=null,skeletonRenderer=null,assetManager=null,skeleton=null,state=null,bounds=null,fixedScale=0,ready=false,loading=false,failed=false,last=0,frame=0,expression=208,expressionClosed=false,faceSlots=[];
+ let canvas=null,ctx=null,shader=null,batcher=null,skeletonRenderer=null,assetManager=null,skeleton=null,state=null,bounds=null,fixedScale=0,ready=false,loading=false,failed=false,last=0,frame=0,expression=208,expressionClosed=false,faceSlots=[],facialRigBoneIndexes=new Set();
  const assetBase='./Characters/'+folder+'/',DISPLAY_SCALE=2;
  function mount(target){if(!canvas){canvas=document.createElement('canvas');canvas.className='spine-stage';canvas.setAttribute('aria-label',name+' Spine animation')}target.replaceWith(canvas);if(ready){drawOnce();return}if(loading||failed)return;loading=true;
   try{ctx=new spine.ManagedWebGLRenderingContext(canvas,{alpha:true,premultipliedAlpha:true});if(!ctx.gl)throw Error('WebGL unavailable');shader=spine.Shader.newTwoColoredTextured(ctx);batcher=new spine.PolygonBatcher(ctx);skeletonRenderer=new spine.SkeletonRenderer(ctx);assetManager=new spine.AssetManager(ctx,assetBase);assetManager.loadBinary(name+'.skel');assetManager.loadTextureAtlas(name+'.atlas');poll()}catch(e){failed=true;loading=false;console.error(name+' Spine init failed:',e)}
@@ -164,7 +164,7 @@ function createSpinePortrait(name,folder){
   // Freeze the complete eye-and-brow rig, not only the obvious pupil/lash bones.
   // Spine exports use several naming conventions (Eye_L, Eyebrows_L, Brow.L, etc.).
   const facialRigPattern=/(?:eye|brow|eyelid|eyelash|pupil|iris)/i;
-  const facialRigBoneIndexes=new Set();
+  facialRigBoneIndexes=new Set();
   data.bones.forEach((bone,index)=>{if(facialRigPattern.test(bone.name))facialRigBoneIndexes.add(index)});
   const facialRigSlotIndexes=new Set();
   skeleton.data.slots.forEach((slot,index)=>{
