@@ -1,0 +1,1929 @@
+{
+ "_note": "portraitId in Dialog rows: 0-999 -> heroes.res, 1000-1999 -> mobs.res, 2000 -> writer (%WriterGender / WriterMale), 3000+ -> portraits.res. \"res\" is the base asset name; the actual Spine file names (skeleton/atlas) are not in the provided data. Several ids can share one res (e.g. 3059 and 3126 -> Efrat).",
+ "entries": {
+  "0": {
+   "type": "hero",
+   "name": "초원",
+   "res": "Chowon",
+   "usedInDialog": 1112
+  },
+  "1": {
+   "type": "hero",
+   "name": "헬리아",
+   "res": "Helya",
+   "usedInDialog": 1540
+  },
+  "2": {
+   "type": "hero",
+   "name": "루나",
+   "res": "Luna",
+   "usedInDialog": 542
+  },
+  "3": {
+   "type": "hero",
+   "name": "엘린",
+   "res": "Ellin",
+   "usedInDialog": 888
+  },
+  "4": {
+   "type": "hero",
+   "name": "퀸 하트",
+   "res": "QueenHeart",
+   "usedInDialog": 586
+  },
+  "5": {
+   "type": "hero",
+   "name": "밍밍",
+   "res": "MingMing",
+   "usedInDialog": 750
+  },
+  "6": {
+   "type": "hero",
+   "name": "앨리스",
+   "res": "Alice",
+   "usedInDialog": 1302
+  },
+  "7": {
+   "type": "hero",
+   "name": "빅보",
+   "res": "BigBo",
+   "usedInDialog": 373
+  },
+  "8": {
+   "type": "hero",
+   "name": "라라",
+   "res": "LaLa",
+   "usedInDialog": 1468
+  },
+  "9": {
+   "type": "hero",
+   "name": "엘림스 스마일",
+   "res": "Elims",
+   "usedInDialog": 1136
+  },
+  "10": {
+   "type": "hero",
+   "name": "제인 도우",
+   "res": "JaneDoeHunter",
+   "usedInDialog": 474
+  },
+  "11": {
+   "type": "hero",
+   "name": "피노키오",
+   "res": "Pinocchio",
+   "usedInDialog": 1027
+  },
+  "12": {
+   "type": "hero",
+   "name": "리나",
+   "res": "Lina",
+   "usedInDialog": 413
+  },
+  "13": {
+   "type": "hero",
+   "name": "스칼렛",
+   "res": "Scarlet",
+   "usedInDialog": 349
+  },
+  "14": {
+   "type": "hero",
+   "name": "그레텔",
+   "res": "Gretel",
+   "usedInDialog": 985
+  },
+  "15": {
+   "type": "hero",
+   "name": "아라모드",
+   "res": "Chocola",
+   "usedInDialog": 580
+  },
+  "16": {
+   "type": "hero",
+   "name": "헨젤",
+   "res": "Hansel",
+   "usedInDialog": 1039
+  },
+  "17": {
+   "type": "hero",
+   "name": "체셔",
+   "res": "CheshireCat",
+   "usedInDialog": 751
+  },
+  "18": {
+   "type": "hero",
+   "name": "플레어",
+   "res": "Flare",
+   "usedInDialog": 659
+  },
+  "19": {
+   "type": "hero",
+   "name": "브라이어 로즈",
+   "res": "BriarRose",
+   "usedInDialog": 2644
+  },
+  "20": {
+   "type": "hero",
+   "name": "멜피",
+   "res": "Malfi",
+   "usedInDialog": 970
+  },
+  "21": {
+   "type": "hero",
+   "name": "제페토",
+   "res": "Zepeto",
+   "usedInDialog": 673
+  },
+  "22": {
+   "type": "hero",
+   "name": "DnD",
+   "res": "DnD",
+   "usedInDialog": 474
+  },
+  "23": {
+   "type": "hero",
+   "name": "사샤",
+   "res": "Sasha",
+   "usedInDialog": 659
+  },
+  "24": {
+   "type": "hero",
+   "name": "드로셀마이어",
+   "res": "Drosselmeyer",
+   "usedInDialog": 788
+  },
+  "25": {
+   "type": "hero",
+   "name": "세실리아",
+   "res": "Cecilia",
+   "usedInDialog": 2928
+  },
+  "26": {
+   "type": "hero",
+   "name": "마리",
+   "res": "Marie",
+   "usedInDialog": 1272
+  },
+  "27": {
+   "type": "hero",
+   "name": "디에터",
+   "res": "Dieter",
+   "usedInDialog": 761
+  },
+  "28": {
+   "type": "hero",
+   "name": "아이르",
+   "res": "Aire",
+   "usedInDialog": 1722
+  },
+  "29": {
+   "type": "hero",
+   "name": "플로렌스",
+   "res": "Florence",
+   "usedInDialog": 922
+  },
+  "30": {
+   "type": "hero",
+   "name": "베라",
+   "res": "Vera",
+   "usedInDialog": 946
+  },
+  "31": {
+   "type": "hero",
+   "name": "키스멧",
+   "res": "Kismet",
+   "usedInDialog": 883
+  },
+  "32": {
+   "type": "hero",
+   "name": "마녀 세실리아",
+   "res": "WitchCecilia",
+   "usedInDialog": 198
+  },
+  "33": {
+   "type": "hero",
+   "name": "하루",
+   "res": "Haru",
+   "usedInDialog": 757
+  },
+  "34": {
+   "type": "hero",
+   "name": "카이",
+   "res": "Kai",
+   "usedInDialog": 637
+  },
+  "35": {
+   "type": "hero",
+   "name": "루시안",
+   "res": "Lucian",
+   "usedInDialog": 371
+  },
+  "36": {
+   "type": "hero",
+   "name": "레일라",
+   "res": "Leila",
+   "usedInDialog": 389
+  },
+  "37": {
+   "type": "hero",
+   "name": "막시밀리안",
+   "res": "Maximilien",
+   "usedInDialog": 474
+  },
+  "38": {
+   "type": "hero",
+   "name": "올리비에",
+   "res": "Olivier",
+   "usedInDialog": 696
+  },
+  "39": {
+   "type": "hero",
+   "name": "오필리아",
+   "res": "Ophelia",
+   "usedInDialog": 645
+  },
+  "40": {
+   "type": "hero",
+   "name": "아나스타샤",
+   "res": "Anastasia",
+   "usedInDialog": 702
+  },
+  "41": {
+   "type": "hero",
+   "name": "피치 크러시",
+   "res": "PeachCrush",
+   "usedInDialog": 478
+  },
+  "42": {
+   "type": "hero",
+   "name": "자르갈",
+   "res": "Jargal",
+   "usedInDialog": 730
+  },
+  "43": {
+   "type": "hero",
+   "name": "닉스",
+   "res": "JaneDoe",
+   "usedInDialog": 296
+  },
+  "44": {
+   "type": "hero",
+   "name": "사야",
+   "res": "Saya",
+   "usedInDialog": 728
+  },
+  "45": {
+   "type": "hero",
+   "name": "바다",
+   "res": "Bada",
+   "usedInDialog": 666
+  },
+  "46": {
+   "type": "hero",
+   "name": "릴리스",
+   "res": "Lilith",
+   "usedInDialog": 423
+  },
+  "47": {
+   "type": "hero",
+   "name": "아크 포리프",
+   "res": "Arc",
+   "usedInDialog": 642
+  },
+  "48": {
+   "type": "hero",
+   "name": "모니카",
+   "res": "Monica",
+   "usedInDialog": 375
+  },
+  "49": {
+   "type": "hero",
+   "name": "메이메이",
+   "res": "MeiMei",
+   "usedInDialog": 349
+  },
+  "50": {
+   "type": "hero",
+   "name": "하랑",
+   "res": "Harang",
+   "usedInDialog": 1002
+  },
+  "51": {
+   "type": "hero",
+   "name": "클로드",
+   "res": "Clode",
+   "usedInDialog": 450
+  },
+  "52": {
+   "type": "hero",
+   "name": "러프",
+   "res": "Rough",
+   "usedInDialog": 433
+  },
+  "53": {
+   "type": "hero",
+   "name": "카인",
+   "res": "Cain",
+   "usedInDialog": 422
+  },
+  "54": {
+   "type": "hero",
+   "name": "미호",
+   "res": "Miho",
+   "usedInDialog": 768
+  },
+  "55": {
+   "type": "hero",
+   "name": "라리사",
+   "res": "Larissa",
+   "usedInDialog": 347
+  },
+  "56": {
+   "type": "hero",
+   "name": "아멜리",
+   "res": "Ameli",
+   "usedInDialog": 412
+  },
+  "57": {
+   "type": "hero",
+   "name": "연오",
+   "res": "Yeono",
+   "usedInDialog": 1059
+  },
+  "58": {
+   "type": "hero",
+   "name": "미하일",
+   "res": "Mikhail",
+   "usedInDialog": 313
+  },
+  "59": {
+   "type": "hero",
+   "name": "시호",
+   "res": "Siho",
+   "usedInDialog": 874
+  },
+  "60": {
+   "type": "hero",
+   "name": "살라딘",
+   "res": "Saladin",
+   "usedInDialog": 355
+  },
+  "61": {
+   "type": "hero",
+   "name": "셰라자드",
+   "res": "Sherazard",
+   "usedInDialog": 210
+  },
+  "62": {
+   "type": "hero",
+   "name": "크리스티앙",
+   "res": "Chrystian",
+   "usedInDialog": 133
+  },
+  "63": {
+   "type": "hero",
+   "name": "죠안",
+   "res": "Joan",
+   "usedInDialog": 125
+  },
+  "64": {
+   "type": "hero",
+   "name": "악마 카인",
+   "res": "CainDevil",
+   "usedInDialog": 411
+  },
+  "65": {
+   "type": "hero",
+   "name": "소피",
+   "res": "Sophie",
+   "usedInDialog": 1061
+  },
+  "66": {
+   "type": "hero",
+   "name": "타브리스",
+   "res": "Tabris",
+   "usedInDialog": 323
+  },
+  "67": {
+   "type": "hero",
+   "name": "티나",
+   "res": "Tina",
+   "usedInDialog": 359
+  },
+  "1057": {
+   "type": "mob",
+   "name": "병사",
+   "res": "SoldierSpear",
+   "usedInDialog": 56
+  },
+  "1303": {
+   "type": "mob",
+   "name": "세르네쥬",
+   "res": "Celouneige",
+   "usedInDialog": 24
+  },
+  "1306": {
+   "type": "mob",
+   "name": "봄의 정령",
+   "res": "SpringSpirit",
+   "usedInDialog": 18
+  },
+  "1309": {
+   "type": "mob",
+   "name": "루아 세르네쥬",
+   "res": "CelouneigeBoss",
+   "usedInDialog": 7
+  },
+  "1327": {
+   "type": "mob",
+   "name": "이든",
+   "res": "Eden",
+   "usedInDialog": 22
+  },
+  "2000": {
+   "type": "portrait",
+   "name": "작가",
+   "res": "%WriterGender",
+   "usedInDialog": 22552
+  },
+  "3000": {
+   "type": "portrait",
+   "name": "???",
+   "res": "LaLa",
+   "usedInDialog": 572
+  },
+  "3001": {
+   "type": "portrait",
+   "name": "아티팩트",
+   "res": "ArtefactBook",
+   "usedInDialog": 0
+  },
+  "3002": {
+   "type": "portrait",
+   "name": "에프라트",
+   "res": "Efrat_Mask",
+   "usedInDialog": 376
+  },
+  "3003": {
+   "type": "portrait",
+   "name": "트럼프 병사",
+   "res": "TrumpSoldier",
+   "usedInDialog": 29
+  },
+  "3004": {
+   "type": "portrait",
+   "name": "트럼프 병사 2",
+   "res": "TrumpSoldier",
+   "usedInDialog": 2
+  },
+  "3005": {
+   "type": "portrait",
+   "name": "트럼프 병사 3",
+   "res": "TrumpSoldier",
+   "usedInDialog": 0
+  },
+  "3006": {
+   "type": "portrait",
+   "name": "너굴씨",
+   "res": "RaccoonLeaf",
+   "usedInDialog": 53
+  },
+  "3007": {
+   "type": "portrait",
+   "name": "헨젤의 아버지",
+   "res": "NpcMan",
+   "usedInDialog": 6
+  },
+  "3008": {
+   "type": "portrait",
+   "name": "헨젤의 어머니",
+   "res": "NpcWoman",
+   "usedInDialog": 13
+  },
+  "3009": {
+   "type": "portrait",
+   "name": "에프라트",
+   "res": "EfratCat",
+   "usedInDialog": 2344
+  },
+  "3010": {
+   "type": "portrait",
+   "name": "스페이드",
+   "res": "QueenSpade",
+   "usedInDialog": 35
+  },
+  "3011": {
+   "type": "portrait",
+   "name": "아주머니",
+   "res": "NpcWoman",
+   "usedInDialog": 38
+  },
+  "3012": {
+   "type": "portrait",
+   "name": "아저씨",
+   "res": "NpcMan",
+   "usedInDialog": 49
+  },
+  "3013": {
+   "type": "portrait",
+   "name": "해머군",
+   "res": "ArtefactBook",
+   "usedInDialog": 28
+  },
+  "3014": {
+   "type": "portrait",
+   "name": "불량배 너굴씨 1",
+   "res": "RaccoonBully",
+   "usedInDialog": 12
+  },
+  "3015": {
+   "type": "portrait",
+   "name": "불량배 너굴씨 2",
+   "res": "RaccoonBully",
+   "usedInDialog": 16
+  },
+  "3016": {
+   "type": "portrait",
+   "name": "불량배 듀오",
+   "res": "RaccoonBully",
+   "usedInDialog": 1
+  },
+  "3017": {
+   "type": "portrait",
+   "name": "마을 상인",
+   "res": "NpcMan",
+   "usedInDialog": 4
+  },
+  "3018": {
+   "type": "portrait",
+   "name": "곰인형",
+   "res": "MobMimi",
+   "usedInDialog": 2
+  },
+  "3019": {
+   "type": "portrait",
+   "name": "토끼인형",
+   "res": "MobPipi",
+   "usedInDialog": 2
+  },
+  "3020": {
+   "type": "portrait",
+   "name": "미미",
+   "res": "MobMimi",
+   "usedInDialog": 145
+  },
+  "3021": {
+   "type": "portrait",
+   "name": "피피",
+   "res": "MobPipi",
+   "usedInDialog": 88
+  },
+  "3022": {
+   "type": "portrait",
+   "name": "미미&피피",
+   "res": "ArtefactBook",
+   "usedInDialog": 3
+  },
+  "3023": {
+   "type": "portrait",
+   "name": "피노키오?",
+   "res": "Pinocchio",
+   "usedInDialog": 6
+  },
+  "3024": {
+   "type": "portrait",
+   "name": "피노키오 Mk.2",
+   "res": "Pinocchio",
+   "usedInDialog": 7
+  },
+  "3025": {
+   "type": "portrait",
+   "name": "병사",
+   "res": "SoldierSpear",
+   "usedInDialog": 0
+  },
+  "3026": {
+   "type": "portrait",
+   "name": "병사1",
+   "res": "SoldierSpear",
+   "usedInDialog": 38
+  },
+  "3027": {
+   "type": "portrait",
+   "name": "병사2",
+   "res": "SoldierSpear",
+   "usedInDialog": 39
+  },
+  "3028": {
+   "type": "portrait",
+   "name": "병사3",
+   "res": "SoldierSpear",
+   "usedInDialog": 9
+  },
+  "3029": {
+   "type": "portrait",
+   "name": "날카로운 목소리",
+   "res": "ArtefactBook",
+   "usedInDialog": 1
+  },
+  "3030": {
+   "type": "portrait",
+   "name": "속삭이는 목소리",
+   "res": "ArtefactBook",
+   "usedInDialog": 1
+  },
+  "3031": {
+   "type": "portrait",
+   "name": "단호한 목소리",
+   "res": "ArtefactBook",
+   "usedInDialog": 1
+  },
+  "3032": {
+   "type": "portrait",
+   "name": "검은 양 1",
+   "res": "BlackSheep",
+   "usedInDialog": 48
+  },
+  "3033": {
+   "type": "portrait",
+   "name": "검은 양 2",
+   "res": "BlackSheep",
+   "usedInDialog": 11
+  },
+  "3034": {
+   "type": "portrait",
+   "name": "검은 양 3",
+   "res": "BlackSheep",
+   "usedInDialog": 5
+  },
+  "3035": {
+   "type": "portrait",
+   "name": "검은 양들",
+   "res": "BlackSheep",
+   "usedInDialog": 2
+  },
+  "3036": {
+   "type": "portrait",
+   "name": "왕",
+   "res": "NpcKing1",
+   "usedInDialog": 38
+  },
+  "3037": {
+   "type": "portrait",
+   "name": "어린 로즈",
+   "res": "ArtefactBook",
+   "usedInDialog": 5
+  },
+  "3038": {
+   "type": "portrait",
+   "name": "병사들",
+   "res": "SoldierSpear",
+   "usedInDialog": 1
+  },
+  "3039": {
+   "type": "portrait",
+   "name": "라펠",
+   "res": "NpcRapel",
+   "usedInDialog": 461
+  },
+  "3040": {
+   "type": "portrait",
+   "name": "마을 주민",
+   "res": "NpcWoman",
+   "usedInDialog": 34
+  },
+  "3041": {
+   "type": "portrait",
+   "name": "너굴씨 2",
+   "res": "RaccoonLeaf",
+   "usedInDialog": 3
+  },
+  "3042": {
+   "type": "portrait",
+   "name": "너굴씨 3",
+   "res": "RaccoonLeaf",
+   "usedInDialog": 3
+  },
+  "3043": {
+   "type": "portrait",
+   "name": "자르갈",
+   "res": "Jargal",
+   "usedInDialog": 0
+  },
+  "3044": {
+   "type": "portrait",
+   "name": "할머니?",
+   "res": "SashaGrandma",
+   "usedInDialog": 2
+  },
+  "3045": {
+   "type": "portrait",
+   "name": "사샤의 할머니",
+   "res": "SashaGrandma",
+   "usedInDialog": 277
+  },
+  "3046": {
+   "type": "portrait",
+   "name": "검은 병사",
+   "res": "Drosselmeyer",
+   "usedInDialog": 7
+  },
+  "3047": {
+   "type": "portrait",
+   "name": "생쥐 대왕",
+   "res": "Dieter",
+   "usedInDialog": 8
+  },
+  "3048": {
+   "type": "portrait",
+   "name": "소녀",
+   "res": "Marie",
+   "usedInDialog": 8
+  },
+  "3049": {
+   "type": "portrait",
+   "name": "생쥐?",
+   "res": "RatKnight",
+   "usedInDialog": 4
+  },
+  "3050": {
+   "type": "portrait",
+   "name": "생쥐 병사",
+   "res": "RatKnight",
+   "usedInDialog": 47
+  },
+  "3051": {
+   "type": "portrait",
+   "name": "생쥐 병사2",
+   "res": "RatKnight",
+   "usedInDialog": 27
+  },
+  "3052": {
+   "type": "portrait",
+   "name": "생쥐 병사3",
+   "res": "RatKnight",
+   "usedInDialog": 7
+  },
+  "3053": {
+   "type": "portrait",
+   "name": "호두까기 병정 1",
+   "res": "NutcrackerSpear",
+   "usedInDialog": 13
+  },
+  "3054": {
+   "type": "portrait",
+   "name": "호두까기 병정 2",
+   "res": "NutcrackerSpear",
+   "usedInDialog": 10
+  },
+  "3055": {
+   "type": "portrait",
+   "name": "호두까기 병정 3",
+   "res": "NutcrackerSpear",
+   "usedInDialog": 2
+  },
+  "3056": {
+   "type": "portrait",
+   "name": "생쥐군",
+   "res": "RatKnight",
+   "usedInDialog": 12
+  },
+  "3057": {
+   "type": "portrait",
+   "name": "호두까기군",
+   "res": "NutcrackerSpear",
+   "usedInDialog": 8
+  },
+  "3058": {
+   "type": "portrait",
+   "name": "대부",
+   "res": "NpcMan",
+   "usedInDialog": 5
+  },
+  "3059": {
+   "type": "portrait",
+   "name": "에프라트",
+   "res": "Efrat",
+   "usedInDialog": 138
+  },
+  "3060": {
+   "type": "portrait",
+   "name": "남자",
+   "res": "NpcEdward",
+   "usedInDialog": 24
+  },
+  "3061": {
+   "type": "portrait",
+   "name": "인어?",
+   "res": "Aire",
+   "usedInDialog": 16
+  },
+  "3062": {
+   "type": "portrait",
+   "name": "서핑 너굴씨 A",
+   "res": "RaccoonMermaid",
+   "usedInDialog": 6
+  },
+  "3063": {
+   "type": "portrait",
+   "name": "서핑 너굴씨 B",
+   "res": "RaccoonMermaid",
+   "usedInDialog": 4
+  },
+  "3064": {
+   "type": "portrait",
+   "name": "헨젤&그레텔",
+   "res": "ArtefactBook",
+   "usedInDialog": 7
+  },
+  "3065": {
+   "type": "portrait",
+   "name": "도너찌",
+   "res": "DonutziBerry",
+   "usedInDialog": 15
+  },
+  "3066": {
+   "type": "portrait",
+   "name": "병사의 목소리",
+   "res": "SoldierSpear",
+   "usedInDialog": 0
+  },
+  "3067": {
+   "type": "portrait",
+   "name": "왕자",
+   "res": "NpcEdward",
+   "usedInDialog": 2
+  },
+  "3068": {
+   "type": "portrait",
+   "name": "에드워드",
+   "res": "NpcEdward",
+   "usedInDialog": 223
+  },
+  "3069": {
+   "type": "portrait",
+   "name": "레이나",
+   "res": "NpcReina",
+   "usedInDialog": 73
+  },
+  "3070": {
+   "type": "portrait",
+   "name": "청년의 목소리",
+   "res": "ArtefactBook",
+   "usedInDialog": 8
+  },
+  "3071": {
+   "type": "portrait",
+   "name": "신하",
+   "res": "ArtefactBook",
+   "usedInDialog": 2
+  },
+  "3072": {
+   "type": "portrait",
+   "name": "귀부인",
+   "res": "ArtefactBook",
+   "usedInDialog": 2
+  },
+  "3073": {
+   "type": "portrait",
+   "name": "신사",
+   "res": "ArtefactBook",
+   "usedInDialog": 2
+  },
+  "3074": {
+   "type": "portrait",
+   "name": "귀족 청년",
+   "res": "ArtefactBook",
+   "usedInDialog": 4
+  },
+  "3075": {
+   "type": "portrait",
+   "name": "귀족 A",
+   "res": "ArtefactBook",
+   "usedInDialog": 3
+  },
+  "3076": {
+   "type": "portrait",
+   "name": "귀족 B",
+   "res": "ArtefactBook",
+   "usedInDialog": 2
+  },
+  "3077": {
+   "type": "portrait",
+   "name": "귀족 C",
+   "res": "ArtefactBook",
+   "usedInDialog": 1
+  },
+  "3078": {
+   "type": "portrait",
+   "name": "경비병",
+   "res": "SoldierSpear",
+   "usedInDialog": 44
+  },
+  "3079": {
+   "type": "portrait",
+   "name": "아버지",
+   "res": "NpcMan",
+   "usedInDialog": 3
+  },
+  "3080": {
+   "type": "portrait",
+   "name": "마을 사람 A",
+   "res": "NpcMan",
+   "usedInDialog": 44
+  },
+  "3081": {
+   "type": "portrait",
+   "name": "마을 사람 B",
+   "res": "NpcWoman",
+   "usedInDialog": 23
+  },
+  "3082": {
+   "type": "portrait",
+   "name": "마을 사람 C",
+   "res": "Npcman",
+   "usedInDialog": 4
+  },
+  "3083": {
+   "type": "portrait",
+   "name": "소녀",
+   "res": "Florence",
+   "usedInDialog": 18
+  },
+  "3084": {
+   "type": "portrait",
+   "name": "세르네쥬 A",
+   "res": "Celouneige",
+   "usedInDialog": 16
+  },
+  "3085": {
+   "type": "portrait",
+   "name": "세르네쥬 B",
+   "res": "Celouneige",
+   "usedInDialog": 14
+  },
+  "3086": {
+   "type": "portrait",
+   "name": "눈의 괴물",
+   "res": "Celouneige",
+   "usedInDialog": 4
+  },
+  "3087": {
+   "type": "portrait",
+   "name": "세르네쥬",
+   "res": "Celouneige",
+   "usedInDialog": 0
+  },
+  "3088": {
+   "type": "portrait",
+   "name": "나스챠",
+   "res": "OwlNascha",
+   "usedInDialog": 255
+  },
+  "3089": {
+   "type": "portrait",
+   "name": "봄의 정령",
+   "res": "SpringSpirit",
+   "usedInDialog": 0
+  },
+  "3090": {
+   "type": "portrait",
+   "name": "관중",
+   "res": "ArtefactBook",
+   "usedInDialog": 9
+  },
+  "3091": {
+   "type": "portrait",
+   "name": "할머니 손님",
+   "res": "ArtefactBook",
+   "usedInDialog": 2
+  },
+  "3092": {
+   "type": "portrait",
+   "name": "할아버지 손님",
+   "res": "ArtefactBook",
+   "usedInDialog": 2
+  },
+  "3093": {
+   "type": "portrait",
+   "name": "남자 손님",
+   "res": "ArtefactBook",
+   "usedInDialog": 1
+  },
+  "3094": {
+   "type": "portrait",
+   "name": "손님들",
+   "res": "ArtefactBook",
+   "usedInDialog": 2
+  },
+  "3095": {
+   "type": "portrait",
+   "name": "어린이 손님",
+   "res": "ArtefactBook",
+   "usedInDialog": 6
+  },
+  "3096": {
+   "type": "portrait",
+   "name": "여자 손님",
+   "res": "ArtefactBook",
+   "usedInDialog": 5
+  },
+  "3097": {
+   "type": "portrait",
+   "name": "피치 MK-2",
+   "res": "PeachCrushDrone",
+   "usedInDialog": 82
+  },
+  "3098": {
+   "type": "portrait",
+   "name": "도적단",
+   "res": "ArtefactBook",
+   "usedInDialog": 7
+  },
+  "3099": {
+   "type": "portrait",
+   "name": "기사들",
+   "res": "ArtefactBook",
+   "usedInDialog": 4
+  },
+  "3100": {
+   "type": "portrait",
+   "name": "기사 A",
+   "res": "ArtefactBook",
+   "usedInDialog": 29
+  },
+  "3101": {
+   "type": "portrait",
+   "name": "기사 B",
+   "res": "ArtefactBook",
+   "usedInDialog": 22
+  },
+  "3102": {
+   "type": "portrait",
+   "name": "빨강 아멍이",
+   "res": "LittleAmungC",
+   "usedInDialog": 63
+  },
+  "3103": {
+   "type": "portrait",
+   "name": "파랑 아멍이",
+   "res": "LittleAmungA",
+   "usedInDialog": 44
+  },
+  "3104": {
+   "type": "portrait",
+   "name": "초록 아멍이",
+   "res": "LittleAmungB",
+   "usedInDialog": 28
+  },
+  "3105": {
+   "type": "portrait",
+   "name": "만타댕댕",
+   "res": "MantaDog",
+   "usedInDialog": 10
+  },
+  "3106": {
+   "type": "portrait",
+   "name": "맥스",
+   "res": "MantaDog",
+   "usedInDialog": 8
+  },
+  "3107": {
+   "type": "portrait",
+   "name": "고양이",
+   "res": "ArtefactBook",
+   "usedInDialog": 17
+  },
+  "3108": {
+   "type": "portrait",
+   "name": "주민 1",
+   "res": "NpcMan",
+   "usedInDialog": 13
+  },
+  "3109": {
+   "type": "portrait",
+   "name": "주민 2",
+   "res": "NpcWoman",
+   "usedInDialog": 16
+  },
+  "3110": {
+   "type": "portrait",
+   "name": "루아 세르네쥬",
+   "res": "CelouneigeBoss",
+   "usedInDialog": 0
+  },
+  "3111": {
+   "type": "portrait",
+   "name": "어린 그레텔",
+   "res": "ArtefactBook",
+   "usedInDialog": 3
+  },
+  "3112": {
+   "type": "portrait",
+   "name": "어린 헨젤",
+   "res": "ArtefactBook",
+   "usedInDialog": 2
+  },
+  "3113": {
+   "type": "portrait",
+   "name": "아냐의 어머니",
+   "res": "ArtefactBook",
+   "usedInDialog": 22
+  },
+  "3114": {
+   "type": "portrait",
+   "name": "둥가",
+   "res": "ArtefactBook",
+   "usedInDialog": 13
+  },
+  "3115": {
+   "type": "portrait",
+   "name": "시선",
+   "res": "Sight",
+   "usedInDialog": 6
+  },
+  "3116": {
+   "type": "portrait",
+   "name": "어둠의 형상",
+   "res": "ArtefactBook",
+   "usedInDialog": 2
+  },
+  "3117": {
+   "type": "portrait",
+   "name": "J",
+   "res": "ArtefactBook",
+   "usedInDialog": 10
+  },
+  "3118": {
+   "type": "portrait",
+   "name": "닥터헬",
+   "res": "DrHell",
+   "usedInDialog": 129
+  },
+  "3119": {
+   "type": "portrait",
+   "name": "이든",
+   "res": "Eden",
+   "usedInDialog": 0
+  },
+  "3120": {
+   "type": "portrait",
+   "name": "노인",
+   "res": "ArtefactBook",
+   "usedInDialog": 17
+  },
+  "3121": {
+   "type": "portrait",
+   "name": "제이",
+   "res": "ArtefactBook",
+   "usedInDialog": 1
+  },
+  "3122": {
+   "type": "portrait",
+   "name": "소원의 돌",
+   "res": "ArtefactBook",
+   "usedInDialog": 2
+  },
+  "3123": {
+   "type": "portrait",
+   "name": "주민들",
+   "res": "NpcMan",
+   "usedInDialog": 11
+  },
+  "3124": {
+   "type": "portrait",
+   "name": "악마카인",
+   "res": "CainDevil",
+   "usedInDialog": 0
+  },
+  "3125": {
+   "type": "portrait",
+   "name": "비행선원",
+   "res": "ArtefactBook",
+   "usedInDialog": 1
+  },
+  "3126": {
+   "type": "portrait",
+   "name": "에프라트의 목소리",
+   "res": "Efrat",
+   "usedInDialog": 5
+  },
+  "3127": {
+   "type": "portrait",
+   "name": "하루?",
+   "res": "Haru",
+   "usedInDialog": 5
+  },
+  "3128": {
+   "type": "portrait",
+   "name": "인형?",
+   "res": "ArtefactBook",
+   "usedInDialog": 1
+  },
+  "3129": {
+   "type": "portrait",
+   "name": "기사단?",
+   "res": "ArtefactBook",
+   "usedInDialog": 1
+  },
+  "3130": {
+   "type": "portrait",
+   "name": "물고기?",
+   "res": "ArtefactBook",
+   "usedInDialog": 1
+  },
+  "3131": {
+   "type": "portrait",
+   "name": "영혼",
+   "res": "ArtefactBook",
+   "usedInDialog": 14
+  },
+  "3132": {
+   "type": "portrait",
+   "name": "크롬웰 바피르",
+   "res": "ArtefactBook",
+   "usedInDialog": 34
+  },
+  "3133": {
+   "type": "portrait",
+   "name": "소녀",
+   "res": "Npcgirl1",
+   "usedInDialog": 3
+  },
+  "3134": {
+   "type": "portrait",
+   "name": "쥬쥬",
+   "res": "VeraJuJu",
+   "usedInDialog": 20
+  },
+  "3135": {
+   "type": "portrait",
+   "name": "박쥐?",
+   "res": "VeraJuJu",
+   "usedInDialog": 2
+  },
+  "3136": {
+   "type": "portrait",
+   "name": "왕눈이",
+   "res": "VeraWangnoon",
+   "usedInDialog": 11
+  },
+  "3137": {
+   "type": "portrait",
+   "name": "박쥐2?",
+   "res": "VeraWangnoon",
+   "usedInDialog": 0
+  },
+  "3138": {
+   "type": "portrait",
+   "name": "왕눈이&쥬쥬",
+   "res": "ArtefactBook",
+   "usedInDialog": 8
+  },
+  "3139": {
+   "type": "portrait",
+   "name": "보육원 어린이 1",
+   "res": "Npcgirl1",
+   "usedInDialog": 2
+  },
+  "3140": {
+   "type": "portrait",
+   "name": "보육원 어린이 2",
+   "res": "Npcboy1",
+   "usedInDialog": 3
+  },
+  "3141": {
+   "type": "portrait",
+   "name": "엠마",
+   "res": "Npcgirl1",
+   "usedInDialog": 41
+  },
+  "3142": {
+   "type": "portrait",
+   "name": "필립",
+   "res": "Npcboy1",
+   "usedInDialog": 26
+  },
+  "3143": {
+   "type": "portrait",
+   "name": "라라&아나스타샤",
+   "res": "ArtefactBook",
+   "usedInDialog": 1
+  },
+  "3144": {
+   "type": "portrait",
+   "name": "언더월드 주민 1",
+   "res": "NpcMan",
+   "usedInDialog": 11
+  },
+  "3145": {
+   "type": "portrait",
+   "name": "언더월드 주민 2",
+   "res": "NpcWoman",
+   "usedInDialog": 11
+  },
+  "3146": {
+   "type": "portrait",
+   "name": "점원",
+   "res": "NpcWoman",
+   "usedInDialog": 1
+  },
+  "3147": {
+   "type": "portrait",
+   "name": "도비",
+   "res": "Dobi",
+   "usedInDialog": 7
+  },
+  "3148": {
+   "type": "portrait",
+   "name": "꼬비",
+   "res": "Kkobi",
+   "usedInDialog": 6
+  },
+  "3149": {
+   "type": "portrait",
+   "name": "도비&꼬비",
+   "res": "ArtefactBook",
+   "usedInDialog": 3
+  },
+  "3150": {
+   "type": "portrait",
+   "name": "남자 목소리",
+   "res": "ArtefactBook",
+   "usedInDialog": 2
+  },
+  "3151": {
+   "type": "portrait",
+   "name": "여자 목소리",
+   "res": "ArtefactBook",
+   "usedInDialog": 2
+  },
+  "3152": {
+   "type": "portrait",
+   "name": "마을 주민",
+   "res": "OrientalMan",
+   "usedInDialog": 60
+  },
+  "3153": {
+   "type": "portrait",
+   "name": "도깨비에 홀린 주민",
+   "res": "OrientalZombie",
+   "usedInDialog": 5
+  },
+  "3154": {
+   "type": "portrait",
+   "name": "도깨비에 홀린 주민2",
+   "res": "OrientalZombie",
+   "usedInDialog": 3
+  },
+  "3155": {
+   "type": "portrait",
+   "name": "주민들?",
+   "res": "OrientalZombie",
+   "usedInDialog": 3
+  },
+  "3156": {
+   "type": "portrait",
+   "name": "과거의 연오",
+   "res": "ArtefactBook",
+   "usedInDialog": 14
+  },
+  "3157": {
+   "type": "portrait",
+   "name": "옛 친구",
+   "res": "OrientalMan",
+   "usedInDialog": 20
+  },
+  "3158": {
+   "type": "portrait",
+   "name": "야광 도깨비",
+   "res": "DobiBoss",
+   "usedInDialog": 3
+  },
+  "3159": {
+   "type": "portrait",
+   "name": "야광 꼬깨비",
+   "res": "KKobiBoss",
+   "usedInDialog": 3
+  },
+  "3160": {
+   "type": "portrait",
+   "name": "도깨비들",
+   "res": "ArtefactBook",
+   "usedInDialog": 3
+  },
+  "3161": {
+   "type": "portrait",
+   "name": "강시?",
+   "res": "Meimei",
+   "usedInDialog": 10
+  },
+  "3162": {
+   "type": "portrait",
+   "name": "트럼프 병사",
+   "res": "TrumpSoldier",
+   "usedInDialog": 2
+  },
+  "3163": {
+   "type": "portrait",
+   "name": "사제",
+   "res": "ArtefactBook",
+   "usedInDialog": 18
+  },
+  "3164": {
+   "type": "portrait",
+   "name": "사제 2",
+   "res": "ArtefactBook",
+   "usedInDialog": 11
+  },
+  "3165": {
+   "type": "portrait",
+   "name": "사제들",
+   "res": "ArtefactBook",
+   "usedInDialog": 1
+  },
+  "3166": {
+   "type": "portrait",
+   "name": "천왕",
+   "res": "ArtefactBook",
+   "usedInDialog": 14
+  },
+  "3167": {
+   "type": "portrait",
+   "name": "호선",
+   "res": "Hoseon",
+   "usedInDialog": 206
+  },
+  "3168": {
+   "type": "portrait",
+   "name": "운디네 1",
+   "res": "Undine",
+   "usedInDialog": 22
+  },
+  "3169": {
+   "type": "portrait",
+   "name": "운디네 2",
+   "res": "Undine",
+   "usedInDialog": 7
+  },
+  "3170": {
+   "type": "portrait",
+   "name": "수인족 할머니",
+   "res": "ArtefactBook",
+   "usedInDialog": 5
+  },
+  "3171": {
+   "type": "portrait",
+   "name": "수인족 할아버지",
+   "res": "ArtefactBook",
+   "usedInDialog": 6
+  },
+  "3172": {
+   "type": "portrait",
+   "name": "천년호",
+   "res": "CheonNyeonHo",
+   "usedInDialog": 237
+  },
+  "3173": {
+   "type": "portrait",
+   "name": "수인족 주민",
+   "res": "ArtefactBook",
+   "usedInDialog": 6
+  },
+  "3174": {
+   "type": "portrait",
+   "name": "판도라 너굴씨 1",
+   "res": "RaccoonPandora",
+   "usedInDialog": 5
+  },
+  "3175": {
+   "type": "portrait",
+   "name": "판도라 너굴씨 2",
+   "res": "RaccoonPandora",
+   "usedInDialog": 3
+  },
+  "3176": {
+   "type": "portrait",
+   "name": "미호&시호",
+   "res": "ArtefactBook",
+   "usedInDialog": 2
+  },
+  "3177": {
+   "type": "portrait",
+   "name": "하얀 새?",
+   "res": "ArtefactBook",
+   "usedInDialog": 17
+  },
+  "3178": {
+   "type": "portrait",
+   "name": "초원&작가",
+   "res": "ArtefactBook",
+   "usedInDialog": 1
+  },
+  "3179": {
+   "type": "portrait",
+   "name": "시반 슈미터 용병",
+   "res": "ArtefactBook",
+   "usedInDialog": 7
+  },
+  "3180": {
+   "type": "portrait",
+   "name": "얀 지슈카",
+   "res": "YanZisuka",
+   "usedInDialog": 107
+  },
+  "3181": {
+   "type": "portrait",
+   "name": "필립 팬드래건",
+   "res": "ArtefactBook",
+   "usedInDialog": 3
+  },
+  "3182": {
+   "type": "portrait",
+   "name": "철가면",
+   "res": "IronMask",
+   "usedInDialog": 53
+  },
+  "3183": {
+   "type": "portrait",
+   "name": "남자의 목소리",
+   "res": "ArtefactBook",
+   "usedInDialog": 4
+  },
+  "3184": {
+   "type": "portrait",
+   "name": "여자의 목소리",
+   "res": "ArtefactBook",
+   "usedInDialog": 4
+  },
+  "3185": {
+   "type": "portrait",
+   "name": "나스챠의 목소리",
+   "res": "ArtefactBook",
+   "usedInDialog": 7
+  },
+  "3186": {
+   "type": "portrait",
+   "name": "어린 세실리아",
+   "res": "ArtefactBook",
+   "usedInDialog": 17
+  },
+  "3187": {
+   "type": "portrait",
+   "name": "철가면",
+   "res": "IronMask2",
+   "usedInDialog": 77
+  },
+  "3188": {
+   "type": "portrait",
+   "name": "크리스티앙(임시)",
+   "res": "ArtefactBook",
+   "usedInDialog": 0
+  },
+  "3189": {
+   "type": "portrait",
+   "name": "레인울프 원로 A",
+   "res": "ArtefactBook",
+   "usedInDialog": 6
+  },
+  "3190": {
+   "type": "portrait",
+   "name": "레인울프 원로 B",
+   "res": "ArtefactBook",
+   "usedInDialog": 4
+  },
+  "3191": {
+   "type": "portrait",
+   "name": "레인울프 가주",
+   "res": "ArtefactBook",
+   "usedInDialog": 8
+  },
+  "3192": {
+   "type": "portrait",
+   "name": "음유시인?",
+   "res": "Sophie",
+   "usedInDialog": 13
+  },
+  "3193": {
+   "type": "portrait",
+   "name": "나나",
+   "res": "RabbitNana",
+   "usedInDialog": 29
+  },
+  "3194": {
+   "type": "portrait",
+   "name": "촌장",
+   "res": "NpcMan",
+   "usedInDialog": 78
+  },
+  "3195": {
+   "type": "portrait",
+   "name": "베니쉬[가명]",
+   "res": "ArtefactBook",
+   "usedInDialog": 1
+  },
+  "3196": {
+   "type": "portrait",
+   "name": "신부?",
+   "res": "Tabris",
+   "usedInDialog": 8
+  }
+ },
+ "sharedRes": {
+  "LaLa": [
+   8,
+   3000
+  ],
+  "Pinocchio": [
+   11,
+   3023,
+   3024
+  ],
+  "Drosselmeyer": [
+   24,
+   3046
+  ],
+  "Marie": [
+   26,
+   3048
+  ],
+  "Dieter": [
+   27,
+   3047
+  ],
+  "Aire": [
+   28,
+   3061
+  ],
+  "Florence": [
+   29,
+   3083
+  ],
+  "Haru": [
+   33,
+   3127
+  ],
+  "Jargal": [
+   42,
+   3043
+  ],
+  "CainDevil": [
+   64,
+   3124
+  ],
+  "Sophie": [
+   65,
+   3192
+  ],
+  "Tabris": [
+   66,
+   3196
+  ],
+  "SoldierSpear": [
+   1057,
+   3025,
+   3026,
+   3027,
+   3028,
+   3038,
+   3066,
+   3078
+  ],
+  "Celouneige": [
+   1303,
+   3084,
+   3085,
+   3086,
+   3087
+  ],
+  "SpringSpirit": [
+   1306,
+   3089
+  ],
+  "CelouneigeBoss": [
+   1309,
+   3110
+  ],
+  "Eden": [
+   1327,
+   3119
+  ],
+  "ArtefactBook": [
+   3001,
+   3013,
+   3022,
+   3029,
+   3030,
+   3031,
+   3037,
+   3064,
+   3070,
+   3071,
+   3072,
+   3073,
+   3074,
+   3075,
+   3076,
+   3077,
+   3090,
+   3091,
+   3092,
+   3093,
+   3094,
+   3095,
+   3096,
+   3098,
+   3099,
+   3100,
+   3101,
+   3107,
+   3111,
+   3112,
+   3113,
+   3114,
+   3116,
+   3117,
+   3120,
+   3121,
+   3122,
+   3125,
+   3128,
+   3129,
+   3130,
+   3131,
+   3132,
+   3138,
+   3143,
+   3149,
+   3150,
+   3151,
+   3156,
+   3160,
+   3163,
+   3164,
+   3165,
+   3166,
+   3170,
+   3171,
+   3173,
+   3176,
+   3177,
+   3178,
+   3179,
+   3181,
+   3183,
+   3184,
+   3185,
+   3186,
+   3188,
+   3189,
+   3190,
+   3191,
+   3195
+  ],
+  "TrumpSoldier": [
+   3003,
+   3004,
+   3005,
+   3162
+  ],
+  "RaccoonLeaf": [
+   3006,
+   3041,
+   3042
+  ],
+  "NpcMan": [
+   3007,
+   3012,
+   3017,
+   3058,
+   3079,
+   3080,
+   3108,
+   3123,
+   3144,
+   3194
+  ],
+  "NpcWoman": [
+   3008,
+   3011,
+   3040,
+   3081,
+   3109,
+   3145,
+   3146
+  ],
+  "RaccoonBully": [
+   3014,
+   3015,
+   3016
+  ],
+  "MobMimi": [
+   3018,
+   3020
+  ],
+  "MobPipi": [
+   3019,
+   3021
+  ],
+  "BlackSheep": [
+   3032,
+   3033,
+   3034,
+   3035
+  ],
+  "SashaGrandma": [
+   3044,
+   3045
+  ],
+  "RatKnight": [
+   3049,
+   3050,
+   3051,
+   3052,
+   3056
+  ],
+  "NutcrackerSpear": [
+   3053,
+   3054,
+   3055,
+   3057
+  ],
+  "Efrat": [
+   3059,
+   3126
+  ],
+  "NpcEdward": [
+   3060,
+   3067,
+   3068
+  ],
+  "RaccoonMermaid": [
+   3062,
+   3063
+  ],
+  "MantaDog": [
+   3105,
+   3106
+  ],
+  "Npcgirl1": [
+   3133,
+   3139,
+   3141
+  ],
+  "VeraJuJu": [
+   3134,
+   3135
+  ],
+  "VeraWangnoon": [
+   3136,
+   3137
+  ],
+  "Npcboy1": [
+   3140,
+   3142
+  ],
+  "OrientalMan": [
+   3152,
+   3157
+  ],
+  "OrientalZombie": [
+   3153,
+   3154,
+   3155
+  ],
+  "Undine": [
+   3168,
+   3169
+  ],
+  "RaccoonPandora": [
+   3174,
+   3175
+  ]
+ },
+ "efrat": [
+  {
+   "portraitId": 3002,
+   "name": "에프라트",
+   "res": "Efrat_Mask",
+   "usedInDialog": 376
+  },
+  {
+   "portraitId": 3009,
+   "name": "에프라트",
+   "res": "EfratCat",
+   "usedInDialog": 2344
+  },
+  {
+   "portraitId": 3059,
+   "name": "에프라트",
+   "res": "Efrat",
+   "usedInDialog": 138
+  },
+  {
+   "portraitId": 3126,
+   "name": "에프라트의 목소리",
+   "res": "Efrat",
+   "usedInDialog": 5
+  }
+ ]
+}
