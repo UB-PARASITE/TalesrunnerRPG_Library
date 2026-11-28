@@ -1,0 +1,13 @@
+BlackSheep.png
+size:1024,1024
+filter:Linear,Linear
+pma:true
+BlackSheep_Angry
+bounds:2,251,1020,771
+
+BlackSheep_2.png
+size:1024,1024
+filter:Linear,Linear
+pma:true
+BlackSheep_Normal
+bounds:2,258,1020,764

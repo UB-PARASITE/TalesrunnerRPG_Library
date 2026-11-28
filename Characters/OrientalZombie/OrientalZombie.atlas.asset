@@ -1,0 +1,14 @@
+OrientalZombie.png
+size:1024,1024
+filter:Linear,Linear
+pma:true
+1
+bounds:520,2,495,353
+offsets:2,1,498,355
+rotate:90
+2
+bounds:2,2,516,413
+offsets:1,1,518,415
+3
+bounds:2,417,483,469
+offsets:1,1,485,471

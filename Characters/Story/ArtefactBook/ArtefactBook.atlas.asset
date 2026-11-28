@@ -1,0 +1,21 @@
+ArtefactBook.png
+size:1024,1024
+filter:Linear,Linear
+pma:true
+Book
+bounds:2,292,1002,720
+Book accessories
+bounds:2,196,94,768
+rotate:90
+Paper3
+bounds:2,2,192,490
+rotate:90
+
+ArtefactBook_2.png
+size:1024,1024
+filter:Linear,Linear
+pma:true
+Paper
+bounds:2,77,408,615
+Paper2
+bounds:412,157,280,535

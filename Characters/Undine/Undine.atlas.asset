@@ -1,0 +1,15 @@
+Undine.png
+size:1024,1024
+filter:Linear,Linear
+pma:true
+Undine_Normal
+bounds:2,2,893,982
+offsets:8,1,923,1020
+
+Undine_2.png
+size:1024,1024
+filter:Linear,Linear
+pma:true
+Undine_Angry
+bounds:2,2,893,982
+offsets:8,1,923,1020

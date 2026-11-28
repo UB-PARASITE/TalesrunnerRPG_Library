@@ -1,0 +1,17 @@
+RatKnight.png
+size:1024,1024
+filter:Linear,Linear
+pma:true
+1
+bounds:594,585,295,304
+offsets:1,1,297,306
+2
+bounds:2,539,305,350
+offsets:1,1,307,352
+3
+bounds:309,516,283,373
+offsets:1,1,285,375
+4
+bounds:594,420,163,262
+offsets:1,1,165,264
+rotate:90
