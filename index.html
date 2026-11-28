@@ -201,7 +201,7 @@ function createSpinePortrait(name,folder){
     if(closedEye&&(f.isIris||f.isLowerEyeLine))target=null;
     else if(isWriter){
       const candidates=f.names.filter(n=>aliases.some(alias=>parts(n).includes(alias)));
-      if(closedEye&&f.isEyeLine)target=f.names.find(n=>/closed/i.test(n))||choose(candidates);
+      if(closedEye&&f.isEyeLine)target=f.names.find(n=>/(?:close|closed)/i.test(n))||null;
       else if(candidates.length)target=choose(candidates);
       else if((f.isEyeLine||f.isLash)&&!closedEye){const directional=f.names.filter(n=>n.toUpperCase().endsWith('_'+direction()));if(directional.length)target=choose(directional)}
     }else{
