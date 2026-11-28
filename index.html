@@ -159,8 +159,8 @@ function createSpinePortrait(name,folder){
  function setExpression(id){expression=Number(id);if(ready){applyExpression(expression);drawOnce()}}
  function applyExpression(id){
   const map={200:'blank',201:'angry',202:'blank',203:'crying',204:'smiling',205:'angry2',206:'crying2',207:'smiling2',208:'blank',209:'surprised',210:'angry2'},key=map[id]||'blank',isWriter=name==='WriterMale'||name==='WriterFemale',attachmentKey=isWriter&&key==='smiling2'?'laugh':key,aliases=attachmentKey==='surprised'?['surprised','suprised']:[attachmentKey],closedEye=isWriter&&(attachmentKey==='laugh'||attachmentKey==='smiling');
-  const parts=n=>n.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean),direction=n=>closedEye?'D':'U';
-  const choose=(items)=>{const suffix='_'+direction();return items.find(n=>n.toUpperCase().endsWith(suffix))||items.find(n=>! /_[DU]$/i.test(n))||items[0]||null};
+  const parts=n=>n.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean),direction=()=>closedEye?'D':'U';
+  const choose=items=>{const suffix='_'+direction();return items.find(n=>n.toUpperCase().endsWith(suffix))||items.find(n=>! /_[DU]$/i.test(n))||items[0]||null};
   for(const f of faceSlots){
     if(isWriter&&closedEye&&f.isIris){try{skeleton.setAttachment(f.slot,null)}catch(e){}continue}
     let target=null;
@@ -168,7 +168,15 @@ function createSpinePortrait(name,folder){
       const lid=/^(?:eyeline|eyelashes)/i.test(f.slot)||f.names.some(n=>/^(?:eyeline|eyelashes)/i.test(n));
       const candidates=f.names.filter(n=>aliases.some(alias=>parts(n).includes(alias)));
       if(candidates.length)target=choose(candidates);
-      else if(lid){const directional=f.names.filter(n=>new RegExp('_'+direction()+'
+      else if(lid){const directional=f.names.filter(n=>new RegExp('_'+direction()+'$','i').test(n));if(directional.length)target=choose(directional)}
+    }else{
+      const norm=n=>n.toLowerCase().replace(/[^a-z0-9]/g,'');
+      if(key==='blank'&&f.names.includes('blank'))target='blank';
+      else{const candidates=f.names.filter(n=>{const x=norm(n),k=norm(key);return x===k||x.endsWith(k)||x.includes(k)});if(candidates.length)target=candidates[0];else if(key==='angry2'){target=f.names.find(n=>/angry2/i.test(n))||f.names.find(n=>/angry/i.test(n))}else if(key==='crying'){target=f.names.find(n=>/crying2?/i.test(n))}}
+    }
+    try{if(target)skeleton.setAttachment(f.slot,target);else if(isWriter)skeleton.setAttachment(f.slot,f.base);else if(f.base)skeleton.setAttachment(f.slot,f.base)}catch(e){}
+  }
+}
  return{mount,setExpression};
 }
 const CeciliaSpine=createSpinePortrait('Cecilia','Cecilia');
