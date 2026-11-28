@@ -1,14 +1,34 @@
 {
   "version": 1,
-  "totalBytes": 1188557143,
+  "totalBytes": 1393916813,
   "files": [
     {
-      "url": "./BGM/BGM_ADreamWorld.wav",
-      "size": 17227724
+      "url": "./Background/Library_Default (Left).png",
+      "size": 529389
+    },
+    {
+      "url": "./Background/Library_Default (Right).png",
+      "size": 570735
+    },
+    {
+      "url": "./Background/White (Left).png",
+      "size": 494
+    },
+    {
+      "url": "./Background/White (Right).png",
+      "size": 494
+    },
+    {
+      "url": "./BGM/Beach.wav",
+      "size": 8386604
     },
     {
       "url": "./BGM/BGM_Action.wav",
       "size": 8478764
+    },
+    {
+      "url": "./BGM/BGM_ADreamWorld.wav",
+      "size": 17227724
     },
     {
       "url": "./BGM/BGM_AnubisInvasion.wav",
@@ -89,6 +109,58 @@
     {
       "url": "./BGM/BGM_ElfOfSpring.wav",
       "size": 7548988
+    },
+    {
+      "url": "./BGM/BGM_g3_Alone.wav",
+      "size": 11810348
+    },
+    {
+      "url": "./BGM/BGM_g3_BlueConcerto.wav",
+      "size": 16017452
+    },
+    {
+      "url": "./BGM/bgm_g3_BraveMarch.wav",
+      "size": 22408748
+    },
+    {
+      "url": "./BGM/BGM_g3_Conspiracy2.wav",
+      "size": 18229292
+    },
+    {
+      "url": "./BGM/bgm_g3_Corale.wav",
+      "size": 24215084
+    },
+    {
+      "url": "./BGM/bgm_g3_Exodus.wav",
+      "size": 17478188
+    },
+    {
+      "url": "./BGM/BGM_g3_HappyMercenary.wav",
+      "size": 8828972
+    },
+    {
+      "url": "./BGM/BGM_g3_HeartToHeart.wav",
+      "size": 18510380
+    },
+    {
+      "url": "./BGM/BGM_g3_LonelyWanderer.wav",
+      "size": 18459692
+    },
+    {
+      "url": "./BGM/BGM_g3_RiskyVoices.wav",
+      "size": 13791788
+    },
+    {
+      "url": "./BGM/BGM_g3_ShivanScimitar.wav",
+      "size": 20464172
+    },
+    {
+      "url": "./BGM/BGM_g3_Tears.wav",
+      "size": 14404588
+    },
+    {
+      "url": "./BGM/BGM_g3_TimeOfFate.wav",
+      "size": 13584428
     },
     {
       "url": "./BGM/BGM_GoodOrEvil.wav",
@@ -255,50 +327,6 @@
       "size": 10776484
     },
     {
-      "url": "./BGM/BGM_g3_Alone.wav",
-      "size": 11810348
-    },
-    {
-      "url": "./BGM/BGM_g3_BlueConcerto.wav",
-      "size": 16017452
-    },
-    {
-      "url": "./BGM/BGM_g3_Conspiracy2.wav",
-      "size": 18229292
-    },
-    {
-      "url": "./BGM/BGM_g3_HappyMercenary.wav",
-      "size": 8828972
-    },
-    {
-      "url": "./BGM/BGM_g3_HeartToHeart.wav",
-      "size": 18510380
-    },
-    {
-      "url": "./BGM/BGM_g3_LonelyWanderer.wav",
-      "size": 18459692
-    },
-    {
-      "url": "./BGM/BGM_g3_RiskyVoices.wav",
-      "size": 13791788
-    },
-    {
-      "url": "./BGM/BGM_g3_ShivanScimitar.wav",
-      "size": 20464172
-    },
-    {
-      "url": "./BGM/BGM_g3_Tears.wav",
-      "size": 14404588
-    },
-    {
-      "url": "./BGM/BGM_g3_TimeOfFate.wav",
-      "size": 13584428
-    },
-    {
-      "url": "./BGM/Beach.wav",
-      "size": 8386604
-    },
-    {
       "url": "./BGM/Devil'sFollower.wav",
       "size": 18648620
     },
@@ -307,32 +335,196 @@
       "size": 20037672
     },
     {
-      "url": "./BGM/bgm_g3_BraveMarch.wav",
-      "size": 22408748
+      "url": "./Characters/Aire/Aire_2.png",
+      "size": 523460
     },
     {
-      "url": "./BGM/bgm_g3_Corale.wav",
-      "size": 24215084
+      "url": "./Characters/Aire/Aire.atlas",
+      "size": 5488
     },
     {
-      "url": "./BGM/bgm_g3_Exodus.wav",
-      "size": 17478188
+      "url": "./Characters/Aire/Aire.png",
+      "size": 1137598
     },
     {
-      "url": "./Background/Library_Default (Left).png",
-      "size": 529389
+      "url": "./Characters/Aire/Aire.skel",
+      "size": 3025692
     },
     {
-      "url": "./Background/Library_Default (Right).png",
-      "size": 570735
+      "url": "./Characters/Alice/Alice_2.png",
+      "size": 609302
     },
     {
-      "url": "./Background/White (Left).png",
-      "size": 494
+      "url": "./Characters/Alice/Alice_3.png",
+      "size": 282514
     },
     {
-      "url": "./Background/White (Right).png",
-      "size": 494
+      "url": "./Characters/Alice/Alice_4.png",
+      "size": 268548
+    },
+    {
+      "url": "./Characters/Alice/Alice.atlas",
+      "size": 9073
+    },
+    {
+      "url": "./Characters/Alice/Alice.png",
+      "size": 894252
+    },
+    {
+      "url": "./Characters/Alice/Alice.skel",
+      "size": 1072582
+    },
+    {
+      "url": "./Characters/Ameli/Ameli_2.png",
+      "size": 723432
+    },
+    {
+      "url": "./Characters/Ameli/Ameli_3.png",
+      "size": 287532
+    },
+    {
+      "url": "./Characters/Ameli/Ameli.atlas",
+      "size": 10007
+    },
+    {
+      "url": "./Characters/Ameli/Ameli.png",
+      "size": 778692
+    },
+    {
+      "url": "./Characters/Ameli/Ameli.skel",
+      "size": 1151238
+    },
+    {
+      "url": "./Characters/Anastasia/Anastasia_2.png",
+      "size": 699751
+    },
+    {
+      "url": "./Characters/Anastasia/Anastasia_3.png",
+      "size": 581344
+    },
+    {
+      "url": "./Characters/Anastasia/Anastasia_4.png",
+      "size": 362340
+    },
+    {
+      "url": "./Characters/Anastasia/Anastasia_5.png",
+      "size": 490056
+    },
+    {
+      "url": "./Characters/Anastasia/Anastasia_6.png",
+      "size": 402890
+    },
+    {
+      "url": "./Characters/Anastasia/Anastasia_7.png",
+      "size": 445117
+    },
+    {
+      "url": "./Characters/Anastasia/Anastasia_8.png",
+      "size": 391372
+    },
+    {
+      "url": "./Characters/Anastasia/Anastasia.atlas",
+      "size": 12382
+    },
+    {
+      "url": "./Characters/Anastasia/Anastasia.png",
+      "size": 769338
+    },
+    {
+      "url": "./Characters/Anastasia/Anastasia.skel",
+      "size": 1281959
+    },
+    {
+      "url": "./Characters/Arc/Arc_2.png",
+      "size": 443311
+    },
+    {
+      "url": "./Characters/Arc/Arc.atlas",
+      "size": 7023
+    },
+    {
+      "url": "./Characters/Arc/Arc.png",
+      "size": 657812
+    },
+    {
+      "url": "./Characters/Arc/Arc.skel",
+      "size": 373232
+    },
+    {
+      "url": "./Characters/Bada/Bada_2.png",
+      "size": 577458
+    },
+    {
+      "url": "./Characters/Bada/Bada_3.png",
+      "size": 335756
+    },
+    {
+      "url": "./Characters/Bada/Bada_4.png",
+      "size": 351190
+    },
+    {
+      "url": "./Characters/Bada/Bada_5.png",
+      "size": 436607
+    },
+    {
+      "url": "./Characters/Bada/Bada_6.png",
+      "size": 301465
+    },
+    {
+      "url": "./Characters/Bada/Bada_7.png",
+      "size": 246615
+    },
+    {
+      "url": "./Characters/Bada/Bada.atlas",
+      "size": 7055
+    },
+    {
+      "url": "./Characters/Bada/Bada.png",
+      "size": 667653
+    },
+    {
+      "url": "./Characters/Bada/Bada.skel",
+      "size": 688069
+    },
+    {
+      "url": "./Characters/Bigbo/Bigbo_2.png",
+      "size": 617155
+    },
+    {
+      "url": "./Characters/Bigbo/Bigbo_3.png",
+      "size": 336761
+    },
+    {
+      "url": "./Characters/Bigbo/Bigbo_4.png",
+      "size": 372577
+    },
+    {
+      "url": "./Characters/Bigbo/Bigbo_5.png",
+      "size": 196740
+    },
+    {
+      "url": "./Characters/Bigbo/Bigbo_6.png",
+      "size": 344057
+    },
+    {
+      "url": "./Characters/Bigbo/Bigbo_7.png",
+      "size": 192630
+    },
+    {
+      "url": "./Characters/Bigbo/Bigbo.atlas",
+      "size": 6634
+    },
+    {
+      "url": "./Characters/Bigbo/Bigbo.png",
+      "size": 962836
+    },
+    {
+      "url": "./Characters/Bigbo/Bigbo.skel",
+      "size": 395912
+    },
+    {
+      "url": "./Characters/BriarRose/BriarRose_2.png",
+      "size": 248946
     },
     {
       "url": "./Characters/BriarRose/BriarRose.atlas",
@@ -347,20 +539,60 @@
       "size": 2096203
     },
     {
-      "url": "./Characters/BriarRose/BriarRose_2.png",
-      "size": 248946
+      "url": "./Characters/Cain/Cain_2.png",
+      "size": 784335
     },
     {
-      "url": "./Characters/Cecilia/Cecilia.atlas",
-      "size": 6558
+      "url": "./Characters/Cain/Cain_3.png",
+      "size": 579719
     },
     {
-      "url": "./Characters/Cecilia/Cecilia.png",
-      "size": 386216
+      "url": "./Characters/Cain/Cain_4.png",
+      "size": 389368
     },
     {
-      "url": "./Characters/Cecilia/Cecilia.skel",
-      "size": 1508941
+      "url": "./Characters/Cain/Cain_5.png",
+      "size": 135882
+    },
+    {
+      "url": "./Characters/Cain/Cain.atlas",
+      "size": 13470
+    },
+    {
+      "url": "./Characters/Cain/Cain.png",
+      "size": 555504
+    },
+    {
+      "url": "./Characters/Cain/Cain.skel",
+      "size": 2367245
+    },
+    {
+      "url": "./Characters/CainDevil/CainDevil_2.png",
+      "size": 763020
+    },
+    {
+      "url": "./Characters/CainDevil/CainDevil_3.png",
+      "size": 459408
+    },
+    {
+      "url": "./Characters/CainDevil/CainDevil_4.png",
+      "size": 396503
+    },
+    {
+      "url": "./Characters/CainDevil/CainDevil_5.png",
+      "size": 368376
+    },
+    {
+      "url": "./Characters/CainDevil/CainDevil.atlas",
+      "size": 11972
+    },
+    {
+      "url": "./Characters/CainDevil/CainDevil.png",
+      "size": 1102897
+    },
+    {
+      "url": "./Characters/CainDevil/CainDevil.skel",
+      "size": 1303761
     },
     {
       "url": "./Characters/Cecilia/Cecilia_2.png",
@@ -383,16 +615,1356 @@
       "size": 480830
     },
     {
-      "url": "./Characters/WriterFemale/WriterFemale.atlas",
-      "size": 7470
+      "url": "./Characters/Cecilia/Cecilia.atlas",
+      "size": 6558
     },
     {
-      "url": "./Characters/WriterFemale/WriterFemale.png",
-      "size": 706496
+      "url": "./Characters/Cecilia/Cecilia.png",
+      "size": 386216
     },
     {
-      "url": "./Characters/WriterFemale/WriterFemale.skel",
-      "size": 619830
+      "url": "./Characters/Cecilia/Cecilia.skel",
+      "size": 1508941
+    },
+    {
+      "url": "./Characters/CheonNyeonHo/CheonNyeonHo_2.png",
+      "size": 638418
+    },
+    {
+      "url": "./Characters/CheonNyeonHo/CheonNyeonHo_3.png",
+      "size": 277232
+    },
+    {
+      "url": "./Characters/CheonNyeonHo/CheonNyeonHo_4.png",
+      "size": 327112
+    },
+    {
+      "url": "./Characters/CheonNyeonHo/CheonNyeonHo.atlas",
+      "size": 6783
+    },
+    {
+      "url": "./Characters/CheonNyeonHo/CheonNyeonHo.png",
+      "size": 793660
+    },
+    {
+      "url": "./Characters/CheonNyeonHo/CheonNyeonHo.skel",
+      "size": 448398
+    },
+    {
+      "url": "./Characters/CheshireCat/CheshireCat_2.png",
+      "size": 282084
+    },
+    {
+      "url": "./Characters/CheshireCat/CheshireCat_3.png",
+      "size": 282180
+    },
+    {
+      "url": "./Characters/CheshireCat/CheshireCat_4.png",
+      "size": 394281
+    },
+    {
+      "url": "./Characters/CheshireCat/CheshireCat.atlas",
+      "size": 2732
+    },
+    {
+      "url": "./Characters/CheshireCat/CheshireCat.png",
+      "size": 407155
+    },
+    {
+      "url": "./Characters/CheshireCat/CheshireCat.skel",
+      "size": 451718
+    },
+    {
+      "url": "./Characters/Chocola/Chocola_2.png",
+      "size": 132177
+    },
+    {
+      "url": "./Characters/Chocola/Chocola.atlas",
+      "size": 2699
+    },
+    {
+      "url": "./Characters/Chocola/Chocola.png",
+      "size": 501025
+    },
+    {
+      "url": "./Characters/Chocola/Chocola.skel",
+      "size": 1004254
+    },
+    {
+      "url": "./Characters/Chowon/Chowon_2.png",
+      "size": 500778
+    },
+    {
+      "url": "./Characters/Chowon/Chowon.atlas",
+      "size": 4916
+    },
+    {
+      "url": "./Characters/Chowon/Chowon.png",
+      "size": 533742
+    },
+    {
+      "url": "./Characters/Chowon/Chowon.skel",
+      "size": 161512
+    },
+    {
+      "url": "./Characters/Chrystian/Chrystian_2.png",
+      "size": 623558
+    },
+    {
+      "url": "./Characters/Chrystian/Chrystian_3.png",
+      "size": 367781
+    },
+    {
+      "url": "./Characters/Chrystian/Chrystian_4.png",
+      "size": 254350
+    },
+    {
+      "url": "./Characters/Chrystian/Chrystian_5.png",
+      "size": 290364
+    },
+    {
+      "url": "./Characters/Chrystian/Chrystian.atlas",
+      "size": 6404
+    },
+    {
+      "url": "./Characters/Chrystian/Chrystian.png",
+      "size": 537555
+    },
+    {
+      "url": "./Characters/Chrystian/Chrystian.skel",
+      "size": 183262
+    },
+    {
+      "url": "./Characters/Clode/Clode_2.png",
+      "size": 882230
+    },
+    {
+      "url": "./Characters/Clode/Clode_3.png",
+      "size": 390383
+    },
+    {
+      "url": "./Characters/Clode/Clode_4.png",
+      "size": 341323
+    },
+    {
+      "url": "./Characters/Clode/Clode_5.png",
+      "size": 172448
+    },
+    {
+      "url": "./Characters/Clode/Clode.atlas",
+      "size": 7274
+    },
+    {
+      "url": "./Characters/Clode/Clode.png",
+      "size": 657320
+    },
+    {
+      "url": "./Characters/Clode/Clode.skel",
+      "size": 1749715
+    },
+    {
+      "url": "./Characters/Dieter/Dieter_2.png",
+      "size": 479011
+    },
+    {
+      "url": "./Characters/Dieter/Dieter_3.png",
+      "size": 260869
+    },
+    {
+      "url": "./Characters/Dieter/Dieter.atlas",
+      "size": 4216
+    },
+    {
+      "url": "./Characters/Dieter/Dieter.png",
+      "size": 852775
+    },
+    {
+      "url": "./Characters/Dieter/Dieter.skel",
+      "size": 611754
+    },
+    {
+      "url": "./Characters/DnD/DnD_2.png",
+      "size": 330415
+    },
+    {
+      "url": "./Characters/DnD/DnD_3.png",
+      "size": 369865
+    },
+    {
+      "url": "./Characters/DnD/DnD_4.png",
+      "size": 576144
+    },
+    {
+      "url": "./Characters/DnD/DnD.atlas",
+      "size": 7472
+    },
+    {
+      "url": "./Characters/DnD/DnD.png",
+      "size": 673935
+    },
+    {
+      "url": "./Characters/DnD/DnD.skel",
+      "size": 933054
+    },
+    {
+      "url": "./Characters/Drosselmeyer/Drosselmeyer_2.png",
+      "size": 579738
+    },
+    {
+      "url": "./Characters/Drosselmeyer/Drosselmeyer_3.png",
+      "size": 372664
+    },
+    {
+      "url": "./Characters/Drosselmeyer/Drosselmeyer_4.png",
+      "size": 422116
+    },
+    {
+      "url": "./Characters/Drosselmeyer/Drosselmeyer_5.png",
+      "size": 501425
+    },
+    {
+      "url": "./Characters/Drosselmeyer/Drosselmeyer.atlas",
+      "size": 4160
+    },
+    {
+      "url": "./Characters/Drosselmeyer/Drosselmeyer.png",
+      "size": 500239
+    },
+    {
+      "url": "./Characters/Drosselmeyer/Drosselmeyer.skel",
+      "size": 447963
+    },
+    {
+      "url": "./Characters/Efrat_Mask/Efrat_Mask_2.png",
+      "size": 763106
+    },
+    {
+      "url": "./Characters/Efrat_Mask/Efrat_Mask_3.png",
+      "size": 423694
+    },
+    {
+      "url": "./Characters/Efrat_Mask/Efrat_Mask_4.png",
+      "size": 358564
+    },
+    {
+      "url": "./Characters/Efrat_Mask/Efrat_Mask.atlas",
+      "size": 7543
+    },
+    {
+      "url": "./Characters/Efrat_Mask/Efrat_Mask.png",
+      "size": 764885
+    },
+    {
+      "url": "./Characters/Efrat_Mask/Efrat_Mask.skel",
+      "size": 628482
+    },
+    {
+      "url": "./Characters/Efrat/Efrat_2.png",
+      "size": 763106
+    },
+    {
+      "url": "./Characters/Efrat/Efrat_3.png",
+      "size": 423694
+    },
+    {
+      "url": "./Characters/Efrat/Efrat_4.png",
+      "size": 358564
+    },
+    {
+      "url": "./Characters/Efrat/Efrat.atlas",
+      "size": 7523
+    },
+    {
+      "url": "./Characters/Efrat/Efrat.png",
+      "size": 764885
+    },
+    {
+      "url": "./Characters/Efrat/Efrat.skel",
+      "size": 629065
+    },
+    {
+      "url": "./Characters/Elims/Elims_2.png",
+      "size": 635513
+    },
+    {
+      "url": "./Characters/Elims/Elims_3.png",
+      "size": 282050
+    },
+    {
+      "url": "./Characters/Elims/Elims_4.png",
+      "size": 161501
+    },
+    {
+      "url": "./Characters/Elims/Elims.atlas",
+      "size": 7939
+    },
+    {
+      "url": "./Characters/Elims/Elims.png",
+      "size": 522919
+    },
+    {
+      "url": "./Characters/Elims/Elims.skel",
+      "size": 453611
+    },
+    {
+      "url": "./Characters/Ellin/Ellin.atlas",
+      "size": 3087
+    },
+    {
+      "url": "./Characters/Ellin/Ellin.png",
+      "size": 691660
+    },
+    {
+      "url": "./Characters/Ellin/Ellin.skel",
+      "size": 1634657
+    },
+    {
+      "url": "./Characters/Flare/Flare_2.png",
+      "size": 731539
+    },
+    {
+      "url": "./Characters/Flare/Flare.atlas",
+      "size": 8639
+    },
+    {
+      "url": "./Characters/Flare/Flare.png",
+      "size": 1139061
+    },
+    {
+      "url": "./Characters/Flare/Flare.skel",
+      "size": 1765546
+    },
+    {
+      "url": "./Characters/Florence/Florence_2.png",
+      "size": 253634
+    },
+    {
+      "url": "./Characters/Florence/Florence.atlas",
+      "size": 4573
+    },
+    {
+      "url": "./Characters/Florence/Florence.png",
+      "size": 934941
+    },
+    {
+      "url": "./Characters/Florence/Florence.skel",
+      "size": 642471
+    },
+    {
+      "url": "./Characters/Gretel/Gretel_2.png",
+      "size": 787680
+    },
+    {
+      "url": "./Characters/Gretel/Gretel_3.png",
+      "size": 320718
+    },
+    {
+      "url": "./Characters/Gretel/Gretel_4.png",
+      "size": 188075
+    },
+    {
+      "url": "./Characters/Gretel/Gretel.atlas",
+      "size": 9030
+    },
+    {
+      "url": "./Characters/Gretel/Gretel.png",
+      "size": 843434
+    },
+    {
+      "url": "./Characters/Gretel/Gretel.skel",
+      "size": 385110
+    },
+    {
+      "url": "./Characters/Hansel/Hansel.atlas",
+      "size": 5896
+    },
+    {
+      "url": "./Characters/Hansel/Hansel.png",
+      "size": 930658
+    },
+    {
+      "url": "./Characters/Hansel/Hansel.skel",
+      "size": 191719
+    },
+    {
+      "url": "./Characters/Harang/Harang_2.png",
+      "size": 751343
+    },
+    {
+      "url": "./Characters/Harang/Harang_3.png",
+      "size": 303840
+    },
+    {
+      "url": "./Characters/Harang/Harang_4.png",
+      "size": 392698
+    },
+    {
+      "url": "./Characters/Harang/Harang_5.png",
+      "size": 286238
+    },
+    {
+      "url": "./Characters/Harang/Harang_6.png",
+      "size": 383920
+    },
+    {
+      "url": "./Characters/Harang/Harang_7.png",
+      "size": 266923
+    },
+    {
+      "url": "./Characters/Harang/Harang_8.png",
+      "size": 279074
+    },
+    {
+      "url": "./Characters/Harang/Harang.atlas",
+      "size": 14082
+    },
+    {
+      "url": "./Characters/Harang/Harang.png",
+      "size": 489285
+    },
+    {
+      "url": "./Characters/Harang/Harang.skel",
+      "size": 1334898
+    },
+    {
+      "url": "./Characters/Haru/Haru_2.png",
+      "size": 508331
+    },
+    {
+      "url": "./Characters/Haru/Haru_3.png",
+      "size": 284115
+    },
+    {
+      "url": "./Characters/Haru/Haru_4.png",
+      "size": 274196
+    },
+    {
+      "url": "./Characters/Haru/Haru_5.png",
+      "size": 242478
+    },
+    {
+      "url": "./Characters/Haru/Haru.atlas",
+      "size": 11282
+    },
+    {
+      "url": "./Characters/Haru/Haru.png",
+      "size": 768577
+    },
+    {
+      "url": "./Characters/Haru/Haru.skel",
+      "size": 712114
+    },
+    {
+      "url": "./Characters/Helya/Helya_2.png",
+      "size": 731775
+    },
+    {
+      "url": "./Characters/Helya/Helya_3.png",
+      "size": 351900
+    },
+    {
+      "url": "./Characters/Helya/Helya_4.png",
+      "size": 301952
+    },
+    {
+      "url": "./Characters/Helya/Helya.atlas",
+      "size": 7219
+    },
+    {
+      "url": "./Characters/Helya/Helya.png",
+      "size": 604506
+    },
+    {
+      "url": "./Characters/Helya/Helya.skel",
+      "size": 370885
+    },
+    {
+      "url": "./Characters/JaneDoe/JaneDoe_2.png",
+      "size": 620382
+    },
+    {
+      "url": "./Characters/JaneDoe/JaneDoe_3.png",
+      "size": 348038
+    },
+    {
+      "url": "./Characters/JaneDoe/JaneDoe_4.png",
+      "size": 81968
+    },
+    {
+      "url": "./Characters/JaneDoe/JaneDoe.atlas",
+      "size": 9649
+    },
+    {
+      "url": "./Characters/JaneDoe/JaneDoe.png",
+      "size": 707810
+    },
+    {
+      "url": "./Characters/JaneDoe/JaneDoe.skel",
+      "size": 655242
+    },
+    {
+      "url": "./Characters/Jargal/Jargal_2.png",
+      "size": 709533
+    },
+    {
+      "url": "./Characters/Jargal/Jargal_3.png",
+      "size": 570297
+    },
+    {
+      "url": "./Characters/Jargal/Jargal_4.png",
+      "size": 552285
+    },
+    {
+      "url": "./Characters/Jargal/Jargal.atlas",
+      "size": 7232
+    },
+    {
+      "url": "./Characters/Jargal/Jargal.png",
+      "size": 949883
+    },
+    {
+      "url": "./Characters/Jargal/Jargal.skel",
+      "size": 423364
+    },
+    {
+      "url": "./Characters/Joan/Joan_2.png",
+      "size": 578129
+    },
+    {
+      "url": "./Characters/Joan/Joan_3.png",
+      "size": 382381
+    },
+    {
+      "url": "./Characters/Joan/Joan_4.png",
+      "size": 175127
+    },
+    {
+      "url": "./Characters/Joan/Joan.atlas",
+      "size": 5754
+    },
+    {
+      "url": "./Characters/Joan/Joan.png",
+      "size": 468087
+    },
+    {
+      "url": "./Characters/Joan/Joan.skel",
+      "size": 356891
+    },
+    {
+      "url": "./Characters/Kai/Kai_2.png",
+      "size": 512858
+    },
+    {
+      "url": "./Characters/Kai/Kai_3.png",
+      "size": 192974
+    },
+    {
+      "url": "./Characters/Kai/Kai.atlas",
+      "size": 6534
+    },
+    {
+      "url": "./Characters/Kai/Kai.png",
+      "size": 974456
+    },
+    {
+      "url": "./Characters/Kai/Kai.skel",
+      "size": 529722
+    },
+    {
+      "url": "./Characters/Kismet/Kismet_2.png",
+      "size": 380441
+    },
+    {
+      "url": "./Characters/Kismet/Kismet_3.png",
+      "size": 250162
+    },
+    {
+      "url": "./Characters/Kismet/Kismet_4.png",
+      "size": 305763
+    },
+    {
+      "url": "./Characters/Kismet/Kismet_5.png",
+      "size": 160922
+    },
+    {
+      "url": "./Characters/Kismet/Kismet.atlas",
+      "size": 5055
+    },
+    {
+      "url": "./Characters/Kismet/Kismet.png",
+      "size": 582458
+    },
+    {
+      "url": "./Characters/Kismet/Kismet.skel",
+      "size": 610397
+    },
+    {
+      "url": "./Characters/Lala/Lala_2.png",
+      "size": 414192
+    },
+    {
+      "url": "./Characters/Lala/Lala_3.png",
+      "size": 407080
+    },
+    {
+      "url": "./Characters/Lala/Lala.atlas",
+      "size": 6679
+    },
+    {
+      "url": "./Characters/Lala/Lala.png",
+      "size": 925636
+    },
+    {
+      "url": "./Characters/Lala/Lala.skel",
+      "size": 276837
+    },
+    {
+      "url": "./Characters/Larissa/Larissa_2.png",
+      "size": 601699
+    },
+    {
+      "url": "./Characters/Larissa/Larissa_3.png",
+      "size": 423328
+    },
+    {
+      "url": "./Characters/Larissa/Larissa_4.png",
+      "size": 394697
+    },
+    {
+      "url": "./Characters/Larissa/Larissa_5.png",
+      "size": 203424
+    },
+    {
+      "url": "./Characters/Larissa/Larissa_6.png",
+      "size": 281740
+    },
+    {
+      "url": "./Characters/Larissa/Larissa_7.png",
+      "size": 352530
+    },
+    {
+      "url": "./Characters/Larissa/Larissa.atlas",
+      "size": 6962
+    },
+    {
+      "url": "./Characters/Larissa/Larissa.png",
+      "size": 1053467
+    },
+    {
+      "url": "./Characters/Larissa/Larissa.skel",
+      "size": 4355820
+    },
+    {
+      "url": "./Characters/Leila/Leila_2.png",
+      "size": 520562
+    },
+    {
+      "url": "./Characters/Leila/Leila_3.png",
+      "size": 349122
+    },
+    {
+      "url": "./Characters/Leila/Leila.atlas",
+      "size": 5568
+    },
+    {
+      "url": "./Characters/Leila/Leila.png",
+      "size": 1011370
+    },
+    {
+      "url": "./Characters/Leila/Leila.skel",
+      "size": 470323
+    },
+    {
+      "url": "./Characters/Lilith/Lilith_2.png",
+      "size": 678370
+    },
+    {
+      "url": "./Characters/Lilith/Lilith_3.png",
+      "size": 609136
+    },
+    {
+      "url": "./Characters/Lilith/Lilith_4.png",
+      "size": 298699
+    },
+    {
+      "url": "./Characters/Lilith/Lilith.atlas",
+      "size": 10599
+    },
+    {
+      "url": "./Characters/Lilith/Lilith.png",
+      "size": 987013
+    },
+    {
+      "url": "./Characters/Lilith/Lilith.skel",
+      "size": 1892898
+    },
+    {
+      "url": "./Characters/Lina/Lina_2.png",
+      "size": 421755
+    },
+    {
+      "url": "./Characters/Lina/Lina_3.png",
+      "size": 269219
+    },
+    {
+      "url": "./Characters/Lina/Lina.atlas",
+      "size": 7952
+    },
+    {
+      "url": "./Characters/Lina/Lina.png",
+      "size": 817303
+    },
+    {
+      "url": "./Characters/Lina/Lina.skel",
+      "size": 863084
+    },
+    {
+      "url": "./Characters/Lucian/Lucian.atlas",
+      "size": 3815
+    },
+    {
+      "url": "./Characters/Lucian/Lucian.png",
+      "size": 993733
+    },
+    {
+      "url": "./Characters/Lucian/Lucian.skel",
+      "size": 209615
+    },
+    {
+      "url": "./Characters/Luna/Luna_2.png",
+      "size": 486585
+    },
+    {
+      "url": "./Characters/Luna/Luna_3.png",
+      "size": 191348
+    },
+    {
+      "url": "./Characters/Luna/Luna.atlas",
+      "size": 3489
+    },
+    {
+      "url": "./Characters/Luna/Luna.png",
+      "size": 242274
+    },
+    {
+      "url": "./Characters/Luna/Luna.skel",
+      "size": 805567
+    },
+    {
+      "url": "./Characters/Malfi/Malfi_2.png",
+      "size": 782897
+    },
+    {
+      "url": "./Characters/Malfi/Malfi_3.png",
+      "size": 355867
+    },
+    {
+      "url": "./Characters/Malfi/Malfi_4.png",
+      "size": 406904
+    },
+    {
+      "url": "./Characters/Malfi/Malfi_5.png",
+      "size": 258602
+    },
+    {
+      "url": "./Characters/Malfi/Malfi_6.png",
+      "size": 237043
+    },
+    {
+      "url": "./Characters/Malfi/Malfi.atlas",
+      "size": 9728
+    },
+    {
+      "url": "./Characters/Malfi/Malfi.png",
+      "size": 443076
+    },
+    {
+      "url": "./Characters/Malfi/Malfi.skel",
+      "size": 1068184
+    },
+    {
+      "url": "./Characters/Marie/Marie_2.png",
+      "size": 481342
+    },
+    {
+      "url": "./Characters/Marie/Marie.atlas",
+      "size": 5139
+    },
+    {
+      "url": "./Characters/Marie/Marie.png",
+      "size": 1245670
+    },
+    {
+      "url": "./Characters/Marie/Marie.skel",
+      "size": 921864
+    },
+    {
+      "url": "./Characters/Maximilien/Maximilien_2.png",
+      "size": 411065
+    },
+    {
+      "url": "./Characters/Maximilien/Maximilien.atlas",
+      "size": 6380
+    },
+    {
+      "url": "./Characters/Maximilien/Maximilien.png",
+      "size": 582452
+    },
+    {
+      "url": "./Characters/Maximilien/Maximilien.skel",
+      "size": 282458
+    },
+    {
+      "url": "./Characters/Meimei/Meimei_2.png",
+      "size": 782568
+    },
+    {
+      "url": "./Characters/Meimei/Meimei_3.png",
+      "size": 460525
+    },
+    {
+      "url": "./Characters/Meimei/Meimei_4.png",
+      "size": 498982
+    },
+    {
+      "url": "./Characters/Meimei/Meimei_5.png",
+      "size": 341114
+    },
+    {
+      "url": "./Characters/Meimei/Meimei.atlas",
+      "size": 9972
+    },
+    {
+      "url": "./Characters/Meimei/Meimei.png",
+      "size": 793428
+    },
+    {
+      "url": "./Characters/Meimei/Meimei.skel",
+      "size": 557714
+    },
+    {
+      "url": "./Characters/Miho/Miho_2.png",
+      "size": 899391
+    },
+    {
+      "url": "./Characters/Miho/Miho_3.png",
+      "size": 359821
+    },
+    {
+      "url": "./Characters/Miho/Miho_4.png",
+      "size": 505313
+    },
+    {
+      "url": "./Characters/Miho/Miho_5.png",
+      "size": 355150
+    },
+    {
+      "url": "./Characters/Miho/Miho_6.png",
+      "size": 64961
+    },
+    {
+      "url": "./Characters/Miho/Miho.atlas",
+      "size": 13417
+    },
+    {
+      "url": "./Characters/Miho/Miho.png",
+      "size": 776605
+    },
+    {
+      "url": "./Characters/Miho/Miho.skel",
+      "size": 1875366
+    },
+    {
+      "url": "./Characters/Mikhail/Mikhail_2.png",
+      "size": 657881
+    },
+    {
+      "url": "./Characters/Mikhail/Mikhail_3.png",
+      "size": 407332
+    },
+    {
+      "url": "./Characters/Mikhail/Mikhail_4.png",
+      "size": 428651
+    },
+    {
+      "url": "./Characters/Mikhail/Mikhail_5.png",
+      "size": 323223
+    },
+    {
+      "url": "./Characters/Mikhail/Mikhail_6.png",
+      "size": 325774
+    },
+    {
+      "url": "./Characters/Mikhail/Mikhail.atlas",
+      "size": 7452
+    },
+    {
+      "url": "./Characters/Mikhail/Mikhail.png",
+      "size": 862329
+    },
+    {
+      "url": "./Characters/Mikhail/Mikhail.skel",
+      "size": 537227
+    },
+    {
+      "url": "./Characters/Mingming/Mingming_2.png",
+      "size": 476593
+    },
+    {
+      "url": "./Characters/Mingming/Mingming_3.png",
+      "size": 401240
+    },
+    {
+      "url": "./Characters/Mingming/Mingming_4.png",
+      "size": 319028
+    },
+    {
+      "url": "./Characters/Mingming/Mingming.atlas",
+      "size": 6382
+    },
+    {
+      "url": "./Characters/Mingming/Mingming.png",
+      "size": 520416
+    },
+    {
+      "url": "./Characters/Mingming/Mingming.skel",
+      "size": 494306
+    },
+    {
+      "url": "./Characters/Monica/Monica_2.png",
+      "size": 935947
+    },
+    {
+      "url": "./Characters/Monica/Monica_3.png",
+      "size": 469966
+    },
+    {
+      "url": "./Characters/Monica/Monica_4.png",
+      "size": 221113
+    },
+    {
+      "url": "./Characters/Monica/Monica.atlas",
+      "size": 6154
+    },
+    {
+      "url": "./Characters/Monica/Monica.png",
+      "size": 940849
+    },
+    {
+      "url": "./Characters/Monica/Monica.skel",
+      "size": 905136
+    },
+    {
+      "url": "./Characters/Olivier/Olivier_2.png",
+      "size": 539760
+    },
+    {
+      "url": "./Characters/Olivier/Olivier_3.png",
+      "size": 399393
+    },
+    {
+      "url": "./Characters/Olivier/Olivier_4.png",
+      "size": 420313
+    },
+    {
+      "url": "./Characters/Olivier/Olivier_5.png",
+      "size": 225453
+    },
+    {
+      "url": "./Characters/Olivier/Olivier_6.png",
+      "size": 170757
+    },
+    {
+      "url": "./Characters/Olivier/Olivier.atlas",
+      "size": 11067
+    },
+    {
+      "url": "./Characters/Olivier/Olivier.png",
+      "size": 606891
+    },
+    {
+      "url": "./Characters/Olivier/Olivier.skel",
+      "size": 584762
+    },
+    {
+      "url": "./Characters/Ophelia/Ophelia_2.png",
+      "size": 728687
+    },
+    {
+      "url": "./Characters/Ophelia/Ophelia.atlas",
+      "size": 8482
+    },
+    {
+      "url": "./Characters/Ophelia/Ophelia.png",
+      "size": 1228237
+    },
+    {
+      "url": "./Characters/Ophelia/Ophelia.skel",
+      "size": 685069
+    },
+    {
+      "url": "./Characters/PeachCrush/PeachCrush_2.png",
+      "size": 737795
+    },
+    {
+      "url": "./Characters/PeachCrush/PeachCrush_3.png",
+      "size": 471504
+    },
+    {
+      "url": "./Characters/PeachCrush/PeachCrush_4.png",
+      "size": 392469
+    },
+    {
+      "url": "./Characters/PeachCrush/PeachCrush_5.png",
+      "size": 328479
+    },
+    {
+      "url": "./Characters/PeachCrush/PeachCrush.atlas",
+      "size": 8974
+    },
+    {
+      "url": "./Characters/PeachCrush/PeachCrush.png",
+      "size": 855986
+    },
+    {
+      "url": "./Characters/PeachCrush/PeachCrush.skel",
+      "size": 353175
+    },
+    {
+      "url": "./Characters/Pinocchio/Pinocchio_2.png",
+      "size": 282191
+    },
+    {
+      "url": "./Characters/Pinocchio/Pinocchio.atlas",
+      "size": 5861
+    },
+    {
+      "url": "./Characters/Pinocchio/Pinocchio.png",
+      "size": 1034453
+    },
+    {
+      "url": "./Characters/Pinocchio/Pinocchio.skel",
+      "size": 867579
+    },
+    {
+      "url": "./Characters/QueenHeart/QueenHeart_2.png",
+      "size": 406705
+    },
+    {
+      "url": "./Characters/QueenHeart/QueenHeart_3.png",
+      "size": 164890
+    },
+    {
+      "url": "./Characters/QueenHeart/QueenHeart.atlas",
+      "size": 4290
+    },
+    {
+      "url": "./Characters/QueenHeart/QueenHeart.png",
+      "size": 466963
+    },
+    {
+      "url": "./Characters/QueenHeart/QueenHeart.skel",
+      "size": 143780
+    },
+    {
+      "url": "./Characters/RabbitNana/RabbitNana.atlas",
+      "size": 1231
+    },
+    {
+      "url": "./Characters/RabbitNana/RabbitNana.png",
+      "size": 140628
+    },
+    {
+      "url": "./Characters/RabbitNana/RabbitNana.skel",
+      "size": 42026
+    },
+    {
+      "url": "./Characters/Rough/Rough_2.png",
+      "size": 731586
+    },
+    {
+      "url": "./Characters/Rough/Rough_3.png",
+      "size": 424903
+    },
+    {
+      "url": "./Characters/Rough/Rough_4.png",
+      "size": 316677
+    },
+    {
+      "url": "./Characters/Rough/Rough_5.png",
+      "size": 216392
+    },
+    {
+      "url": "./Characters/Rough/Rough.atlas",
+      "size": 10103
+    },
+    {
+      "url": "./Characters/Rough/Rough.png",
+      "size": 806566
+    },
+    {
+      "url": "./Characters/Rough/Rough.skel",
+      "size": 714344
+    },
+    {
+      "url": "./Characters/Saladin/Saladin_2.png",
+      "size": 703539
+    },
+    {
+      "url": "./Characters/Saladin/Saladin_3.png",
+      "size": 324020
+    },
+    {
+      "url": "./Characters/Saladin/Saladin_4.png",
+      "size": 257736
+    },
+    {
+      "url": "./Characters/Saladin/Saladin_5.png",
+      "size": 460765
+    },
+    {
+      "url": "./Characters/Saladin/Saladin_6.png",
+      "size": 291646
+    },
+    {
+      "url": "./Characters/Saladin/Saladin_7.png",
+      "size": 218995
+    },
+    {
+      "url": "./Characters/Saladin/Saladin.atlas",
+      "size": 5959
+    },
+    {
+      "url": "./Characters/Saladin/Saladin.png",
+      "size": 492266
+    },
+    {
+      "url": "./Characters/Saladin/Saladin.skel",
+      "size": 477743
+    },
+    {
+      "url": "./Characters/Sasha/Sasha.atlas",
+      "size": 4700
+    },
+    {
+      "url": "./Characters/Sasha/Sasha.png",
+      "size": 795017
+    },
+    {
+      "url": "./Characters/Sasha/Sasha.skel",
+      "size": 638663
+    },
+    {
+      "url": "./Characters/Saya/Saya_2.png",
+      "size": 695288
+    },
+    {
+      "url": "./Characters/Saya/Saya_3.png",
+      "size": 166346
+    },
+    {
+      "url": "./Characters/Saya/Saya.atlas",
+      "size": 8938
+    },
+    {
+      "url": "./Characters/Saya/Saya.png",
+      "size": 956811
+    },
+    {
+      "url": "./Characters/Saya/Saya.skel",
+      "size": 1396936
+    },
+    {
+      "url": "./Characters/Scarlet/Scarlet_2.png",
+      "size": 535173
+    },
+    {
+      "url": "./Characters/Scarlet/Scarlet.atlas",
+      "size": 6822
+    },
+    {
+      "url": "./Characters/Scarlet/Scarlet.png",
+      "size": 1046367
+    },
+    {
+      "url": "./Characters/Scarlet/Scarlet.skel",
+      "size": 879040
+    },
+    {
+      "url": "./Characters/Sherazard/Sherazard_2.png",
+      "size": 391064
+    },
+    {
+      "url": "./Characters/Sherazard/Sherazard_3.png",
+      "size": 312501
+    },
+    {
+      "url": "./Characters/Sherazard/Sherazard.atlas",
+      "size": 5918
+    },
+    {
+      "url": "./Characters/Sherazard/Sherazard.png",
+      "size": 771203
+    },
+    {
+      "url": "./Characters/Sherazard/Sherazard.skel",
+      "size": 467459
+    },
+    {
+      "url": "./Characters/Siho/Siho_2.png",
+      "size": 765157
+    },
+    {
+      "url": "./Characters/Siho/Siho_3.png",
+      "size": 494768
+    },
+    {
+      "url": "./Characters/Siho/Siho_4.png",
+      "size": 404527
+    },
+    {
+      "url": "./Characters/Siho/Siho_5.png",
+      "size": 235833
+    },
+    {
+      "url": "./Characters/Siho/Siho_6.png",
+      "size": 359158
+    },
+    {
+      "url": "./Characters/Siho/Siho.atlas",
+      "size": 10261
+    },
+    {
+      "url": "./Characters/Siho/Siho.png",
+      "size": 638518
+    },
+    {
+      "url": "./Characters/Siho/Siho.skel",
+      "size": 1245368
+    },
+    {
+      "url": "./Characters/Sophie/Sophie_2.png",
+      "size": 899808
+    },
+    {
+      "url": "./Characters/Sophie/Sophie_3.png",
+      "size": 402528
+    },
+    {
+      "url": "./Characters/Sophie/Sophie_4.png",
+      "size": 426953
+    },
+    {
+      "url": "./Characters/Sophie/Sophie_5.png",
+      "size": 298126
+    },
+    {
+      "url": "./Characters/Sophie/Sophie_6.png",
+      "size": 263850
+    },
+    {
+      "url": "./Characters/Sophie/Sophie.atlas",
+      "size": 11059
+    },
+    {
+      "url": "./Characters/Sophie/Sophie.png",
+      "size": 543012
+    },
+    {
+      "url": "./Characters/Sophie/Sophie.skel",
+      "size": 1363145
+    },
+    {
+      "url": "./Characters/Tabris/Tabris_2.png",
+      "size": 713312
+    },
+    {
+      "url": "./Characters/Tabris/Tabris_3.png",
+      "size": 515202
+    },
+    {
+      "url": "./Characters/Tabris/Tabris_4.png",
+      "size": 346196
+    },
+    {
+      "url": "./Characters/Tabris/Tabris_5.png",
+      "size": 336015
+    },
+    {
+      "url": "./Characters/Tabris/Tabris_6.png",
+      "size": 302811
+    },
+    {
+      "url": "./Characters/Tabris/Tabris.atlas",
+      "size": 11341
+    },
+    {
+      "url": "./Characters/Tabris/Tabris.png",
+      "size": 335081
+    },
+    {
+      "url": "./Characters/Tabris/Tabris.skel",
+      "size": 1076508
+    },
+    {
+      "url": "./Characters/Tina/Tina.atlas",
+      "size": 11639
+    },
+    {
+      "url": "./Characters/Tina/Tina.png",
+      "size": 2449101
+    },
+    {
+      "url": "./Characters/Tina/Tina.skel",
+      "size": 3821714
+    },
+    {
+      "url": "./Characters/Vera/Vera_2.png",
+      "size": 430088
+    },
+    {
+      "url": "./Characters/Vera/Vera.atlas",
+      "size": 4969
+    },
+    {
+      "url": "./Characters/Vera/Vera.png",
+      "size": 1058141
+    },
+    {
+      "url": "./Characters/Vera/Vera.skel",
+      "size": 658987
+    },
+    {
+      "url": "./Characters/WitchCecilia/WitchCecilia_2.png",
+      "size": 840435
+    },
+    {
+      "url": "./Characters/WitchCecilia/WitchCecilia_3.png",
+      "size": 363676
+    },
+    {
+      "url": "./Characters/WitchCecilia/WitchCecilia_4.png",
+      "size": 397416
+    },
+    {
+      "url": "./Characters/WitchCecilia/WitchCecilia_5.png",
+      "size": 312528
+    },
+    {
+      "url": "./Characters/WitchCecilia/WitchCecilia_6.png",
+      "size": 435091
+    },
+    {
+      "url": "./Characters/WitchCecilia/WitchCecilia.atlas",
+      "size": 12022
+    },
+    {
+      "url": "./Characters/WitchCecilia/WitchCecilia.png",
+      "size": 685552
+    },
+    {
+      "url": "./Characters/WitchCecilia/WitchCecilia.skel",
+      "size": 2166971
     },
     {
       "url": "./Characters/WriterFemale/WriterFemale_2.png",
@@ -411,6 +1983,22 @@
       "size": 200153
     },
     {
+      "url": "./Characters/WriterFemale/WriterFemale.atlas",
+      "size": 7470
+    },
+    {
+      "url": "./Characters/WriterFemale/WriterFemale.png",
+      "size": 706496
+    },
+    {
+      "url": "./Characters/WriterFemale/WriterFemale.skel",
+      "size": 619830
+    },
+    {
+      "url": "./Characters/WriterMale/WriterMale_2.png",
+      "size": 264356
+    },
+    {
       "url": "./Characters/WriterMale/WriterMale.atlas",
       "size": 8253
     },
@@ -423,8 +2011,60 @@
       "size": 474903
     },
     {
-      "url": "./Characters/WriterMale/WriterMale_2.png",
-      "size": 264356
+      "url": "./Characters/Yeono/Yeono_2.png",
+      "size": 941719
+    },
+    {
+      "url": "./Characters/Yeono/Yeono_3.png",
+      "size": 369003
+    },
+    {
+      "url": "./Characters/Yeono/Yeono_4.png",
+      "size": 470290
+    },
+    {
+      "url": "./Characters/Yeono/Yeono_5.png",
+      "size": 481534
+    },
+    {
+      "url": "./Characters/Yeono/Yeono_6.png",
+      "size": 588787
+    },
+    {
+      "url": "./Characters/Yeono/Yeono.atlas",
+      "size": 14034
+    },
+    {
+      "url": "./Characters/Yeono/Yeono.png",
+      "size": 668833
+    },
+    {
+      "url": "./Characters/Yeono/Yeono.skel",
+      "size": 1878883
+    },
+    {
+      "url": "./Characters/Zepeto/Zepeto_2.png",
+      "size": 558425
+    },
+    {
+      "url": "./Characters/Zepeto/Zepeto_3.png",
+      "size": 334337
+    },
+    {
+      "url": "./Characters/Zepeto/Zepeto_4.png",
+      "size": 114858
+    },
+    {
+      "url": "./Characters/Zepeto/Zepeto.atlas",
+      "size": 6104
+    },
+    {
+      "url": "./Characters/Zepeto/Zepeto.png",
+      "size": 961989
+    },
+    {
+      "url": "./Characters/Zepeto/Zepeto.skel",
+      "size": 856382
     },
     {
       "url": "./SFX/Fountain.wav",
@@ -433,6 +2073,10 @@
     {
       "url": "./SFX/ManyCrow.wav",
       "size": 123536
+    },
+    {
+      "url": "./SFX/SFX_applause.wav",
+      "size": 520776
     },
     {
       "url": "./SFX/SFX_Bam2.wav",
@@ -619,10 +2263,6 @@
       "size": 486908
     },
     {
-      "url": "./SFX/SFX_FallSword.wav",
-      "size": 147500
-    },
-    {
       "url": "./SFX/SFX_Falldown.wav",
       "size": 71570
     },
@@ -633,6 +2273,10 @@
     {
       "url": "./SFX/SFX_Falldown3.wav",
       "size": 258092
+    },
+    {
+      "url": "./SFX/SFX_FallSword.wav",
+      "size": 147500
     },
     {
       "url": "./SFX/SFX_Fast.wav",
@@ -663,6 +2307,10 @@
       "size": 847916
     },
     {
+      "url": "./SFX/SFX_gogogo.wav",
+      "size": 372024
+    },
+    {
       "url": "./SFX/SFX_Gun1.wav",
       "size": 402236
     },
@@ -671,12 +2319,12 @@
       "size": 503840
     },
     {
-      "url": "./SFX/SFX_Gun3.wav",
-      "size": 193580
-    },
-    {
       "url": "./SFX/SFX_Gun3_2.wav",
       "size": 461504
+    },
+    {
+      "url": "./SFX/SFX_Gun3.wav",
+      "size": 193580
     },
     {
       "url": "./SFX/SFX_Gun4.wav",
@@ -687,12 +2335,12 @@
       "size": 635948
     },
     {
-      "url": "./SFX/SFX_HeartBeatOnce.wav",
-      "size": 41420
-    },
-    {
       "url": "./SFX/SFX_Heartbeat.wav",
       "size": 173600
+    },
+    {
+      "url": "./SFX/SFX_HeartBeatOnce.wav",
+      "size": 41420
     },
     {
       "url": "./SFX/SFX_Hug.wav",
@@ -967,16 +2615,16 @@
       "size": 6693364
     },
     {
-      "url": "./SFX/SFX_applause.wav",
-      "size": 520776
-    },
-    {
-      "url": "./SFX/SFX_gogogo.wav",
-      "size": 372024
-    },
-    {
       "url": "./SFX/TrainAmbience.wav",
       "size": 5319476
+    },
+    {
+      "url": "./story_scripts.json",
+      "size": 2663493
+    },
+    {
+      "url": "./story_tree.json",
+      "size": 131099
     },
     {
       "url": "./TextAsset/Text_Chapter_loc_kor.txt",
@@ -1007,12 +2655,12 @@
       "size": 13652
     },
     {
-      "url": "./TextAsset/Text_SubStoryRead_loc_kor.txt",
-      "size": 2988
-    },
-    {
       "url": "./TextAsset/Text_SubStory_loc_kor.txt",
       "size": 793
+    },
+    {
+      "url": "./TextAsset/Text_SubStoryRead_loc_kor.txt",
+      "size": 2988
     },
     {
       "url": "./TextAsset/Text_Talk_loc_kor.txt",
@@ -1021,14 +2669,6 @@
     {
       "url": "./TextAsset/Text_Writer_loc_kor.txt",
       "size": 24
-    },
-    {
-      "url": "./story_scripts.json",
-      "size": 2663493
-    },
-    {
-      "url": "./story_tree.json",
-      "size": 131099
     }
   ]
 }
