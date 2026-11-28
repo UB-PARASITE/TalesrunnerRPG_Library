@@ -1,0 +1,38 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 1008803689438726606
+  },
+  "m_Name": "WriterFemale_Atlas",
+  "atlasFile": {
+    "m_FileID": 0,
+    "m_PathID": 6174552233784489795
+  },
+  "materials": [
+    {
+      "m_FileID": 10,
+      "m_PathID": 6843049410400880903
+    },
+    {
+      "m_FileID": 3,
+      "m_PathID": -8047626480584706772
+    },
+    {
+      "m_FileID": 8,
+      "m_PathID": 2708566452826621773
+    },
+    {
+      "m_FileID": 6,
+      "m_PathID": -1772166510440254427
+    },
+    {
+      "m_FileID": 12,
+      "m_PathID": 3079694996190267556
+    }
+  ]
+}
