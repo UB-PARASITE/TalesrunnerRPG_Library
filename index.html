@@ -202,6 +202,8 @@ function createSpinePortrait(name,folder){
   }
   for(const side of ['L','R']){
    resetBoneToSetup(skeleton.findBone('Eyebrows_'+side));
+   resetBoneToSetup(skeleton.findBone('Eyeline_'+side+'_U'));
+   resetBoneToSetup(skeleton.findBone('Eyeline_'+side+'_D'));
    resetBoneToSetup(skeleton.findBone('Eyelashes_'+side+'_U'));
    resetBoneToSetup(skeleton.findBone('Eyelashes_'+side+'_D'));
   }
@@ -212,6 +214,7 @@ function createSpinePortrait(name,folder){
    const pupil=skeleton.findBone('Pupil_'+side);
    const brow=skeleton.findBone('Eyebrows_'+side);
    const lowerLid=skeleton.findBone('Eyeline_'+side+'_D');
+   const upperEye=skeleton.findBone('Eyeline_'+side+'_U');
    const upperLash=skeleton.findBone('Eyelashes_'+side+'_U');
    const lowerLash=skeleton.findBone('Eyelashes_'+side+'_D');
    const isMale=name==='WriterMale';
@@ -220,15 +223,30 @@ function createSpinePortrait(name,folder){
    // WriterFemale: both lashes follow pupil scale.
    const scaleTargets=isMale?[upperLash]:[upperLash,lowerLash];
    if(pupil){
+    const pd=pupil.data;
+    const scaleX=pupil.scaleX/(pd.scaleX||1);
+    const scaleY=pupil.scaleY/(pd.scaleY||1);
     for(const lash of scaleTargets)if(lash){
-     const pd=pupil.data,ld=lash.data;
-     lash.scaleX=ld.scaleX*(pupil.scaleX/(pd.scaleX||1));
-     lash.scaleY=ld.scaleY*(pupil.scaleY/(pd.scaleY||1));
+     const ld=lash.data;
+     lash.scaleX=ld.scaleX*scaleX;
+     lash.scaleY=ld.scaleY*scaleY;
+    }
+    // The upper eye frame contracts with the pupil during a blink for both Writers.
+    if(upperEye){
+     upperEye.scaleX=upperEye.data.scaleX*scaleX;
+     upperEye.scaleY=upperEye.data.scaleY*scaleY;
+    }
+   }
+   // Female follows the animated lower eye-line; Male follows the animated brow rotation.
+   const motionSource=isFemale?(lowerLid||brow):brow;
+   if(upperEye&&motionSource){
+    upperEye.x=upperEye.data.x+(motionSource.x-motionSource.data.x);
+    upperEye.y=upperEye.data.y+(motionSource.y-motionSource.data.y);
+    if(isMale&&brow){
+     upperEye.rotation=upperEye.data.rotation+(brow.rotation-brow.data.rotation);
     }
    }
    // Transfer the blink displacement to the upper lash for both Writers.
-   // Female uses the animated lower eye-line; Male has no lower eye-line bone, so use the animated brow motion.
-   const motionSource=isFemale?(lowerLid||brow):brow;
    if(upperLash&&motionSource){
     upperLash.x=upperLash.data.x+(motionSource.x-motionSource.data.x);
     upperLash.y=upperLash.data.y+(motionSource.y-motionSource.data.y);
