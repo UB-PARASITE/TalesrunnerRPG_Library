@@ -165,23 +165,33 @@ function createSpinePortrait(name,folder){
     if(isWriter&&closedEye&&f.isIris){try{skeleton.setAttachment(f.slot,null)}catch(e){}continue}
     let target=null;
     if(isWriter){
-      const lid=/^(?:eyeline|eyelashes)/i.test(f.slot)||f.names.some(n=>/^(?:eyeline|eyelashes)/i.test(n));
+      const isLine=/^eyeline/i.test(f.slot)||f.names.some(n=>/^eyeline/i.test(n));
+      const isLash=/^eyelashes/i.test(f.slot)||f.names.some(n=>/^eyelashes/i.test(n));
+      const lid=isLine||isLash;
       const candidates=f.names.filter(n=>aliases.some(alias=>parts(n).includes(alias)));
       if(candidates.length)target=choose(candidates);
-      else if(lid){const directional=f.names.filter(n=>new RegExp('_'+direction()+'$','i').test(n));if(directional.length)target=choose(directional)}
+      else if(lid&&!(closedEye&&isLine)){const directional=f.names.filter(n=>n.toUpperCase().endsWith('_'+direction()));if(directional.length)target=choose(directional)}
     }else{
       const norm=n=>n.toLowerCase().replace(/[^a-z0-9]/g,'');
       if(key==='blank'&&f.names.includes('blank'))target='blank';
       else{const candidates=f.names.filter(n=>{const x=norm(n),k=norm(key);return x===k||x.endsWith(k)||x.includes(k)});if(candidates.length)target=candidates[0];else if(key==='angry2'){target=f.names.find(n=>/angry2/i.test(n))||f.names.find(n=>/angry/i.test(n))}else if(key==='crying'){target=f.names.find(n=>/crying2?/i.test(n))}}
     }
-    try{if(target)skeleton.setAttachment(f.slot,target);else if(isWriter)skeleton.setAttachment(f.slot,f.base);else if(f.base)skeleton.setAttachment(f.slot,f.base)}catch(e){}
+    try{if(target)skeleton.setAttachment(f.slot,target);else if(isWriter&&closedEye&&(/^eyeline/i.test(f.slot)||f.names.some(n=>/^eyeline/i.test(n))))skeleton.setAttachment(f.slot,null);else if(isWriter)skeleton.setAttachment(f.slot,f.base);else if(f.base)skeleton.setAttachment(f.slot,f.base)}catch(e){}
   }
 }
  function enforceClosedEyes(){
+  const closedAliases=Number(expression)===207?['laugh']:['smiling'];
+  const tokens=n=>n.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
   for(const f of faceSlots){
-   const slotName=f.slot||'',has=(re)=>re.test(slotName)||f.names.some(n=>re.test(n));
-   if(f.isIris||has(/^eyeline/i)){try{skeleton.setAttachment(f.slot,null)}catch(e){}continue}
-   if(has(/^eyelashes/i)){const closed=f.names.find(n=>/_D$/i.test(n));if(closed){try{skeleton.setAttachment(f.slot,closed)}catch(e){}}}
+   const isLine=/^eyeline/i.test(f.slot)||f.names.some(n=>/^eyeline/i.test(n));
+   const isLash=/^eyelashes/i.test(f.slot)||f.names.some(n=>/^eyelashes/i.test(n));
+   if(isLine){
+    const closed=f.names.find(n=>closedAliases.some(a=>tokens(n).includes(a)));
+    try{skeleton.setAttachment(f.slot,closed||null)}catch(e){}
+    continue;
+   }
+   if(f.isIris){try{skeleton.setAttachment(f.slot,null)}catch(e){}continue}
+   if(isLash){const closed=f.names.find(n=>n.toUpperCase().endsWith('_D'));if(closed){try{skeleton.setAttachment(f.slot,closed)}catch(e){}}}
   }
  }
 
