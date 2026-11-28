@@ -219,9 +219,8 @@ function createSpinePortrait(name,folder){
    const lowerLash=skeleton.findBone('Eyelashes_'+side+'_D');
    const isMale=name==='WriterMale';
    const isFemale=name==='WriterFemale';
-   // WriterMale: only the upper lash follows the blink scale; keep the lower lash untouched.
-   // WriterFemale: both lashes follow pupil scale.
-   const scaleTargets=isMale?[upperLash]:[upperLash,lowerLash];
+   // Only the upper lash follows pupil scale. Keep both lower lashes stationary.
+   const scaleTargets=[upperLash];
    if(pupil){
     const pd=pupil.data;
     const scaleX=pupil.scaleX/(pd.scaleX||1);
@@ -237,24 +236,20 @@ function createSpinePortrait(name,folder){
      upperEye.scaleY=upperEye.data.scaleY*scaleY;
     }
    }
-   // Female follows the animated lower eye-line; Male follows the animated brow rotation.
-   const motionSource=isFemale?(lowerLid||brow):brow;
-   if(upperEye&&motionSource){
-    upperEye.x=upperEye.data.x+(motionSource.x-motionSource.data.x);
-    upperEye.y=upperEye.data.y+(motionSource.y-motionSource.data.y);
-    if(isMale&&brow){
+   // Both upper eye frames follow brow movement; Male also follows brow rotation.
+   if(upperEye&&brow){
+    upperEye.x=upperEye.data.x+(brow.x-brow.data.x);
+    upperEye.y=upperEye.data.y+(brow.y-brow.data.y);
+    if(isMale){
      upperEye.rotation=upperEye.data.rotation+(brow.rotation-brow.data.rotation);
     }
    }
-   // Transfer the blink displacement to the upper lash for both Writers.
-   if(upperLash&&motionSource){
-    upperLash.x=upperLash.data.x+(motionSource.x-motionSource.data.x);
-    upperLash.y=upperLash.data.y+(motionSource.y-motionSource.data.y);
-   }
-   // Keep Female's existing lower-lash response. Male's lower lash is deliberately not moved.
-   if(isFemale&&lowerLash&&motionSource){
-    lowerLash.x=lowerLash.data.x+(motionSource.x-motionSource.data.x);
-    lowerLash.y=lowerLash.data.y+(motionSource.y-motionSource.data.y);
+   // Preserve the existing upper-lash response: Female follows the lower eye-line,
+   // while Male follows the brow. Lower lashes are not modified.
+   const lashMotionSource=isFemale?(lowerLid||brow):brow;
+   if(upperLash&&lashMotionSource){
+    upperLash.x=upperLash.data.x+(lashMotionSource.x-lashMotionSource.data.x);
+    upperLash.y=upperLash.data.y+(lashMotionSource.y-lashMotionSource.data.y);
    }
   }
  }
