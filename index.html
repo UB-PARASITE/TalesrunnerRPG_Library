@@ -174,10 +174,17 @@ function createSpinePortrait(name,folder){
    attachments.forEach(attachment=>names.push(attachment.name));
    if(names.some(value=>facialRigPattern.test(value)))facialRigSlotIndexes.add(index);
   });
+  const facialRigConstraintIndexes={ik:new Set(),transform:new Set(),path:new Set()};
+  (data.ikConstraints||[]).forEach((constraint,index)=>{if(facialRigPattern.test(constraint.name))facialRigConstraintIndexes.ik.add(index)});
+  (data.transformConstraints||[]).forEach((constraint,index)=>{if(facialRigPattern.test(constraint.name))facialRigConstraintIndexes.transform.add(index)});
+  (data.pathConstraints||[]).forEach((constraint,index)=>{if(facialRigPattern.test(constraint.name))facialRigConstraintIndexes.path.add(index)});
   for(const animation of data.animations){
    animation.timelines=animation.timelines.filter(timeline=>
     !(Number.isInteger(timeline.boneIndex)&&facialRigBoneIndexes.has(timeline.boneIndex))&&
-    !(Number.isInteger(timeline.slotIndex)&&facialRigSlotIndexes.has(timeline.slotIndex))
+    !(Number.isInteger(timeline.slotIndex)&&facialRigSlotIndexes.has(timeline.slotIndex))&&
+    !(Number.isInteger(timeline.ikConstraintIndex)&&facialRigConstraintIndexes.ik.has(timeline.ikConstraintIndex))&&
+    !(Number.isInteger(timeline.transformConstraintIndex)&&facialRigConstraintIndexes.transform.has(timeline.transformConstraintIndex))&&
+    !(Number.isInteger(timeline.pathConstraintIndex)&&facialRigConstraintIndexes.path.has(timeline.pathConstraintIndex))
    );
   }
   const names=data.animations.map(a=>a.name);const initial=names.includes('Idle')?'Idle':names.includes('Normal')?'Normal':names[0];if(initial)state.setAnimation(0,initial,true);ready=true;loading=false;applyExpression(expression);last=performance.now()/1000;render()}catch(e){failed=true;loading=false;console.error(name+' Spine parse failed:',e)}
