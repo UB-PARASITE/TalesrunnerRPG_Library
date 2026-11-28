@@ -190,21 +190,25 @@ function createSpinePortrait(name,folder,testMode=false){
  }
  function poll(){if(!assetManager.isLoadingComplete()){if(assetManager.hasErrors()){failed=true;loading=false;console.error(name+' Spine assets failed:',assetManager.getErrors());return}setTimeout(poll,80);return}
   try{const atlas=assetManager.require(name+'.atlas'),loader=new spine.SkeletonBinary(new spine.AtlasAttachmentLoader(atlas));loader.scale=1;const data=loader.readSkeletonData(assetManager.require(name+'.skel'));skeleton=new spine.Skeleton(data);bounds=(()=>{skeleton.setToSetupPose();skeleton.updateWorldTransform();const offset=new spine.Vector2(),size=new spine.Vector2();skeleton.getBounds(offset,size,[]);return{offset,size}})();const sd=new spine.AnimationStateData(data);state=new spine.AnimationState(sd);faceSlots=[];const skin=skeleton.data.defaultSkin;if(skin)skeleton.slots.forEach(slot=>{const current=slot.getAttachment(),attachments=[];skin.getAttachmentsForSlot(slot.data.index,attachments);const names=attachments.map(a=>a.name);const facialName=/^(?:angry|angry2|blank|closed|crying|crying2|shy|shy-surprised|smiling|smiling2|surprised)(?:\s|_|$)|^(?:mouth|eyebrows?|eyeline|eyelashes|pupil|white(?:_|$)|eye(?:'s|_|\s|$)|iris|eyelid|under[_\s-]*eyeline|lower[_\s-]*eyeline)/i;const facial=facialName.test(slot.data.name)||names.some(n=>facialName.test(n));const isIris=/^(?:pupil|iris|white|eyeball)(?:_|$)|^eye'?s_light(?:_|$)/i.test(slot.data.name)||names.some(n=>/^(?:pupil|iris|white|eyeball)(?:_|$)|^eye'?s_light(?:_|$)/i.test(n));const isEyeLine=/(?:eye[\s_-]*line|eyeline)/i.test(slot.data.name)||names.some(n=>/(?:eye[\s_-]*line|eyeline)/i.test(n));const lowerEyeLinePattern=/(?:under|lower|bottom|down)[\s_-]*(?:eye[\s_-]*line|eyeline)|(?:eye[\s_-]*line|eyeline).*(?:[_\s-](?:D|DOWN|LOWER|BOTTOM))$/i;const isLowerEyeLine=lowerEyeLinePattern.test(slot.data.name)||names.some(n=>lowerEyeLinePattern.test(n));const isLash=/^eyelashes/i.test(slot.data.name)||names.some(n=>/^eyelashes/i.test(n));if(facial)faceSlots.push({slot:slot.data.name,base:current?.name||null,names,isIris,isEyeLine,isLowerEyeLine,isLash,renderTarget:current?.name||null})});
-   // Keep facial bone timelines intact so native blinking and eye movement remain active.
-   // Only filter facial slot attachment timelines: expression attachments are controlled
-   // by applyExpression(), while eye-bone animation (including blink) remains untouched.
-   const facialRigPattern=/(?:eye|brow|eyelid|eyelash|pupil|iris)/i;
-   const facialRigSlotIndexes=new Set();
+   // Preserve all eye-related slot timelines: some characters implement blinking
+   // by swapping eye/eyelid attachments rather than animating bones.
+   // Only suppress non-eye facial expression slots (mouth/brow/emotion attachments),
+   // which remain controlled by applyExpression().
+   const eyeSlotPattern=/(?:eye|eyelid|eyelash|pupil|iris|eyeline|eyeline)/i;
+   const expressionSlotPattern=/(?:mouth|brow|eyebrow|angry|crying|shy|smiling|surprised)/i;
+   const expressionSlotIndexes=new Set();
    skeleton.data.slots.forEach((slot,index)=>{
     const names=[slot.name];
     const attachments=[];
     if(skin)skin.getAttachmentsForSlot(index,attachments);
     attachments.forEach(attachment=>names.push(attachment.name));
-    if(names.some(value=>facialRigPattern.test(value)))facialRigSlotIndexes.add(index);
+    const isEyeSlot=names.some(value=>eyeSlotPattern.test(value));
+    const isExpressionSlot=names.some(value=>expressionSlotPattern.test(value));
+    if(!isEyeSlot&&isExpressionSlot)expressionSlotIndexes.add(index);
    });
    if(!testMode)for(const animation of data.animations){
     animation.timelines=animation.timelines.filter(timeline=>
-     !(Number.isInteger(timeline.slotIndex)&&facialRigSlotIndexes.has(timeline.slotIndex))
+     !(Number.isInteger(timeline.slotIndex)&&expressionSlotIndexes.has(timeline.slotIndex))
     );
    }
    const names=data.animations.map(a=>a.name);const initial=names.includes('Idle')?'Idle':names.includes('Normal')?'Normal':names[0];if(initial)state.setAnimation(0,initial,true);ready=true;loading=false;if(!testMode)applyExpression(expression);last=performance.now()/1000;render()}catch(e){failed=true;loading=false;console.error(name+' Spine parse failed:',e)}
