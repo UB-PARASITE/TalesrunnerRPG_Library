@@ -183,45 +183,33 @@ function rch(){const c=$('#chars');c.innerHTML='';const by={};sc.ord.forEach(i=>
   const isWriter=String(i)==='2000'||nm==='작가',isCecilia=String(i)==='25',isBriarRose=String(i)==='19',spineFolder=HERO_SPINE_MAP[String(i)]||PORTRAIT_SPINE_MAP[String(i)],storyFolder=STORY_PORTRAIT_SPINE_MAP[String(i)];if(isWriter||isCecilia||isBriarRose||spineFolder||storyFolder){d.classList.add('spine-ch');if(sc.spk==i)d.classList.add('speaking');const canvas=document.createElement('canvas');canvas.className='spine-stage';canvas.setAttribute('aria-label',(isWriter?(gender?'Writer Male':'Writer Female'):isCecilia?'Cecilia':isBriarRose?'BriarRose':(spineFolder||storyFolder))+' Spine animation');d.append(canvas);d.insertAdjacentHTML('beforeend',`<span class=nm>${nm}</span>`);c.append(d);const portrait=isWriter?(gender?WriterMaleSpine:WriterFemaleSpine):isCecilia?CeciliaSpine:isBriarRose?BriarRoseSpine:spineFolder?getCharacterSpine(spineFolder):getStoryCharacterSpine(storyFolder);portrait.mount(canvas);portrait.setExpression(o.e);return}
   d.innerHTML=`<div class=fig style="background:linear-gradient(#fff3,#0004),hsl(${h},45%,45%)"><div>${[...nm][0]}</div><div class=em>${E[o.e]||'🙂'}</div></div><span class=nm>${nm}</span>`;c.append(d)})}
 function createSpinePortrait(name,folder,testMode=false){
- let canvas=null,ctx=null,shader=null,batcher=null,skeletonRenderer=null,assetManager=null,skeleton=null,state=null,bounds=null,fixedScale=0,ready=false,loading=false,failed=false,last=0,frame=0,mounted=false,expression=208,expressionClosed=false,faceSlots=[],facialRigBoneIndexes=new Set();
+ let canvas=null,ctx=null,shader=null,batcher=null,skeletonRenderer=null,assetManager=null,skeleton=null,state=null,bounds=null,fixedScale=0,ready=false,loading=false,failed=false,last=0,frame=0,mounted=false,expression=208,expressionClosed=false,faceSlots=[];
  const assetBase='./Characters/'+folder+'/',DISPLAY_SCALE=2;
  function mount(target){mounted=true;if(!canvas){canvas=document.createElement('canvas');canvas.className='spine-stage';canvas.setAttribute('aria-label',name+' Spine animation')}target.replaceWith(canvas);if(ready){drawOnce();return}if(loading||failed)return;loading=true;
   try{ctx=new spine.ManagedWebGLRenderingContext(canvas,{alpha:true,premultipliedAlpha:true});if(!ctx.gl)throw Error('WebGL unavailable');shader=spine.Shader.newTwoColoredTextured(ctx);batcher=new spine.PolygonBatcher(ctx);skeletonRenderer=new spine.SkeletonRenderer(ctx);assetManager=new spine.AssetManager(ctx,assetBase);assetManager.loadBinary(name+'.skel');assetManager.loadTextureAtlas(name+'.atlas');poll()}catch(e){failed=true;loading=false;console.error(name+' Spine init failed:',e)}
  }
  function poll(){if(!assetManager.isLoadingComplete()){if(assetManager.hasErrors()){failed=true;loading=false;console.error(name+' Spine assets failed:',assetManager.getErrors());return}setTimeout(poll,80);return}
   try{const atlas=assetManager.require(name+'.atlas'),loader=new spine.SkeletonBinary(new spine.AtlasAttachmentLoader(atlas));loader.scale=1;const data=loader.readSkeletonData(assetManager.require(name+'.skel'));skeleton=new spine.Skeleton(data);bounds=(()=>{skeleton.setToSetupPose();skeleton.updateWorldTransform();const offset=new spine.Vector2(),size=new spine.Vector2();skeleton.getBounds(offset,size,[]);return{offset,size}})();const sd=new spine.AnimationStateData(data);state=new spine.AnimationState(sd);faceSlots=[];const skin=skeleton.data.defaultSkin;if(skin)skeleton.slots.forEach(slot=>{const current=slot.getAttachment(),attachments=[];skin.getAttachmentsForSlot(slot.data.index,attachments);const names=attachments.map(a=>a.name);const facialName=/^(?:angry|angry2|blank|closed|crying|crying2|shy|shy-surprised|smiling|smiling2|surprised)(?:\s|_|$)|^(?:mouth|eyebrows?|eyeline|eyelashes|pupil|white(?:_|$)|eye(?:'s|_|\s|$)|iris|eyelid|under[_\s-]*eyeline|lower[_\s-]*eyeline)/i;const facial=facialName.test(slot.data.name)||names.some(n=>facialName.test(n));const isIris=/^(?:pupil|iris|white|eyeball)(?:_|$)|^eye'?s_light(?:_|$)/i.test(slot.data.name)||names.some(n=>/^(?:pupil|iris|white|eyeball)(?:_|$)|^eye'?s_light(?:_|$)/i.test(n));const isEyeLine=/(?:eye[\s_-]*line|eyeline)/i.test(slot.data.name)||names.some(n=>/(?:eye[\s_-]*line|eyeline)/i.test(n));const lowerEyeLinePattern=/(?:under|lower|bottom|down)[\s_-]*(?:eye[\s_-]*line|eyeline)|(?:eye[\s_-]*line|eyeline).*(?:[_\s-](?:D|DOWN|LOWER|BOTTOM))$/i;const isLowerEyeLine=lowerEyeLinePattern.test(slot.data.name)||names.some(n=>lowerEyeLinePattern.test(n));const isLash=/^eyelashes/i.test(slot.data.name)||names.some(n=>/^eyelashes/i.test(n));if(facial)faceSlots.push({slot:slot.data.name,base:current?.name||null,names,isIris,isEyeLine,isLowerEyeLine,isLash,renderTarget:current?.name||null})});
-  // Remove Spine animation timelines that drive eye parts. The Idle/Normal
-  // animation can contain its own blink keys, which attachment restoration
-  // after state.apply() cannot reliably suppress.
-  // Freeze the complete eye-and-brow rig, not only the obvious pupil/lash bones.
-  // Spine exports use several naming conventions (Eye_L, Eyebrows_L, Brow.L, etc.).
-  const facialRigPattern=/(?:eye|brow|eyelid|eyelash|pupil|iris)/i;
-  facialRigBoneIndexes=new Set();
-  data.bones.forEach((bone,index)=>{if(facialRigPattern.test(bone.name))facialRigBoneIndexes.add(index)});
-  const facialRigSlotIndexes=new Set();
-  skeleton.data.slots.forEach((slot,index)=>{
-   const names=[slot.name];
-   const attachments=[];
-   if(skin)skin.getAttachmentsForSlot(index,attachments);
-   attachments.forEach(attachment=>names.push(attachment.name));
-   if(names.some(value=>facialRigPattern.test(value)))facialRigSlotIndexes.add(index);
-  });
-  const facialRigConstraintIndexes={ik:new Set(),transform:new Set(),path:new Set()};
-  (data.ikConstraints||[]).forEach((constraint,index)=>{if(facialRigPattern.test(constraint.name))facialRigConstraintIndexes.ik.add(index)});
-  (data.transformConstraints||[]).forEach((constraint,index)=>{if(facialRigPattern.test(constraint.name))facialRigConstraintIndexes.transform.add(index)});
-  (data.pathConstraints||[]).forEach((constraint,index)=>{if(facialRigPattern.test(constraint.name))facialRigConstraintIndexes.path.add(index)});
-  if(!testMode)for(const animation of data.animations){
-   animation.timelines=animation.timelines.filter(timeline=>
-    !(Number.isInteger(timeline.boneIndex)&&facialRigBoneIndexes.has(timeline.boneIndex))&&
-    !(Number.isInteger(timeline.slotIndex)&&facialRigSlotIndexes.has(timeline.slotIndex))&&
-    !(Number.isInteger(timeline.ikConstraintIndex)&&facialRigConstraintIndexes.ik.has(timeline.ikConstraintIndex))&&
-    !(Number.isInteger(timeline.transformConstraintIndex)&&facialRigConstraintIndexes.transform.has(timeline.transformConstraintIndex))&&
-    !(Number.isInteger(timeline.pathConstraintIndex)&&facialRigConstraintIndexes.path.has(timeline.pathConstraintIndex))
-   );
-  }
-  const names=data.animations.map(a=>a.name);const initial=names.includes('Idle')?'Idle':names.includes('Normal')?'Normal':names[0];if(initial)state.setAnimation(0,initial,true);ready=true;loading=false;if(!testMode)applyExpression(expression);last=performance.now()/1000;render()}catch(e){failed=true;loading=false;console.error(name+' Spine parse failed:',e)}
+   // Keep facial bone timelines intact so native blinking and eye movement remain active.
+   // Only filter facial slot attachment timelines: expression attachments are controlled
+   // by applyExpression(), while eye-bone animation (including blink) remains untouched.
+   const facialRigPattern=/(?:eye|brow|eyelid|eyelash|pupil|iris)/i;
+   const facialRigSlotIndexes=new Set();
+   skeleton.data.slots.forEach((slot,index)=>{
+    const names=[slot.name];
+    const attachments=[];
+    if(skin)skin.getAttachmentsForSlot(index,attachments);
+    attachments.forEach(attachment=>names.push(attachment.name));
+    if(names.some(value=>facialRigPattern.test(value)))facialRigSlotIndexes.add(index);
+   });
+   if(!testMode)for(const animation of data.animations){
+    animation.timelines=animation.timelines.filter(timeline=>
+     !(Number.isInteger(timeline.slotIndex)&&facialRigSlotIndexes.has(timeline.slotIndex))
+    );
+   }
+   const names=data.animations.map(a=>a.name);const initial=names.includes('Idle')?'Idle':names.includes('Normal')?'Normal':names[0];if(initial)state.setAnimation(0,initial,true);ready=true;loading=false;if(!testMode)applyExpression(expression);last=performance.now()/1000;render()}catch(e){failed=true;loading=false;console.error(name+' Spine parse failed:',e)}
  }
- function render(){if(!ready||!mounted)return;if(!canvas?.isConnected){frame=requestAnimationFrame(render);return}const w=Math.max(1,canvas.clientWidth),h=Math.max(1,canvas.clientHeight),pixelRatio=Math.min(devicePixelRatio*DISPLAY_SCALE,2);if(canvas.width!==Math.round(w*pixelRatio)||canvas.height!==Math.round(h*pixelRatio)){canvas.width=Math.round(w*pixelRatio);canvas.height=Math.round(h*pixelRatio)}const gl=ctx.gl;gl.viewport(0,0,canvas.width,canvas.height);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);const now=performance.now()/1000,delta=Math.min(.05,Math.max(0,now-last));last=now;state.update(delta);state.apply(skeleton);if(!testMode){resetFacialRigBones();const closedEye=isClosedEye();applyEyeState();if(name==='WriterMale'||name==='WriterFemale'){if(closedEye)enforceClosedEyes();}}skeleton.updateWorldTransform();const cx=bounds.offset.x+bounds.size.x/2,visibleH=Math.max(1,h-(testMode?0:150)),referenceW=Math.min(window.innerWidth*1.12,800);if(!fixedScale)fixedScale=Math.min((referenceW/1.6)/Math.max(bounds.size.x,1),visibleH/Math.max(bounds.size.y,1))*(name==='Chocola'?.95:1.35);const scale=fixedScale,viewW=w/scale,viewH=h/scale,cy=bounds.offset.y+bounds.size.y/2;const mvp=new spine.Matrix4();mvp.ortho2d(cx-viewW/2,cy-viewH/2,viewW,viewH);shader.bind();shader.setUniformi(spine.Shader.SAMPLER,0);shader.setUniform4x4f(spine.Shader.MVP_MATRIX,mvp.values);batcher.begin(shader);skeletonRenderer.premultipliedAlpha=true;skeletonRenderer.draw(batcher,skeleton);batcher.end();shader.unbind();frame=requestAnimationFrame(render)}
+ function render(){if(!ready||!mounted)return;if(!canvas?.isConnected){frame=requestAnimationFrame(render);return}const w=Math.max(1,canvas.clientWidth),h=Math.max(1,canvas.clientHeight),pixelRatio=Math.min(devicePixelRatio*DISPLAY_SCALE,2);if(canvas.width!==Math.round(w*pixelRatio)||canvas.height!==Math.round(h*pixelRatio)){canvas.width=Math.round(w*pixelRatio);canvas.height=Math.round(h*pixelRatio)}const gl=ctx.gl;gl.viewport(0,0,canvas.width,canvas.height);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);const now=performance.now()/1000,delta=Math.min(.05,Math.max(0,now-last));last=now;state.update(delta);state.apply(skeleton);skeleton.updateWorldTransform();const cx=bounds.offset.x+bounds.size.x/2,visibleH=Math.max(1,h-(testMode?0:150)),referenceW=Math.min(window.innerWidth*1.12,800);if(!fixedScale)fixedScale=Math.min((referenceW/1.6)/Math.max(bounds.size.x,1),visibleH/Math.max(bounds.size.y,1))*(name==='Chocola'?.95:1.35);const scale=fixedScale,viewW=w/scale,viewH=h/scale,cy=bounds.offset.y+bounds.size.y/2;const mvp=new spine.Matrix4();mvp.ortho2d(cx-viewW/2,cy-viewH/2,viewW,viewH);shader.bind();shader.setUniformi(spine.Shader.SAMPLER,0);shader.setUniform4x4f(spine.Shader.MVP_MATRIX,mvp.values);batcher.begin(shader);skeletonRenderer.premultipliedAlpha=true;skeletonRenderer.draw(batcher,skeleton);batcher.end();shader.unbind();frame=requestAnimationFrame(render)}
  function drawOnce(){if(ready&&mounted&&!frame)render()}
  function setExpression(id){expression=Number(id);if(ready){applyExpression(expression);drawOnce()}}
  function applyExpression(id){
@@ -254,71 +242,6 @@ function createSpinePortrait(name,folder,testMode=false){
     }catch(e){}
   }
  }
- function isClosedEye(){
-  const animation=state?.getCurrent?.(0)?.animation?.name||'';
-  return expressionClosed||/closed/i.test(animation);
- }
- function applyEyeState(){
-  const closedEye=isClosedEye();
-  for(const f of faceSlots){
-   if(!(f.isIris||f.isEyeLine||f.isLowerEyeLine||f.isLash))continue;
-   let target=f.renderTarget??f.base;
-   if(closedEye){
-    if(f.isIris||f.isLowerEyeLine)target=null;
-    else if(f.isEyeLine)target=f.names.find(n=>/(?:close|closed)/i.test(n))||null;
-    else if(f.isLash)target=f.names.find(n=>/(?:_D$|close|closed)/i.test(n))||null;
-   }
-   try{skeleton.setAttachment(f.slot,target??null)}catch(e){}
-  }
-  if(!closedEye)resetBlinkBoneScales();
- }
- function resetFacialRigBones(){
-  for(const index of facialRigBoneIndexes){
-   const bone=skeleton.bones[index];
-   if(!bone)continue;
-   const setup=bone.data;
-   bone.x=setup.x;bone.y=setup.y;bone.rotation=setup.rotation;
-   bone.scaleX=setup.scaleX;bone.scaleY=setup.scaleY;
-   bone.shearX=setup.shearX;bone.shearY=setup.shearY;
-  }
- }
- function resetBlinkBoneScales(){
-  for(const bone of skeleton.bones){
-   const name=bone.data.name;
-   if(/^(?:Pupil_[LR]|(?:up|under)_eyeline_[LR]_[a-z0-9]+|Eyeline_[LR]_[UD]|Eyelashes_[LR]_[UD])$/i.test(name)){
-    bone.scaleX=bone.data.scaleX;bone.scaleY=bone.data.scaleY;
-   }
-  }
- }
- function resetBoneToSetup(bone){
-  if(!bone)return;
-  const d=bone.data;
-  bone.rotation=d.rotation;bone.x=d.x;bone.y=d.y;
-  bone.scaleX=d.scaleX;bone.scaleY=d.scaleY;
-  bone.shearX=d.shearX;bone.shearY=d.shearY;
- }
- function enforceClosedEyes(){
-  const closedAliases=Number(expression)===207?['closed','laugh']:['closed','smiling'];
-  const tokens=n=>n.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
-  for(const f of faceSlots){
-   if(f.isLowerEyeLine){try{skeleton.setAttachment(f.slot,null)}catch(e){}continue}
-   if(f.isEyeLine){
-    const closed=f.names.find(n=>closedAliases.some(a=>tokens(n).includes(a)));
-    try{skeleton.setAttachment(f.slot,closed||null)}catch(e){}
-    continue;
-   }
-   if(f.isIris){try{skeleton.setAttachment(f.slot,null)}catch(e){}continue}
-   if(f.isLash){const closed=f.names.find(n=>n.toUpperCase().endsWith('_D')||/closed/i.test(n));if(closed){try{skeleton.setAttachment(f.slot,closed)}catch(e){}}}
-  }
-  for(const side of ['L','R']){
-   resetBoneToSetup(skeleton.findBone('Eyebrows_'+side));
-   resetBoneToSetup(skeleton.findBone('Eyeline_'+side+'_U'));
-   resetBoneToSetup(skeleton.findBone('Eyeline_'+side+'_D'));
-   resetBoneToSetup(skeleton.findBone('Eyelashes_'+side+'_U'));
-   resetBoneToSetup(skeleton.findBone('Eyelashes_'+side+'_D'));
-  }
- }
-
  return{mount,unmount:()=>{mounted=false;if(frame)cancelAnimationFrame(frame);frame=0},setExpression,getAnimations:()=>ready?skeleton.data.animations.map(a=>a.name):[],hasFailed:()=>failed,playAnimation:animation=>{if(!ready)return false;state.clearTracks();skeleton.setToSetupPose();if(animation)state.setAnimation(0,animation,true);last=performance.now()/1000;return true}};
 }
 const CeciliaSpine=createSpinePortrait('Cecilia','Cecilia');
