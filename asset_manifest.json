@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "totalBytes": 1393916813,
+  "totalBytes": 1407660726,
   "files": [
     {
       "url": "./Background/Library_Default (Left).png",
@@ -1873,6 +1873,474 @@
     {
       "url": "./Characters/Sophie/Sophie.skel",
       "size": 1363145
+    },
+    {
+      "url": "./Characters/Story/ArtefactBook/ArtefactBook_2.png",
+      "size": 62263
+    },
+    {
+      "url": "./Characters/Story/ArtefactBook/ArtefactBook.atlas",
+      "size": 293
+    },
+    {
+      "url": "./Characters/Story/ArtefactBook/ArtefactBook.png",
+      "size": 420020
+    },
+    {
+      "url": "./Characters/Story/ArtefactBook/ArtefactBook.skel",
+      "size": 17763
+    },
+    {
+      "url": "./Characters/Story/BlackSheep/BlackSheep_2.png",
+      "size": 270932
+    },
+    {
+      "url": "./Characters/Story/BlackSheep/BlackSheep.atlas",
+      "size": 202
+    },
+    {
+      "url": "./Characters/Story/BlackSheep/BlackSheep.png",
+      "size": 276207
+    },
+    {
+      "url": "./Characters/Story/BlackSheep/BlackSheep.skel",
+      "size": 564
+    },
+    {
+      "url": "./Characters/Story/Celouneige/Celouneige.atlas",
+      "size": 199
+    },
+    {
+      "url": "./Characters/Story/Celouneige/Celouneige.png",
+      "size": 342427
+    },
+    {
+      "url": "./Characters/Story/Celouneige/Celouneige.skel",
+      "size": 369
+    },
+    {
+      "url": "./Characters/Story/CelouneigeBoss/CelouneigeBoss.atlas",
+      "size": 101
+    },
+    {
+      "url": "./Characters/Story/CelouneigeBoss/CelouneigeBoss.png",
+      "size": 421147
+    },
+    {
+      "url": "./Characters/Story/CelouneigeBoss/CelouneigeBoss.skel",
+      "size": 317
+    },
+    {
+      "url": "./Characters/Story/DonutziBerry/DonutziBerry_2.png",
+      "size": 420847
+    },
+    {
+      "url": "./Characters/Story/DonutziBerry/DonutziBerry.atlas",
+      "size": 175
+    },
+    {
+      "url": "./Characters/Story/DonutziBerry/DonutziBerry.png",
+      "size": 359621
+    },
+    {
+      "url": "./Characters/Story/DonutziBerry/DonutziBerry.skel",
+      "size": 493
+    },
+    {
+      "url": "./Characters/Story/DrHell/DrHell_2.png",
+      "size": 184989
+    },
+    {
+      "url": "./Characters/Story/DrHell/DrHell.atlas",
+      "size": 5357
+    },
+    {
+      "url": "./Characters/Story/DrHell/DrHell.png",
+      "size": 521818
+    },
+    {
+      "url": "./Characters/Story/DrHell/DrHell.skel",
+      "size": 196333
+    },
+    {
+      "url": "./Characters/Story/EfratCat/EfratCat_2.png",
+      "size": 449812
+    },
+    {
+      "url": "./Characters/Story/EfratCat/EfratCat_3.png",
+      "size": 276890
+    },
+    {
+      "url": "./Characters/Story/EfratCat/EfratCat.atlas",
+      "size": 5589
+    },
+    {
+      "url": "./Characters/Story/EfratCat/EfratCat.png",
+      "size": 561562
+    },
+    {
+      "url": "./Characters/Story/EfratCat/EfratCat.skel",
+      "size": 168321
+    },
+    {
+      "url": "./Characters/Story/LittleAmungA/LittleAmungA.atlas",
+      "size": 113
+    },
+    {
+      "url": "./Characters/Story/LittleAmungA/LittleAmungA.png",
+      "size": 41562
+    },
+    {
+      "url": "./Characters/Story/LittleAmungA/LittleAmungA.skel",
+      "size": 236
+    },
+    {
+      "url": "./Characters/Story/LittleAmungB/LittleAmungB.atlas",
+      "size": 113
+    },
+    {
+      "url": "./Characters/Story/LittleAmungB/LittleAmungB.png",
+      "size": 42190
+    },
+    {
+      "url": "./Characters/Story/LittleAmungB/LittleAmungB.skel",
+      "size": 236
+    },
+    {
+      "url": "./Characters/Story/LittleAmungC/LittleAmungC.atlas",
+      "size": 114
+    },
+    {
+      "url": "./Characters/Story/LittleAmungC/LittleAmungC.png",
+      "size": 31539
+    },
+    {
+      "url": "./Characters/Story/LittleAmungC/LittleAmungC.skel",
+      "size": 236
+    },
+    {
+      "url": "./Characters/Story/MantaDog/MantaDog.atlas",
+      "size": 107
+    },
+    {
+      "url": "./Characters/Story/MantaDog/MantaDog.png",
+      "size": 109006
+    },
+    {
+      "url": "./Characters/Story/MantaDog/MantaDog.skel",
+      "size": 228
+    },
+    {
+      "url": "./Characters/Story/MobMimi/MobMimi.atlas",
+      "size": 243
+    },
+    {
+      "url": "./Characters/Story/MobMimi/MobMimi.png",
+      "size": 362524
+    },
+    {
+      "url": "./Characters/Story/MobMimi/MobMimi.skel",
+      "size": 420
+    },
+    {
+      "url": "./Characters/Story/MobPipi/MobPipi.atlas",
+      "size": 374
+    },
+    {
+      "url": "./Characters/Story/MobPipi/MobPipi.png",
+      "size": 346125
+    },
+    {
+      "url": "./Characters/Story/MobPipi/MobPipi.skel",
+      "size": 586
+    },
+    {
+      "url": "./Characters/Story/NpcEdward/NpcEdward.atlas",
+      "size": 796
+    },
+    {
+      "url": "./Characters/Story/NpcEdward/NpcEdward.png",
+      "size": 416660
+    },
+    {
+      "url": "./Characters/Story/NpcEdward/NpcEdward.skel",
+      "size": 1729
+    },
+    {
+      "url": "./Characters/Story/NpcKing1/NpcKing1.atlas",
+      "size": 585
+    },
+    {
+      "url": "./Characters/Story/NpcKing1/NpcKing1.png",
+      "size": 414210
+    },
+    {
+      "url": "./Characters/Story/NpcKing1/NpcKing1.skel",
+      "size": 967
+    },
+    {
+      "url": "./Characters/Story/NpcKing2/NpcKing2.atlas",
+      "size": 589
+    },
+    {
+      "url": "./Characters/Story/NpcKing2/NpcKing2.png",
+      "size": 381550
+    },
+    {
+      "url": "./Characters/Story/NpcKing2/NpcKing2.skel",
+      "size": 967
+    },
+    {
+      "url": "./Characters/Story/NpcMan/NpcMan.atlas",
+      "size": 489
+    },
+    {
+      "url": "./Characters/Story/NpcMan/NpcMan.png",
+      "size": 200956
+    },
+    {
+      "url": "./Characters/Story/NpcMan/NpcMan.skel",
+      "size": 689
+    },
+    {
+      "url": "./Characters/Story/NpcRapel/NpcRapel.atlas",
+      "size": 546
+    },
+    {
+      "url": "./Characters/Story/NpcRapel/NpcRapel.png",
+      "size": 665557
+    },
+    {
+      "url": "./Characters/Story/NpcRapel/NpcRapel.skel",
+      "size": 1147
+    },
+    {
+      "url": "./Characters/Story/NpcReina/NpcReina.atlas",
+      "size": 613
+    },
+    {
+      "url": "./Characters/Story/NpcReina/NpcReina.png",
+      "size": 481932
+    },
+    {
+      "url": "./Characters/Story/NpcReina/NpcReina.skel",
+      "size": 1126
+    },
+    {
+      "url": "./Characters/Story/NpcWoman/NpcWoman.atlas",
+      "size": 519
+    },
+    {
+      "url": "./Characters/Story/NpcWoman/NpcWoman.png",
+      "size": 263330
+    },
+    {
+      "url": "./Characters/Story/NpcWoman/NpcWoman.skel",
+      "size": 691
+    },
+    {
+      "url": "./Characters/Story/NutcrackerSpear/NutcrackerSpear.atlas",
+      "size": 296
+    },
+    {
+      "url": "./Characters/Story/NutcrackerSpear/NutcrackerSpear.png",
+      "size": 330325
+    },
+    {
+      "url": "./Characters/Story/NutcrackerSpear/NutcrackerSpear.skel",
+      "size": 482
+    },
+    {
+      "url": "./Characters/Story/OwlNascha/OwlNascha.atlas",
+      "size": 320
+    },
+    {
+      "url": "./Characters/Story/OwlNascha/OwlNascha.png",
+      "size": 346951
+    },
+    {
+      "url": "./Characters/Story/OwlNascha/OwlNascha.skel",
+      "size": 476
+    },
+    {
+      "url": "./Characters/Story/PeachCrushDrone/PeachCrushDrone.atlas",
+      "size": 122
+    },
+    {
+      "url": "./Characters/Story/PeachCrushDrone/PeachCrushDrone.png",
+      "size": 73264
+    },
+    {
+      "url": "./Characters/Story/PeachCrushDrone/PeachCrushDrone.skel",
+      "size": 294
+    },
+    {
+      "url": "./Characters/Story/RaccoonBully/RaccoonBully.atlas",
+      "size": 107
+    },
+    {
+      "url": "./Characters/Story/RaccoonBully/RaccoonBully.png",
+      "size": 265253
+    },
+    {
+      "url": "./Characters/Story/RaccoonBully/RaccoonBully.skel",
+      "size": 263
+    },
+    {
+      "url": "./Characters/Story/RaccoonFire/RaccoonFire.atlas",
+      "size": 83
+    },
+    {
+      "url": "./Characters/Story/RaccoonFire/RaccoonFire.png",
+      "size": 363063
+    },
+    {
+      "url": "./Characters/Story/RaccoonFire/RaccoonFire.skel",
+      "size": 339
+    },
+    {
+      "url": "./Characters/Story/RaccoonLeaf/RaccoonLeaf.atlas",
+      "size": 85
+    },
+    {
+      "url": "./Characters/Story/RaccoonLeaf/RaccoonLeaf.png",
+      "size": 228175
+    },
+    {
+      "url": "./Characters/Story/RaccoonLeaf/RaccoonLeaf.skel",
+      "size": 339
+    },
+    {
+      "url": "./Characters/Story/RaccoonMermaid/RaccoonMermaid.atlas",
+      "size": 107
+    },
+    {
+      "url": "./Characters/Story/RaccoonMermaid/RaccoonMermaid.png",
+      "size": 419242
+    },
+    {
+      "url": "./Characters/Story/RaccoonMermaid/RaccoonMermaid.skel",
+      "size": 265
+    },
+    {
+      "url": "./Characters/Story/RaccoonRudolf/RaccoonRudolf.atlas",
+      "size": 108
+    },
+    {
+      "url": "./Characters/Story/RaccoonRudolf/RaccoonRudolf.png",
+      "size": 300824
+    },
+    {
+      "url": "./Characters/Story/RaccoonRudolf/RaccoonRudolf.skel",
+      "size": 264
+    },
+    {
+      "url": "./Characters/Story/RaccoonSleep/RaccoonSleep.atlas",
+      "size": 107
+    },
+    {
+      "url": "./Characters/Story/RaccoonSleep/RaccoonSleep.png",
+      "size": 278337
+    },
+    {
+      "url": "./Characters/Story/RaccoonSleep/RaccoonSleep.skel",
+      "size": 263
+    },
+    {
+      "url": "./Characters/Story/RaccoonSnow/RaccoonSnow.atlas",
+      "size": 104
+    },
+    {
+      "url": "./Characters/Story/RaccoonSnow/RaccoonSnow.png",
+      "size": 267230
+    },
+    {
+      "url": "./Characters/Story/RaccoonSnow/RaccoonSnow.skel",
+      "size": 262
+    },
+    {
+      "url": "./Characters/Story/RatKnight/RatKnight.atlas",
+      "size": 247
+    },
+    {
+      "url": "./Characters/Story/RatKnight/RatKnight.png",
+      "size": 204779
+    },
+    {
+      "url": "./Characters/Story/RatKnight/RatKnight.skel",
+      "size": 422
+    },
+    {
+      "url": "./Characters/Story/SashaGrandma/SashaGrandma.atlas",
+      "size": 648
+    },
+    {
+      "url": "./Characters/Story/SashaGrandma/SashaGrandma.png",
+      "size": 496309
+    },
+    {
+      "url": "./Characters/Story/SashaGrandma/SashaGrandma.skel",
+      "size": 1249
+    },
+    {
+      "url": "./Characters/Story/Sight/Sight.atlas",
+      "size": 401
+    },
+    {
+      "url": "./Characters/Story/Sight/Sight.png",
+      "size": 340208
+    },
+    {
+      "url": "./Characters/Story/Sight/Sight.skel",
+      "size": 634
+    },
+    {
+      "url": "./Characters/Story/SightOfDarkness/SightOfDarkness.atlas",
+      "size": 110
+    },
+    {
+      "url": "./Characters/Story/SightOfDarkness/SightOfDarkness.png",
+      "size": 519427
+    },
+    {
+      "url": "./Characters/Story/SightOfDarkness/SightOfDarkness.skel",
+      "size": 266
+    },
+    {
+      "url": "./Characters/Story/SoldierSpear/SoldierSpear.atlas",
+      "size": 377
+    },
+    {
+      "url": "./Characters/Story/SoldierSpear/SoldierSpear.png",
+      "size": 186442
+    },
+    {
+      "url": "./Characters/Story/SoldierSpear/SoldierSpear.skel",
+      "size": 587
+    },
+    {
+      "url": "./Characters/Story/SpringSpirit/SpringSpirit.atlas",
+      "size": 114
+    },
+    {
+      "url": "./Characters/Story/SpringSpirit/SpringSpirit.png",
+      "size": 147555
+    },
+    {
+      "url": "./Characters/Story/SpringSpirit/SpringSpirit.skel",
+      "size": 236
+    },
+    {
+      "url": "./Characters/Story/TrumpSoldier/TrumpSoldier.atlas",
+      "size": 103
+    },
+    {
+      "url": "./Characters/Story/TrumpSoldier/TrumpSoldier.png",
+      "size": 229975
+    },
+    {
+      "url": "./Characters/Story/TrumpSoldier/TrumpSoldier.skel",
+      "size": 263
     },
     {
       "url": "./Characters/Tabris/Tabris_2.png",
