@@ -124,7 +124,18 @@ for g,h in gmap.items(): fgh[h]=(g,fg[g])
 print('friendship groups remapped (group->hero):',{g:(h,tx.get(hero[h])) for g,h in gmap.items() if g!=h})
 print('heroes without friendship stories:',[(h,tx.get(hero[h])) for h in sorted(hero) if h not in fgh])
 tree.append({'id':'fr','label':'호감도 스토리','children':[{'id':'hero%d'%h,'heroId':h,'friendshipGroup':fgh[h][0],'title':['@'+hero[h]],'children':fgh[h][1]} for h in sorted(fgh)]})
-bl=[node(['@'+hero[b['id']],' 생일 (%d/%d)'%(b['month'],b['day'])] if b['id'] in hero else ['#%d'%b['id']],b['birthDayDialogId']) for b in T['birthdays'] if story(b['birthDayDialogId'])]
+bl=[node(['@'+hero[b['id']],' 생일 (%d/%d)'%(b['month'],b['day'])] if b['id'] in hero else ['#%d'%b['id']],b['birthDayDialogId'],heroId=b['id']) for b in T['birthdays'] if story(b['birthDayDialogId'])]
+# Birthday stories carry no Bg/BGM/Sound/Character-placement rows. Fixed resources (user-verified in game):
+# Bg=BirthdayRoom, BGM=BirthDay, image BirthdayCake (horizontally centred, bottom-aligned), no Sound/Voice.
+# BirthdayCharacterImage rows use portraitId -1 = the birthday hero (birthdays.id).
+def _bd(st,h):
+    return [['E',h,x[2]] if x[0]=='E' and x[1]==-1 else x for x in st]
+for b in T['birthdays']:
+    k=str(b['birthDayDialogId'])
+    if k in S:
+        reg(b['id'])
+        S[k]['st']=[['B','BirthdayRoom',0],['G','BirthDay',0],['IM','BirthdayCake','C','B'],['C',b['id'],'C']]+_bd(S[k]['st'],b['id'])
+
 tree.append({'id':'bd','label':'생일 스토리','children':[{'id':'birthday','title':['캐릭터 생일'],'children':bl}]})
 used=set()
 def walk(n):

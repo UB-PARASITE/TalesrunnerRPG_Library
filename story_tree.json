@@ -5294,434 +5294,496 @@
         "@Hero_Name_0000",
         " 생일 (5/2)"
        ],
-       "dialogId": 30000
+       "dialogId": 30000,
+       "heroId": 0
       },
       {
        "title": [
         "@Hero_Name_0001",
         " 생일 (4/18)"
        ],
-       "dialogId": 30001
+       "dialogId": 30001,
+       "heroId": 1
       },
       {
        "title": [
         "@Hero_Name_0002",
         " 생일 (11/23)"
        ],
-       "dialogId": 30002
+       "dialogId": 30002,
+       "heroId": 2
       },
       {
        "title": [
         "@Hero_Name_0003",
         " 생일 (5/10)"
        ],
-       "dialogId": 30003
+       "dialogId": 30003,
+       "heroId": 3
       },
       {
        "title": [
         "@Hero_Name_0004",
         " 생일 (9/2)"
        ],
-       "dialogId": 30004
+       "dialogId": 30004,
+       "heroId": 4
       },
       {
        "title": [
         "@Hero_Name_0005",
         " 생일 (7/29)"
        ],
-       "dialogId": 30005
+       "dialogId": 30005,
+       "heroId": 5
       },
       {
        "title": [
         "@Hero_Name_0006",
         " 생일 (1/5)"
        ],
-       "dialogId": 30006
+       "dialogId": 30006,
+       "heroId": 6
       },
       {
        "title": [
         "@Hero_Name_0007",
         " 생일 (3/3)"
        ],
-       "dialogId": 30007
+       "dialogId": 30007,
+       "heroId": 7
       },
       {
        "title": [
         "@Hero_Name_0008",
         " 생일 (1/31)"
        ],
-       "dialogId": 30008
+       "dialogId": 30008,
+       "heroId": 8
       },
       {
        "title": [
         "@Hero_Name_0009",
         " 생일 (8/8)"
        ],
-       "dialogId": 30009
+       "dialogId": 30009,
+       "heroId": 9
       },
       {
        "title": [
         "@Hero_Name_0010",
         " 생일 (1/11)"
        ],
-       "dialogId": 30010
+       "dialogId": 30010,
+       "heroId": 10
       },
       {
        "title": [
         "@Hero_Name_0011",
         " 생일 (9/11)"
        ],
-       "dialogId": 30011
+       "dialogId": 30011,
+       "heroId": 11
       },
       {
        "title": [
         "@Hero_Name_0012",
         " 생일 (2/28)"
        ],
-       "dialogId": 30012
+       "dialogId": 30012,
+       "heroId": 12
       },
       {
        "title": [
         "@Hero_Name_0013",
         " 생일 (6/17)"
        ],
-       "dialogId": 30013
+       "dialogId": 30013,
+       "heroId": 13
       },
       {
        "title": [
         "@Hero_Name_0014",
         " 생일 (6/22)"
        ],
-       "dialogId": 30014
+       "dialogId": 30014,
+       "heroId": 14
       },
       {
        "title": [
         "@Hero_Name_0015",
         " 생일 (7/7)"
        ],
-       "dialogId": 30015
+       "dialogId": 30015,
+       "heroId": 15
       },
       {
        "title": [
         "@Hero_Name_0016",
         " 생일 (10/16)"
        ],
-       "dialogId": 30016
+       "dialogId": 30016,
+       "heroId": 16
       },
       {
        "title": [
         "@Hero_Name_0017",
         " 생일 (2/22)"
        ],
-       "dialogId": 30017
+       "dialogId": 30017,
+       "heroId": 17
       },
       {
        "title": [
         "@Hero_Name_0018",
         " 생일 (4/20)"
        ],
-       "dialogId": 30018
+       "dialogId": 30018,
+       "heroId": 18
       },
       {
        "title": [
         "@Hero_Name_0019",
         " 생일 (3/17)"
        ],
-       "dialogId": 30019
+       "dialogId": 30019,
+       "heroId": 19
       },
       {
        "title": [
         "@Hero_Name_0020",
         " 생일 (5/30)"
        ],
-       "dialogId": 30020
+       "dialogId": 30020,
+       "heroId": 20
       },
       {
        "title": [
         "@Hero_Name_0021",
         " 생일 (7/14)"
        ],
-       "dialogId": 30021
+       "dialogId": 30021,
+       "heroId": 21
       },
       {
        "title": [
         "@Hero_Name_0022",
         " 생일 (6/10)"
        ],
-       "dialogId": 30022
+       "dialogId": 30022,
+       "heroId": 22
       },
       {
        "title": [
         "@Hero_Name_0023",
         " 생일 (3/30)"
        ],
-       "dialogId": 30023
+       "dialogId": 30023,
+       "heroId": 23
       },
       {
        "title": [
         "@Hero_Name_0024",
         " 생일 (12/28)"
        ],
-       "dialogId": 30024
+       "dialogId": 30024,
+       "heroId": 24
       },
       {
        "title": [
         "@Hero_Name_0025",
         " 생일 (12/7)"
        ],
-       "dialogId": 30025
+       "dialogId": 30025,
+       "heroId": 25
       },
       {
        "title": [
         "@Hero_Name_0026",
         " 생일 (3/7)"
        ],
-       "dialogId": 30026
+       "dialogId": 30026,
+       "heroId": 26
       },
       {
        "title": [
         "@Hero_Name_0027",
         " 생일 (4/4)"
        ],
-       "dialogId": 30027
+       "dialogId": 30027,
+       "heroId": 27
       },
       {
        "title": [
         "@Hero_Name_0028",
         " 생일 (10/10)"
        ],
-       "dialogId": 30028
+       "dialogId": 30028,
+       "heroId": 28
       },
       {
        "title": [
         "@Hero_Name_0029",
         " 생일 (2/4)"
        ],
-       "dialogId": 30029
+       "dialogId": 30029,
+       "heroId": 29
       },
       {
        "title": [
         "@Hero_Name_0030",
         " 생일 (8/1)"
        ],
-       "dialogId": 30030
+       "dialogId": 30030,
+       "heroId": 30
       },
       {
        "title": [
         "@Hero_Name_0031",
         " 생일 (1/1)"
        ],
-       "dialogId": 30031
+       "dialogId": 30031,
+       "heroId": 31
       },
       {
        "title": [
         "@Hero_Name_0033",
         " 생일 (11/11)"
        ],
-       "dialogId": 30032
+       "dialogId": 30032,
+       "heroId": 33
       },
       {
        "title": [
         "@Hero_Name_0034",
         " 생일 (10/31)"
        ],
-       "dialogId": 30033
+       "dialogId": 30033,
+       "heroId": 34
       },
       {
        "title": [
         "@Hero_Name_0035",
         " 생일 (12/1)"
        ],
-       "dialogId": 30034
+       "dialogId": 30034,
+       "heroId": 35
       },
       {
        "title": [
         "@Hero_Name_0036",
         " 생일 (11/2)"
        ],
-       "dialogId": 30035
+       "dialogId": 30035,
+       "heroId": 36
       },
       {
        "title": [
         "@Hero_Name_0037",
         " 생일 (2/29)"
        ],
-       "dialogId": 30036
+       "dialogId": 30036,
+       "heroId": 37
       },
       {
        "title": [
         "@Hero_Name_0038",
         " 생일 (8/13)"
        ],
-       "dialogId": 30037
+       "dialogId": 30037,
+       "heroId": 38
       },
       {
        "title": [
         "@Hero_Name_0039",
         " 생일 (9/30)"
        ],
-       "dialogId": 30038
+       "dialogId": 30038,
+       "heroId": 39
       },
       {
        "title": [
         "@Hero_Name_0040",
         " 생일 (6/12)"
        ],
-       "dialogId": 30039
+       "dialogId": 30039,
+       "heroId": 40
       },
       {
        "title": [
         "@Hero_Name_0041",
         " 생일 (11/29)"
        ],
-       "dialogId": 30040
+       "dialogId": 30040,
+       "heroId": 41
       },
       {
        "title": [
         "@Hero_Name_0042",
         " 생일 (9/5)"
        ],
-       "dialogId": 30041
+       "dialogId": 30041,
+       "heroId": 42
       },
       {
        "title": [
         "@Hero_Name_0043",
         " 생일 (11/30)"
        ],
-       "dialogId": 30057
+       "dialogId": 30057,
+       "heroId": 43
       },
       {
        "title": [
         "@Hero_Name_0044",
         " 생일 (3/25)"
        ],
-       "dialogId": 30042
+       "dialogId": 30042,
+       "heroId": 44
       },
       {
        "title": [
         "@Hero_Name_0045",
         " 생일 (12/24)"
        ],
-       "dialogId": 30043
+       "dialogId": 30043,
+       "heroId": 45
       },
       {
        "title": [
         "@Hero_Name_0046",
         " 생일 (2/14)"
        ],
-       "dialogId": 30044
+       "dialogId": 30044,
+       "heroId": 46
       },
       {
        "title": [
         "@Hero_Name_0047",
         " 생일 (7/7)"
        ],
-       "dialogId": 30045
+       "dialogId": 30045,
+       "heroId": 47
       },
       {
        "title": [
         "@Hero_Name_0048",
         " 생일 (8/16)"
        ],
-       "dialogId": 30055
+       "dialogId": 30055,
+       "heroId": 48
       },
       {
        "title": [
         "@Hero_Name_0049",
         " 생일 (1/15)"
        ],
-       "dialogId": 30056
+       "dialogId": 30056,
+       "heroId": 49
       },
       {
        "title": [
         "@Hero_Name_0050",
         " 생일 (12/12)"
        ],
-       "dialogId": 30048
+       "dialogId": 30048,
+       "heroId": 50
       },
       {
        "title": [
         "@Hero_Name_0051",
         " 생일 (7/17)"
        ],
-       "dialogId": 30046
+       "dialogId": 30046,
+       "heroId": 51
       },
       {
        "title": [
         "@Hero_Name_0052",
         " 생일 (2/14)"
        ],
-       "dialogId": 30047
+       "dialogId": 30047,
+       "heroId": 52
       },
       {
        "title": [
         "@Hero_Name_0053",
         " 생일 (12/21)"
        ],
-       "dialogId": 30050
+       "dialogId": 30050,
+       "heroId": 53
       },
       {
        "title": [
         "@Hero_Name_0054",
         " 생일 (7/6)"
        ],
-       "dialogId": 30049
+       "dialogId": 30049,
+       "heroId": 54
       },
       {
        "title": [
         "@Hero_Name_0055",
         " 생일 (1/23)"
        ],
-       "dialogId": 30052
+       "dialogId": 30052,
+       "heroId": 55
       },
       {
        "title": [
         "@Hero_Name_0056",
         " 생일 (2/9)"
        ],
-       "dialogId": 30053
+       "dialogId": 30053,
+       "heroId": 56
       },
       {
        "title": [
         "@Hero_Name_0057",
         " 생일 (4/5)"
        ],
-       "dialogId": 30054
+       "dialogId": 30054,
+       "heroId": 57
       },
       {
        "title": [
         "@Hero_Name_0058",
         " 생일 (12/25)"
        ],
-       "dialogId": 30058
+       "dialogId": 30058,
+       "heroId": 58
       },
       {
        "title": [
         "@Hero_Name_0059",
         " 생일 (3/14)"
        ],
-       "dialogId": 30059
+       "dialogId": 30059,
+       "heroId": 59
       },
       {
        "title": [
         "@Hero_Name_0065",
         " 생일 (5/7)"
        ],
-       "dialogId": 30060
+       "dialogId": 30060,
+       "heroId": 65
       },
       {
        "title": [
         "@Hero_Name_0066",
         " 생일 (7/10)"
        ],
-       "dialogId": 30061
+       "dialogId": 30061,
+       "heroId": 66
       },
       {
        "title": [
         "@Hero_Name_0067",
         " 생일 (6/1)"
        ],
-       "dialogId": 30062
+       "dialogId": 30062,
+       "heroId": 67
       }
      ]
     }
