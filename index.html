@@ -41,7 +41,7 @@ summary{padding:11px 14px;font-weight:600;cursor:pointer}summary small{color:var
 .ch.spine-ch.speaking{transform:translateX(-50%) scale(1.045)}
 .ch.spine-ch .spine-stage{position:absolute;inset:0;width:100%;height:100%;display:block}
 .ch.spine-ch .nm{position:absolute;bottom:154px;left:50%;transform:translateX(-50%);white-space:nowrap}
-.spine-tag{display:inline-block;margin-left:7px;padding:1px 6px;border-radius:5px;background:#8058b8;color:#fff;font-size:10px;font-weight:600;vertical-align:2px}.ch .fig{height:min(46vh,300px);border-radius:90px 90px 14px 14px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:18px;font-size:46px;box-shadow:0 6px 24px #0008}
+.ch .fig{height:min(46vh,300px);border-radius:90px 90px 14px 14px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:18px;font-size:46px;box-shadow:0 6px 24px #0008}
 .ch .em{font-size:38px;line-height:1.1}.ch .nm{font-size:13px;margin-top:6px;background:#0009;border-radius:8px;display:inline-block;padding:1px 8px}
 #ov{position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:24px;font-size:clamp(18px,3.4vw,30px);white-space:pre-line;background:#000a;z-index:2;line-height:1.8}
 #ov.t{font-weight:700;letter-spacing:.06em;font-size:clamp(24px,5vw,44px)}#ov.l{align-items:flex-start;padding-top:20vh;font-size:clamp(18px,3vw,28px)}
@@ -78,6 +78,7 @@ const categoryName=c=>CATEGORY_LABELS[c.k]?t(CATEGORY_LABELS[c.k]):c.n;
 const E={200:'😐',201:'😠',202:'😑',203:'😢',204:'😊',205:'😡',206:'😭',207:'😄',208:'🙂',209:'😲',210:'🤬'},POS={L:'25%',C:'50%',R:'75%'};
 let DB,cat=0,cur=null,list=[],allStories=[],sc,stack,hist,gender=1,auto=0,skip=0,typ=null,tmr=null,total=1,read={},bgmAudio=null,bgmKey='',sfxAudios=[];
 try{read=JSON.parse(localStorage.getItem('rd')||'{}')}catch(e){}
+let expandedGroups={};try{expandedGroups=JSON.parse(localStorage.getItem('expandedStoryGroups')||'{}')}catch(e){}
 const strip=h=>h.replace(/<[^>]+>/g,''),hue=s=>{let h=0;for(const c of String(s))h=(h*31+c.charCodeAt(0))%360;return h};
 let masterVolume=1;try{const savedVolume=localStorage.getItem("masterVolume");if(savedVolume!==null)masterVolume=Math.max(0,Math.min(1,Number(savedVolume)||0))}catch(e){}
 const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
@@ -97,10 +98,9 @@ function hydrate(tr,sc,tx,miss){const L=a=>a.map(p=>p[0]=='@'?(tx[p.slice(1)]??p
  allStories=DB.cats.flatMap(c=>c.g.flatMap(g=>g.s.map(x=>({id:String(x[1]),title:g.n+' · '+x[0]})))).filter(x=>DB.S[x.id]);
  DB.cats.push({k:'talk',n:'로비 대화',g:[]});idx=null;cat=0;tabs();show();if(miss.length)$('#mn').insertAdjacentHTML('afterbegin','<p>⚠ '+t('readMissing')+miss.join(', ')+'</p>')}
 function tabs(){$('#tabs').innerHTML='';DB.cats.forEach((c,i)=>{const b=document.createElement('button');b.className='tab'+(i==cat?' on':'');b.textContent=categoryName(c);b.onclick=()=>{cat=i;$('#q').value='';tabs();show()};$('#tabs').append(b)})}
-function hasCecilia(id){const st=DB.S[String(id)]?.st;if(!st)return false;const scan=a=>{for(const x of a||[]){if(!Array.isArray(x))continue;if(x[0]==='C'&&String(x[1])==='25')return true;for(let n=1;n<x.length;n++)if(Array.isArray(x[n])&&(Array.isArray(x[n][0])?scan(x[n]):scan([x[n]])))return true}return false};return scan(st)}
 function show(){const c=DB.cats[cat],m=$('#mn');m.innerHTML='';if(c.k=='talk')return talks(m);
- c.g.forEach((g,gi)=>{const d=document.createElement('details');d.open=c.g.length<4||gi==0;d.innerHTML=`<summary>${g.n}<small>${g.s.length}${t('chapters')}</small></summary>`;const gr=document.createElement('div');gr.className='grid';
-  g.s.forEach(s=>{const b=document.createElement('button');b.className='card'+(read[s[1]]?' rd':'');const sm=DB.S[s[1]].sm;b.innerHTML=`<b>${s[0]}${hasCecilia(s[1])?'<span class="spine-tag">✦ Spine</span>':''}</b>${sm?`<span>${sm}</span>`:''}`;b.onclick=()=>play(s[1],g.s.map(x=>x[1]),g.n+' · '+s[0]);gr.append(b)});d.append(gr);m.append(d)})}
+ c.g.forEach((g,gi)=>{const d=document.createElement('details'),groupKey=c.k+':'+gi;d.open=!!expandedGroups[groupKey];d.innerHTML=`<summary>${g.n}<small>${g.s.length}${t('chapters')}</small></summary>`;d.addEventListener('toggle',()=>{expandedGroups[groupKey]=d.open;try{localStorage.setItem('expandedStoryGroups',JSON.stringify(expandedGroups))}catch(e){}});const gr=document.createElement('div');gr.className='grid';
+  g.s.forEach(s=>{const b=document.createElement('button');b.className='card'+(read[s[1]]?' rd':'');const sm=DB.S[s[1]].sm;b.innerHTML=`<b>${s[0]}</b>${sm?`<span>${sm}</span>`:''}`;b.onclick=()=>play(s[1],g.s.map(x=>x[1]),g.n+' · '+s[0]);gr.append(b)});d.append(gr);m.append(d)})}
 function talks(m,hid){const ch=document.createElement('div');ch.className='chips';Object.keys(DB.talk).forEach(h=>{const b=document.createElement('button');b.className='tab'+(h==hid?' on':'');b.textContent=DB.H[h]||'#'+h;b.onclick=()=>{m.innerHTML='';talks(m,h)};ch.append(b)});m.append(ch);
  if(hid!=null)DB.talk[hid].forEach(entry=>{const d=document.createElement('div');d.className='talk';d.innerHTML=`<small>${E[entry[1]]||''} ${entry[0]?t('touch'):t('defaultTalk')}</small><br>${entry[2]}`;m.append(d)});else m.append(Object.assign(document.createElement('p'),{textContent:t('chooseCharacter')}))}
 let idx;$('#q').oninput=()=>{clearTimeout(tmr);tmr=setTimeout(search,250)};
