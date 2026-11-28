@@ -226,18 +226,17 @@ function createSpinePortrait(name,folder){
   bone.shearX=d.shearX;bone.shearY=d.shearY;
  }
  function enforceClosedEyes(){
-  const closedAliases=Number(expression)===207?['laugh']:['smiling'];
+  const closedAliases=Number(expression)===207?['closed','laugh']:['closed','smiling'];
   const tokens=n=>n.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
   for(const f of faceSlots){
-   const isLine=/^eyeline/i.test(f.slot)||f.names.some(n=>/^eyeline/i.test(n));
-   const isLash=/^eyelashes/i.test(f.slot)||f.names.some(n=>/^eyelashes/i.test(n));
-   if(isLine){
+   if(f.isLowerEyeLine){try{skeleton.setAttachment(f.slot,null)}catch(e){}continue}
+   if(f.isEyeLine){
     const closed=f.names.find(n=>closedAliases.some(a=>tokens(n).includes(a)));
     try{skeleton.setAttachment(f.slot,closed||null)}catch(e){}
     continue;
    }
    if(f.isIris){try{skeleton.setAttachment(f.slot,null)}catch(e){}continue}
-   if(isLash){const closed=f.names.find(n=>n.toUpperCase().endsWith('_D'));if(closed){try{skeleton.setAttachment(f.slot,closed)}catch(e){}}}
+   if(f.isLash){const closed=f.names.find(n=>n.toUpperCase().endsWith('_D')||/closed/i.test(n));if(closed){try{skeleton.setAttachment(f.slot,closed)}catch(e){}}}
   }
   for(const side of ['L','R']){
    resetBoneToSetup(skeleton.findBone('Eyebrows_'+side));
@@ -247,7 +246,6 @@ function createSpinePortrait(name,folder){
    resetBoneToSetup(skeleton.findBone('Eyelashes_'+side+'_D'));
   }
  }
-
  function syncWriterEyelashes(){
   for(const side of ['L','R']){
    const pupil=skeleton.findBone('Pupil_'+side);
