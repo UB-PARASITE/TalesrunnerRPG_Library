@@ -161,18 +161,28 @@ function createSpinePortrait(name,folder){
   // Remove Spine animation timelines that drive eye parts. The Idle/Normal
   // animation can contain its own blink keys, which attachment restoration
   // after state.apply() cannot reliably suppress.
-  const eyeBoneIndexes=new Set();
-  data.bones.forEach((bone,index)=>{if(/pupil|iris|eyeline|eyelash|eyelid/i.test(bone.name))eyeBoneIndexes.add(index)});
-  const eyeSlotIndexes=new Set(faceSlots.filter(f=>f.isIris||f.isEyeLine||f.isLowerEyeLine||f.isLash).map(f=>skeleton.data.slots.findIndex(slot=>slot.name===f.slot)).filter(index=>index>=0));
+  // Freeze the complete eye-and-brow rig, not only the obvious pupil/lash bones.
+  // Spine exports use several naming conventions (Eye_L, Eyebrows_L, Brow.L, etc.).
+  const facialRigPattern=/(?:eye|brow|eyelid|eyelash|pupil|iris)/i;
+  const facialRigBoneIndexes=new Set();
+  data.bones.forEach((bone,index)=>{if(facialRigPattern.test(bone.name))facialRigBoneIndexes.add(index)});
+  const facialRigSlotIndexes=new Set();
+  skeleton.data.slots.forEach((slot,index)=>{
+   const names=[slot.name];
+   const attachments=[];
+   if(skin)skin.getAttachmentsForSlot(index,attachments);
+   attachments.forEach(attachment=>names.push(attachment.name));
+   if(names.some(value=>facialRigPattern.test(value)))facialRigSlotIndexes.add(index);
+  });
   for(const animation of data.animations){
    animation.timelines=animation.timelines.filter(timeline=>
-    !(Number.isInteger(timeline.boneIndex)&&eyeBoneIndexes.has(timeline.boneIndex))&&
-    !(Number.isInteger(timeline.slotIndex)&&eyeSlotIndexes.has(timeline.slotIndex))
+    !(Number.isInteger(timeline.boneIndex)&&facialRigBoneIndexes.has(timeline.boneIndex))&&
+    !(Number.isInteger(timeline.slotIndex)&&facialRigSlotIndexes.has(timeline.slotIndex))
    );
   }
   const names=data.animations.map(a=>a.name);const initial=names.includes('Idle')?'Idle':names.includes('Normal')?'Normal':names[0];if(initial)state.setAnimation(0,initial,true);ready=true;loading=false;applyExpression(expression);last=performance.now()/1000;render()}catch(e){failed=true;loading=false;console.error(name+' Spine parse failed:',e)}
  }
- function render(){if(!ready)return;if(!canvas?.isConnected){frame=requestAnimationFrame(render);return}const w=Math.max(1,canvas.clientWidth),h=Math.max(1,canvas.clientHeight),pixelRatio=Math.min(devicePixelRatio*DISPLAY_SCALE,2);if(canvas.width!==Math.round(w*pixelRatio)||canvas.height!==Math.round(h*pixelRatio)){canvas.width=Math.round(w*pixelRatio);canvas.height=Math.round(h*pixelRatio)}const gl=ctx.gl;gl.viewport(0,0,canvas.width,canvas.height);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);const now=performance.now()/1000,delta=Math.min(.05,Math.max(0,now-last));last=now;state.update(delta);state.apply(skeleton);const closedEye=isClosedEye();applyEyeState();if(name==='WriterMale'||name==='WriterFemale'){if(closedEye)enforceClosedEyes();else syncWriterEyelashes();}skeleton.updateWorldTransform();const cx=bounds.offset.x+bounds.size.x/2,visibleH=Math.max(1,h-150),referenceW=Math.min(window.innerWidth*1.12,800);if(!fixedScale)fixedScale=Math.min((referenceW/1.6)/Math.max(bounds.size.x,1),visibleH/Math.max(bounds.size.y,1))*(name==='Chocola'?.95:1.35);const scale=fixedScale,viewW=w/scale,viewH=h/scale,cy=bounds.offset.y+bounds.size.y/2;const mvp=new spine.Matrix4();mvp.ortho2d(cx-viewW/2,cy-viewH/2,viewW,viewH);shader.bind();shader.setUniformi(spine.Shader.SAMPLER,0);shader.setUniform4x4f(spine.Shader.MVP_MATRIX,mvp.values);batcher.begin(shader);skeletonRenderer.premultipliedAlpha=true;skeletonRenderer.draw(batcher,skeleton);batcher.end();shader.unbind();frame=requestAnimationFrame(render)}
+ function render(){if(!ready)return;if(!canvas?.isConnected){frame=requestAnimationFrame(render);return}const w=Math.max(1,canvas.clientWidth),h=Math.max(1,canvas.clientHeight),pixelRatio=Math.min(devicePixelRatio*DISPLAY_SCALE,2);if(canvas.width!==Math.round(w*pixelRatio)||canvas.height!==Math.round(h*pixelRatio)){canvas.width=Math.round(w*pixelRatio);canvas.height=Math.round(h*pixelRatio)}const gl=ctx.gl;gl.viewport(0,0,canvas.width,canvas.height);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);const now=performance.now()/1000,delta=Math.min(.05,Math.max(0,now-last));last=now;state.update(delta);state.apply(skeleton);resetFacialRigBones();const closedEye=isClosedEye();applyEyeState();if(name==='WriterMale'||name==='WriterFemale'){if(closedEye)enforceClosedEyes();}skeleton.updateWorldTransform();const cx=bounds.offset.x+bounds.size.x/2,visibleH=Math.max(1,h-150),referenceW=Math.min(window.innerWidth*1.12,800);if(!fixedScale)fixedScale=Math.min((referenceW/1.6)/Math.max(bounds.size.x,1),visibleH/Math.max(bounds.size.y,1))*(name==='Chocola'?.95:1.35);const scale=fixedScale,viewW=w/scale,viewH=h/scale,cy=bounds.offset.y+bounds.size.y/2;const mvp=new spine.Matrix4();mvp.ortho2d(cx-viewW/2,cy-viewH/2,viewW,viewH);shader.bind();shader.setUniformi(spine.Shader.SAMPLER,0);shader.setUniform4x4f(spine.Shader.MVP_MATRIX,mvp.values);batcher.begin(shader);skeletonRenderer.premultipliedAlpha=true;skeletonRenderer.draw(batcher,skeleton);batcher.end();shader.unbind();frame=requestAnimationFrame(render)}
  function drawOnce(){if(ready&&!frame)render()}
  function setExpression(id){expression=Number(id);if(ready){applyExpression(expression);drawOnce()}}
  function applyExpression(id){
@@ -223,6 +233,16 @@ function createSpinePortrait(name,folder){
   }
   if(!closedEye)resetBlinkBoneScales();
  }
+ function resetFacialRigBones(){
+  for(const index of facialRigBoneIndexes){
+   const bone=skeleton.bones[index];
+   if(!bone)continue;
+   const setup=bone.data;
+   bone.x=setup.x;bone.y=setup.y;bone.rotation=setup.rotation;
+   bone.scaleX=setup.scaleX;bone.scaleY=setup.scaleY;
+   bone.shearX=setup.shearX;bone.shearY=setup.shearY;
+  }
+ }
  function resetBlinkBoneScales(){
   for(const bone of skeleton.bones){
    const name=bone.data.name;
@@ -259,31 +279,7 @@ function createSpinePortrait(name,folder){
    resetBoneToSetup(skeleton.findBone('Eyelashes_'+side+'_D'));
   }
  }
- function syncWriterEyelashes(){
-  for(const side of ['L','R']){
-   const pupil=skeleton.findBone('Pupil_'+side);
-   const brow=skeleton.findBone('Eyebrows_'+side);
-   const lowerLid=skeleton.findBone('Eyeline_'+side+'_D');
-   const upperEye=skeleton.findBone('Eyeline_'+side+'_U');
-   const upperLash=skeleton.findBone('Eyelashes_'+side+'_U');
-   // Only the upper lash follows pupil scale. Keep both lower lashes stationary.
-   const scaleTargets=[upperLash];
-   // Do not derive eyelid/eyelash scale from pupil scale: the old coupling
-   // reproduced blink motion even after restoring the pupil's setup pose.
-   // Both Writers use the same upper-eye-frame response: follow brow translation.
-   if(upperEye&&brow){
-    upperEye.x=upperEye.data.x+(brow.x-brow.data.x);
-    upperEye.y=upperEye.data.y+(brow.y-brow.data.y);
-   }
-   // Both Writers use the Female response for the upper lash: follow the lower eye-line
-   // when available, otherwise fall back to the brow. Lower lashes remain stationary.
-   const lashMotionSource=lowerLid||brow;
-   if(upperLash&&lashMotionSource){
-    upperLash.x=upperLash.data.x+(lashMotionSource.x-lashMotionSource.data.x);
-    upperLash.y=upperLash.data.y+(lashMotionSource.y-lashMotionSource.data.y);
-   }
-  }
- }
+
  return{mount,setExpression};
 }
 const CeciliaSpine=createSpinePortrait('Cecilia','Cecilia');
