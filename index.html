@@ -154,7 +154,7 @@ function createSpinePortrait(name,folder){
  function poll(){if(!assetManager.isLoadingComplete()){if(assetManager.hasErrors()){failed=true;loading=false;console.error(name+' Spine assets failed:',assetManager.getErrors());return}setTimeout(poll,80);return}
   try{const atlas=assetManager.require(name+'.atlas'),loader=new spine.SkeletonBinary(new spine.AtlasAttachmentLoader(atlas));loader.scale=1;const data=loader.readSkeletonData(assetManager.require(name+'.skel'));skeleton=new spine.Skeleton(data);bounds=(()=>{skeleton.setToSetupPose();skeleton.updateWorldTransform();const offset=new spine.Vector2(),size=new spine.Vector2();skeleton.getBounds(offset,size,[]);return{offset,size}})();const sd=new spine.AnimationStateData(data);state=new spine.AnimationState(sd);faceSlots=[];const skin=skeleton.data.defaultSkin;if(skin)skeleton.slots.forEach(slot=>{const current=slot.getAttachment(),attachments=[];skin.getAttachmentsForSlot(slot.data.index,attachments);const names=attachments.map(a=>a.name);const facialName=/^(?:angry|angry2|blank|closed|crying|crying2|shy|shy-surprised|smiling|smiling2|surprised)(?:\s|_|$)|^(?:mouth|eyebrows?|eyeline|eyelashes|pupil|white(?:_|$)|eye(?:'s|_|\s|$)|iris|eyelid)/i;const facial=facialName.test(slot.data.name)||names.some(n=>facialName.test(n));const isIris=/^(?:pupil|iris|white)(?:_|$)|^eye'?s_light(?:_|$)/i.test(slot.data.name)||names.some(n=>/^(?:pupil|iris|white)(?:_|$)|^eye'?s_light(?:_|$)/i.test(n));if(facial)faceSlots.push({slot:slot.data.name,base:current?.name||null,names,isIris})});const names=data.animations.map(a=>a.name);const initial=names.includes('Idle')?'Idle':names.includes('Normal')?'Normal':names[0];if(initial)state.setAnimation(0,initial,true);ready=true;loading=false;applyExpression(expression);last=performance.now()/1000;render()}catch(e){failed=true;loading=false;console.error(name+' Spine parse failed:',e)}
  }
- function render(){if(!ready)return;if(!canvas?.isConnected){frame=requestAnimationFrame(render);return}const w=Math.max(1,canvas.clientWidth),h=Math.max(1,canvas.clientHeight),pixelRatio=Math.min(devicePixelRatio*DISPLAY_SCALE,2);if(canvas.width!==Math.round(w*pixelRatio)||canvas.height!==Math.round(h*pixelRatio)){canvas.width=Math.round(w*pixelRatio);canvas.height=Math.round(h*pixelRatio)}const gl=ctx.gl;gl.viewport(0,0,canvas.width,canvas.height);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);const now=performance.now()/1000,delta=Math.min(.05,Math.max(0,now-last));last=now;state.update(delta);state.apply(skeleton);if((name==='WriterMale'||name==='WriterFemale')&&[204,207].includes(Number(expression)))enforceClosedEyes();skeleton.updateWorldTransform();const cx=bounds.offset.x+bounds.size.x/2,visibleH=Math.max(1,h-150),referenceW=Math.min(window.innerWidth*1.12,800);if(!fixedScale)fixedScale=Math.min((referenceW/1.6)/Math.max(bounds.size.x,1),visibleH/Math.max(bounds.size.y,1))*1.35;const scale=fixedScale,viewW=w/scale,viewH=h/scale,cy=bounds.offset.y+bounds.size.y/2;const mvp=new spine.Matrix4();mvp.ortho2d(cx-viewW/2,cy-viewH/2,viewW,viewH);shader.bind();shader.setUniformi(spine.Shader.SAMPLER,0);shader.setUniform4x4f(spine.Shader.MVP_MATRIX,mvp.values);batcher.begin(shader);skeletonRenderer.premultipliedAlpha=true;skeletonRenderer.draw(batcher,skeleton);batcher.end();shader.unbind();frame=requestAnimationFrame(render)}
+ function render(){if(!ready)return;if(!canvas?.isConnected){frame=requestAnimationFrame(render);return}const w=Math.max(1,canvas.clientWidth),h=Math.max(1,canvas.clientHeight),pixelRatio=Math.min(devicePixelRatio*DISPLAY_SCALE,2);if(canvas.width!==Math.round(w*pixelRatio)||canvas.height!==Math.round(h*pixelRatio)){canvas.width=Math.round(w*pixelRatio);canvas.height=Math.round(h*pixelRatio)}const gl=ctx.gl;gl.viewport(0,0,canvas.width,canvas.height);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);const now=performance.now()/1000,delta=Math.min(.05,Math.max(0,now-last));last=now;state.update(delta);state.apply(skeleton);if(name==='WriterMale'||name==='WriterFemale'){if([204,207].includes(Number(expression)))enforceClosedEyes();else syncWriterEyeLines();}skeleton.updateWorldTransform();const cx=bounds.offset.x+bounds.size.x/2,visibleH=Math.max(1,h-150),referenceW=Math.min(window.innerWidth*1.12,800);if(!fixedScale)fixedScale=Math.min((referenceW/1.6)/Math.max(bounds.size.x,1),visibleH/Math.max(bounds.size.y,1))*1.35;const scale=fixedScale,viewW=w/scale,viewH=h/scale,cy=bounds.offset.y+bounds.size.y/2;const mvp=new spine.Matrix4();mvp.ortho2d(cx-viewW/2,cy-viewH/2,viewW,viewH);shader.bind();shader.setUniformi(spine.Shader.SAMPLER,0);shader.setUniform4x4f(spine.Shader.MVP_MATRIX,mvp.values);batcher.begin(shader);skeletonRenderer.premultipliedAlpha=true;skeletonRenderer.draw(batcher,skeleton);batcher.end();shader.unbind();frame=requestAnimationFrame(render)}
  function drawOnce(){if(ready&&!frame)render()}
  function setExpression(id){expression=Number(id);if(ready){applyExpression(expression);drawOnce()}}
  function applyExpression(id){
@@ -195,6 +195,29 @@ function createSpinePortrait(name,folder){
   }
  }
 
+ function syncWriterEyeLines(){
+  const currentAttachment=slotName=>skeleton.slots.find(s=>s.data.name===slotName)?.getAttachment()?.name||null;
+  const directionBySide={};
+  for(const f of faceSlots){
+   const lash=f.slot.match(/^Eyelashes_([LR])$/i);
+   if(!lash)continue;
+   const attachment=currentAttachment(f.slot);
+   if(/_D$/i.test(attachment||''))directionBySide[lash[1].toUpperCase()]='D';
+   else if(/_U$/i.test(attachment||''))directionBySide[lash[1].toUpperCase()]='U';
+  }
+  if(!directionBySide.L&&!directionBySide.R)return;
+  for(const f of faceSlots){
+   const line=f.slot.match(/^Eyeline_([LR])2?$/i);
+   if(!line)continue;
+   const direction=directionBySide[line[1].toUpperCase()];
+   if(!direction)continue;
+   const current=currentAttachment(f.slot);
+   if(!current||/(?:Smiling|Laugh)$/i.test(current))continue;
+   const base=current.replace(/_[DU]$/i,'');
+   const target=f.names.find(n=>n.toLowerCase()===(base+'_'+direction).toLowerCase());
+   if(target&&target!==current){try{skeleton.setAttachment(f.slot,target)}catch(e){}}
+  }
+ }
  return{mount,setExpression};
 }
 const CeciliaSpine=createSpinePortrait('Cecilia','Cecilia');
