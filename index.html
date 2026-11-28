@@ -216,9 +216,6 @@ function createSpinePortrait(name,folder){
    const lowerLid=skeleton.findBone('Eyeline_'+side+'_D');
    const upperEye=skeleton.findBone('Eyeline_'+side+'_U');
    const upperLash=skeleton.findBone('Eyelashes_'+side+'_U');
-   const lowerLash=skeleton.findBone('Eyelashes_'+side+'_D');
-   const isMale=name==='WriterMale';
-   const isFemale=name==='WriterFemale';
    // Only the upper lash follows pupil scale. Keep both lower lashes stationary.
    const scaleTargets=[upperLash];
    if(pupil){
@@ -236,17 +233,14 @@ function createSpinePortrait(name,folder){
      upperEye.scaleY=upperEye.data.scaleY*scaleY;
     }
    }
-   // Both upper eye frames follow brow movement; Male also follows brow rotation.
+   // Both Writers use the same upper-eye-frame response: follow brow translation.
    if(upperEye&&brow){
     upperEye.x=upperEye.data.x+(brow.x-brow.data.x);
     upperEye.y=upperEye.data.y+(brow.y-brow.data.y);
-    if(isMale){
-     upperEye.rotation=upperEye.data.rotation+(brow.rotation-brow.data.rotation);
-    }
    }
-   // Preserve the existing upper-lash response: Female follows the lower eye-line,
-   // while Male follows the brow. Lower lashes are not modified.
-   const lashMotionSource=isFemale?(lowerLid||brow):brow;
+   // Both Writers use the Female response for the upper lash: follow the lower eye-line
+   // when available, otherwise fall back to the brow. Lower lashes remain stationary.
+   const lashMotionSource=lowerLid||brow;
    if(upperLash&&lashMotionSource){
     upperLash.x=upperLash.data.x+(lashMotionSource.x-lashMotionSource.data.x);
     upperLash.y=upperLash.data.y+(lashMotionSource.y-lashMotionSource.data.y);
