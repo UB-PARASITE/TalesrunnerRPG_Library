@@ -89,10 +89,11 @@ let portraitTestFolder=null,portraitTestRuntime=null,portraitTestAnimation=null;
 const portraitTestCache=new Map();
 function getPortraitTestSpine(folder){if(!portraitTestCache.has(folder)){const name=folder.split('/').pop();portraitTestCache.set(folder,createSpinePortrait(name,folder,true))}return portraitTestCache.get(folder)}
 function portraitLabel(folder){return PORTRAIT_TEST_LABELS[folder]||PORTRAIT_TEST_LABELS[folder.replace(/^Story\\//,'')]||folder.split('/').pop()}
+function stopPortraitTest(){if(portraitTestRuntime?.unmount)portraitTestRuntime.unmount();}
 function renderPortraitBrowser(filter=''){
  const m=$('#mn');m.innerHTML='';
  if(portraitTestFolder){
-  const back=document.createElement('button');back.className='tab';back.textContent=uiLang==='zh'?'← 返回角色列表':'← 캐릭터 목록';back.onclick=()=>{portraitTestFolder=null;portraitTestRuntime=null;portraitTestAnimation=null;$('#q').value='';renderPortraitBrowser('')};m.append(back);
+  const back=document.createElement('button');back.className='tab';back.textContent=uiLang==='zh'?'← 返回角色列表':'← 캐릭터 목록';back.onclick=()=>{stopPortraitTest();portraitTestFolder=null;portraitTestRuntime=null;portraitTestAnimation=null;$('#q').value='';renderPortraitBrowser('')};m.append(back);
   const folder=portraitTestFolder,title=document.createElement('h2');title.textContent=portraitLabel(folder);m.append(title);
   const stage=document.createElement('div');stage.className='portrait-test-stage';const canvas=document.createElement('canvas');canvas.className='portrait-test-canvas';stage.append(canvas);m.append(stage);
   const status=document.createElement('p');status.className='portrait-test-status';status.textContent=uiLang==='zh'?'正在載入 Spine 資產…':'Spine 리소스 불러오는 중…';m.append(status);
@@ -110,7 +111,7 @@ function renderPortraitBrowser(filter=''){
  const q=String(filter||'').trim().toLowerCase();
  const matches=PORTRAIT_TEST_CHARACTERS.filter(folder=>!q||folder.toLowerCase().includes(q)||portraitLabel(folder).toLowerCase().includes(q));
  const info=document.createElement('p');info.className='portrait-test-status';info.textContent=(uiLang==='zh'?'角色數量：':'캐릭터 수: ')+matches.length+' / '+PORTRAIT_TEST_CHARACTERS.length;m.append(info);
- const grid=document.createElement('div');grid.className='portrait-test-character-grid';matches.forEach(folder=>{const b=document.createElement('button');b.className='card';const name=document.createElement('b');name.textContent=portraitLabel(folder);const path=document.createElement('span');path.textContent=folder.startsWith('Story/')?'Characters/'+folder+'/':'Characters/'+folder+'/';b.append(name,path);b.onclick=()=>{portraitTestFolder=folder;portraitTestRuntime=null;portraitTestAnimation=null;renderPortraitBrowser($('#q').value)};grid.append(b)});m.append(grid);
+ const grid=document.createElement('div');grid.className='portrait-test-character-grid';matches.forEach(folder=>{const b=document.createElement('button');b.className='card';const name=document.createElement('b');name.textContent=portraitLabel(folder);const path=document.createElement('span');path.textContent=folder.startsWith('Story/')?'Characters/'+folder+'/':'Characters/'+folder+'/';b.append(name,path);b.onclick=()=>{stopPortraitTest();portraitTestFolder=folder;portraitTestRuntime=null;portraitTestAnimation=null;renderPortraitBrowser($('#q').value)};grid.append(b)});m.append(grid);
 }
 const characterSpineCache=new Map();
 function getCharacterSpine(folder){if(!characterSpineCache.has(folder))characterSpineCache.set(folder,createSpinePortrait(folder,folder));return characterSpineCache.get(folder)};
@@ -139,7 +140,7 @@ function hydrate(tr,sc,tx,miss,portraitMap){
  for(const k in sc.talk)DB.talk[k]=sc.talk[k].map(t=>[t[0],t[1],cl(t[2])]);
  allStories=DB.cats.flatMap(c=>c.g.flatMap(g=>g.s.map(x=>({id:String(x[1]),title:g.n+' · '+x[0]})))).filter(x=>DB.S[x.id]);
  DB.cats.push({k:'talk',n:'로비 대화',g:[]});idx=null;cat=0;tabs();show();if(miss.length)$('#mn').insertAdjacentHTML('afterbegin','<p>⚠ '+t('readMissing')+miss.join(', ')+'</p>')}
-function tabs(){$('#tabs').innerHTML='';DB.cats.forEach((c,i)=>{const b=document.createElement('button');b.className='tab'+(activeTab==='story'&&i==cat?' on':'');b.textContent=categoryName(c);b.onclick=()=>{activeTab='story';portraitTestFolder=null;cat=i;$('#q').value='';tabs();show()};$('#tabs').append(b)});const p=document.createElement('button');p.className='tab'+(activeTab==='portraits'?' on':'');p.textContent=uiLang==='zh'?'立繪':'캐릭터';p.onclick=()=>{activeTab='portraits';portraitTestFolder=null;$('#q').value='';tabs();show()};$('#tabs').append(p)}
+function tabs(){$('#tabs').innerHTML='';DB.cats.forEach((c,i)=>{const b=document.createElement('button');b.className='tab'+(activeTab==='story'&&i==cat?' on':'');b.textContent=categoryName(c);b.onclick=()=>{stopPortraitTest();activeTab='story';portraitTestFolder=null;cat=i;$('#q').value='';tabs();show()};$('#tabs').append(b)});const p=document.createElement('button');p.className='tab'+(activeTab==='portraits'?' on':'');p.textContent=uiLang==='zh'?'立繪':'캐릭터';p.onclick=()=>{activeTab='portraits';portraitTestFolder=null;$('#q').value='';tabs();show()};$('#tabs').append(p)}
 function show(){if(activeTab==='portraits')return renderPortraitBrowser($('#q').value);const c=DB.cats[cat],m=$('#mn');m.innerHTML='';if(c.k=='talk')return talks(m);
  c.g.forEach((g,gi)=>{const d=document.createElement('details'),groupKey=c.k+':'+gi;d.open=!!expandedGroups[groupKey];d.innerHTML=`<summary>${g.n}<small>${g.s.length}${t('chapters')}</small></summary>`;d.addEventListener('toggle',()=>{expandedGroups[groupKey]=d.open;try{localStorage.setItem('expandedStoryGroups',JSON.stringify(expandedGroups))}catch(e){}});const gr=document.createElement('div');gr.className='grid';
   g.s.forEach(s=>{const b=document.createElement('button');b.className='card'+(read[s[1]]?' rd':'');b.innerHTML=`<b>${s[0]}</b>`;b.onclick=()=>play(s[1],g.s.map(x=>x[1]),g.n+' · '+s[0]);gr.append(b)});d.append(gr);m.append(d)})}
@@ -318,7 +319,7 @@ function createSpinePortrait(name,folder,testMode=false){
   }
  }
 
- return{mount,setExpression,getAnimations:()=>ready?skeleton.data.animations.map(a=>a.name):[],hasFailed:()=>failed,playAnimation:animation=>{if(!ready)return false;state.clearTracks();skeleton.setToSetupPose();if(animation)state.setAnimation(0,animation,true);last=performance.now()/1000;return true}};
+ return{mount,unmount:()=>{if(frame)cancelAnimationFrame(frame);frame=0},setExpression,getAnimations:()=>ready?skeleton.data.animations.map(a=>a.name):[],hasFailed:()=>failed,playAnimation:animation=>{if(!ready)return false;state.clearTracks();skeleton.setToSetupPose();if(animation)state.setAnimation(0,animation,true);last=performance.now()/1000;return true}};
 }
 const CeciliaSpine=createSpinePortrait('Cecilia','Cecilia');
 const WriterMaleSpine=createSpinePortrait('WriterMale','WriterMale');
