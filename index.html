@@ -193,7 +193,7 @@ function createSpinePortrait(name,folder){
  function drawOnce(){if(ready&&!frame)render()}
  function setExpression(id){expression=Number(id);if(ready){applyExpression(expression);drawOnce()}}
  function applyExpression(id){
-  const map={200:'blank',201:'angry',202:'blank',203:'crying',204:'smiling',205:'angry2',206:'crying2',207:'smiling2',208:'blank',209:'surprised',210:'angry2'},key=map[id]||'blank',isWriter=name==='WriterMale'||name==='WriterFemale',attachmentKey=isWriter&&key==='smiling2'?'laugh':key,aliases=attachmentKey==='surprised'?['surprised','suprised']:[attachmentKey],hasClosedEyeAssets=faceSlots.some(f=>f.names.some(n=>/(?:^|[^a-z])(?:closed|close)(?:[^a-z]|$)/i.test(n))),closedEye=[204,207].includes(Number(id))&&(isWriter||hasClosedEyeAssets));expressionClosed=closedEye;
+  const map={200:'blank',201:'angry',202:'blank',203:'crying',204:'smiling',205:'angry2',206:'crying2',207:'smiling2',208:'blank',209:'surprised',210:'angry2'},key=map[id]||'blank',isWriter=name==='WriterMale'||name==='WriterFemale',attachmentKey=isWriter&&key==='smiling2'?'laugh':key,aliases=attachmentKey==='surprised'?['surprised','suprised']:[attachmentKey],hasClosedEyeAssets=faceSlots.some(f=>f.names.some(n=>/(?:^|[^a-z])(?:closed|close)(?:[^a-z]|$)/i.test(n))),closedEye=[204,207].includes(Number(id))&&(isWriter||hasClosedEyeAssets);expressionClosed=closedEye;
   const parts=n=>n.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean),direction=()=>closedEye?'D':'U';
   const choose=items=>{const suffix='_'+direction();return items.find(n=>n.toUpperCase().endsWith(suffix))||items.find(n=>! /_[DU]$/i.test(n))||items[0]||null};
   for(const f of faceSlots){
