@@ -1,0 +1,52 @@
+{
+  "m_Shader": {
+    "m_FileID": 1,
+    "m_PathID": -905636281508599772,
+    "Name": "Spine/Skeleton",
+    "IsNull": false
+  },
+  "m_SavedProperties": {
+    "m_TexEnvs": {
+      "_MainTex": {
+        "m_Texture": {
+          "m_FileID": 75,
+          "m_PathID": 1712708597544260924,
+          "Name": "WriterFemale",
+          "IsNull": false
+        },
+        "m_Scale": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "m_Offset": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      }
+    },
+    "m_Ints": {},
+    "m_Floats": {
+      "_Cutoff": 0.1,
+      "_OutlineMipLevel": 0.0,
+      "_OutlineOpaqueAlpha": 1.0,
+      "_OutlineReferenceTexWidth": 1024.0,
+      "_OutlineSmoothness": 1.0,
+      "_OutlineWidth": 3.0,
+      "_StencilComp": 8.0,
+      "_StencilRef": 1.0,
+      "_StraightAlphaInput": 0.0,
+      "_ThresholdEnd": 0.25,
+      "_Use8Neighbourhood": 1.0
+    },
+    "m_Colors": {
+      "_OutlineColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 0.0,
+        "a": 1.0
+      }
+    }
+  },
+  "m_Name": "WriterFemale_WriterFemale",
+  "Name": "WriterFemale_WriterFemale"
+}
