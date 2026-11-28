@@ -88,7 +88,7 @@ let PORTRAIT_TEST_LABELS={};
 let portraitTestFolder=null,portraitTestRuntime=null,portraitTestAnimation=null;
 const portraitTestCache=new Map();
 function getPortraitTestSpine(folder){if(!portraitTestCache.has(folder)){const name=folder.split('/').pop();portraitTestCache.set(folder,createSpinePortrait(name,folder,true))}return portraitTestCache.get(folder)}
-function portraitLabel(folder){return PORTRAIT_TEST_LABELS[folder]||PORTRAIT_TEST_LABELS[folder.replace(/^Story\\//,'')]||folder.split('/').pop()}
+function portraitLabel(folder){return PORTRAIT_TEST_LABELS[folder]||PORTRAIT_TEST_LABELS[folder.replace(/^Story\//,'')]||folder.split('/').pop()}
 function stopPortraitTest(){if(portraitTestRuntime?.unmount)portraitTestRuntime.unmount();}
 function renderPortraitBrowser(filter=''){
  const m=$('#mn');m.innerHTML='';
