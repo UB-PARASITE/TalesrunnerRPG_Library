@@ -214,19 +214,29 @@ function createSpinePortrait(name,folder){
    const lowerLid=skeleton.findBone('Eyeline_'+side+'_D');
    const upperLash=skeleton.findBone('Eyelashes_'+side+'_U');
    const lowerLash=skeleton.findBone('Eyelashes_'+side+'_D');
+   const isMale=name==='WriterMale';
+   const isFemale=name==='WriterFemale';
+   // WriterMale: only the upper lash follows the blink scale; keep the lower lash untouched.
+   // WriterFemale: both lashes follow pupil scale.
+   const scaleTargets=isMale?[upperLash]:[upperLash,lowerLash];
    if(pupil){
-    for(const lash of [upperLash,lowerLash])if(lash){
+    for(const lash of scaleTargets)if(lash){
      const pd=pupil.data,ld=lash.data;
      lash.scaleX=ld.scaleX*(pupil.scaleX/(pd.scaleX||1));
      lash.scaleY=ld.scaleY*(pupil.scaleY/(pd.scaleY||1));
     }
    }
-   if(lowerLash){
-    const source=lowerLid||brow;
-    if(source){
-     lowerLash.x=lowerLash.data.x+(source.x-source.data.x);
-     lowerLash.y=lowerLash.data.y+(source.y-source.data.y);
-    }
+   // Transfer the blink displacement to the upper lash for both Writers.
+   // Female uses the animated lower eye-line; Male has no lower eye-line bone, so use the animated brow motion.
+   const motionSource=isFemale?(lowerLid||brow):brow;
+   if(upperLash&&motionSource){
+    upperLash.x=upperLash.data.x+(motionSource.x-motionSource.data.x);
+    upperLash.y=upperLash.data.y+(motionSource.y-motionSource.data.y);
+   }
+   // Keep Female's existing lower-lash response. Male's lower lash is deliberately not moved.
+   if(isFemale&&lowerLash&&motionSource){
+    lowerLash.x=lowerLash.data.x+(motionSource.x-motionSource.data.x);
+    lowerLash.y=lowerLash.data.y+(motionSource.y-motionSource.data.y);
    }
   }
  }
