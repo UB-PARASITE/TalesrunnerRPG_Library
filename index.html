@@ -166,12 +166,12 @@ function createSpinePortrait(name,folder){
    const allAttachments=[];
    allSkins.forEach(skin=>skin.getAttachmentsForSlot(slot.data.index,allAttachments));
    const scanNames=[...new Set([...names,...allAttachments.map(a=>a.name)])];
-   const facialName=/^(?:angry|angry2|blank|closed|crying|crying2|shy|shy-surprised|smiling|smiling2|surprised)(?:\\s|_|$)|^(?:mouth|eyebrows?|eyeline|eyelashes|pupil|white(?:_|$)|eye(?:'s|_|\\s|$)|iris|eyelid|under[_\\s-]*eyeline|lower[_\\s-]*eyeline)/i;
-   const irisPattern=/(?:pupil|iris|white|eyeball|sclera|eye'?s[_\\s-]*light|eye[_\\s-]*(?:white|pupil|iris))/i;
-   const eyeLinePattern=/(?:eye[\\s_-]*line|eyeline|eyelid)/i;
+   const facialName=/^(?:angry|angry2|blank|closed|crying|crying2|shy|shy-surprised|smiling|smiling2|surprised)(?:\s|_|$)|^(?:mouth|eyebrows?|eyeline|eyelashes|pupil|white(?:_|$)|eye(?:'s|_|\s|$)|iris|eyelid|under[_\s-]*eyeline|lower[_\s-]*eyeline)/i;
+   const irisPattern=/(?:pupil|iris|white|eyeball|sclera|eye'?s[_\s-]*light|eye[_\s-]*(?:white|pupil|iris))/i;
+   const eyeLinePattern=/(?:eye[\s_-]*line|eyeline|eyelid)/i;
    const isIris=irisPattern.test(slot.data.name)||scanNames.some(n=>irisPattern.test(n));
    const isEyeLine=eyeLinePattern.test(slot.data.name)||scanNames.some(n=>eyeLinePattern.test(n));
-   const lowerEyeLinePattern=/(?:under|lower|bottom|down)[\\s_-]*(?:eye[\\s_-]*line|eyeline)|(?:eye[\\s_-]*line|eyeline).*(?:[_\\s-](?:D|DOWN|LOWER|BOTTOM))$/i;
+   const lowerEyeLinePattern=/(?:under|lower|bottom|down)[\s_-]*(?:eye[\s_-]*line|eyeline)|(?:eye[\s_-]*line|eyeline).*(?:[_\s-](?:D|DOWN|LOWER|BOTTOM))$/i;
    const isLowerEyeLine=lowerEyeLinePattern.test(slot.data.name)||scanNames.some(n=>lowerEyeLinePattern.test(n));
    const isLash=/(?:eyelashes?|lash)/i.test(slot.data.name)||scanNames.some(n=>/(?:eyelashes?|lash)/i.test(n));
    const facial=facialName.test(slot.data.name)||scanNames.some(n=>facialName.test(n))||isIris||isEyeLine||isLowerEyeLine||isLash;
@@ -217,7 +217,7 @@ function createSpinePortrait(name,folder){
   return f.names.find(n=>aliases.some(alias=>tokens(n).includes(alias)))||null;
  }
  function applyExpression(id){
-  const map={200:'blank',201:'angry',202:'blank',203:'crying',204:'smiling',205:'angry2',206:'crying2',207:'smiling2',208:'blank',209:'surprised',210:'angry2'},key=map[id]||'blank',isWriter=name==='WriterMale'||name==='WriterFemale',attachmentKey=isWriter&&key==='smiling2'?'laugh':key,aliases=attachmentKey==='surprised'?['surprised','suprised']:[attachmentKey],hasClosedEyeAssets=faceSlots.some(f=>(f.allNames||f.names).some(n=>/(?:^|[^a-z])(?:closed|close)(?:[^a-z]|$)/i.test(n)))||faceSlots.some(f=>f.isEyeLine&&(f.allNames||f.names).some(n=>/(?:^|[^a-z])(?:laugh|smiling|smiling2)(?:[^a-z]|$)/i.test(n)))||faceSlots.some(f=>(f.allNames||f.names).some(n=>/^(?:smiling|smiling2)(?:[\\s_-]|$)/i.test(n))),closedEye=[204,207].includes(Number(id))&&(isWriter||hasClosedEyeAssets);expressionClosed=closedEye;
+  const map={200:'blank',201:'angry',202:'blank',203:'crying',204:'smiling',205:'angry2',206:'crying2',207:'smiling2',208:'blank',209:'surprised',210:'angry2'},key=map[id]||'blank',isWriter=name==='WriterMale'||name==='WriterFemale',attachmentKey=isWriter&&key==='smiling2'?'laugh':key,aliases=attachmentKey==='surprised'?['surprised','suprised']:[attachmentKey],hasClosedEyeAssets=faceSlots.some(f=>(f.allNames||f.names).some(n=>/(?:^|[^a-z])(?:closed|close)(?:[^a-z]|$)/i.test(n)))||faceSlots.some(f=>f.isEyeLine&&(f.allNames||f.names).some(n=>/(?:^|[^a-z])(?:laugh|smiling|smiling2)(?:[^a-z]|$)/i.test(n)))||faceSlots.some(f=>(f.allNames||f.names).some(n=>/^(?:smiling|smiling2)(?:[\s_-]|$)/i.test(n))),closedEye=[204,207].includes(Number(id))&&(isWriter||hasClosedEyeAssets);expressionClosed=closedEye;
   const parts=n=>n.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean),direction=()=>closedEye?'D':'U';
   const choose=items=>{const suffix='_'+direction();return items.find(n=>n.toUpperCase().endsWith(suffix))||items.find(n=>! /_[DU]$/i.test(n))||items[0]||null};
   for(const f of faceSlots){
